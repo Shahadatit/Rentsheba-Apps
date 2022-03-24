@@ -31,158 +31,36 @@
 					<!--Add lists-->
 					<div class="col-xl-8 col-lg-8 col-md-12">
 						<div class="row">
+							@foreach($adminPosts as $item)
 							<div class="col-xl-6 col-lg-12 col-md-12">
 								<div class="card">
 									<div class="item7-card-img">
-										<a href="javascript:void(0)"></a>
-										<img src="../assets/images/products/products/f1.jpg" alt="img" class="cover-image">
+										<a href="{{route('blog-details', $item->slug)}}"></a>
+										@if($item->image)
+										<img src="{{asset('image/'. $item->image)}}" alt="img" class="cover-image">
+										@else
+										<img src="/assets/images/products/products/h3.jpg" alt="img" class="cover-image">
+										@endif
+										
 										<div class="item7-card-text">
-											<span class="badge badge-success">Restaurant</span>
+											<span class="badge badge-info">{{$item->categoryFunction->name}}</span>
 										</div>
 									</div>
 									<div class="card-body">
 										<div class="item7-card-desc d-flex mb-2">
-											<a href="javascript:void(0)"><i class="fa fa-calendar-o text-muted me-2"></i>Dec-03-2019</a>
-											<div class="ms-auto">
-												<a class="me-0" href="javascript:void(0)"><i class="fa fa-comment-o text-muted me-2"></i>4 Comments</a>
-											</div>
-										</div>
-										<a href="blog-details-right.html" class="text-dark"><h4 class="font-weight-semibold">Excepteur  occaecat cupidatat</h4></a>
-										<p>Lorem ipsum dolor sit amet, quis exercitationem into enim ad minima veniam, quis nostrum itationem </p>
-										<a href="blog-details-right.html" class="btn btn-secondary btn-sm">Read More</a>
-									</div>
-								</div>
-							</div>
-							<div class="col-xl-6 col-lg-12 col-md-12">
-								<div class="card">
-									<div class="item-card2-img">
-										<div id="image-slider" class="carousel car-slide" data-bs-ride="carousel">
-											<div class="carousel-inner">
-												<div class="carousel-item active">
-													<img src="../assets/images/products/products/j2.jpg" alt="img" class="cover-image">
-												</div>
-												<div class="carousel-item">
-													<img src="../assets/images/products/products/j1.jpg" alt="img" class="cover-image">
-												</div>
-												<div class="carousel-item">
-													<img src="../assets/images/products/products/h1.jpg" alt="img" class="cover-image">
-												</div>
-												<div class="carousel-item">
-													<img src="../assets/images/products/products/h2.jpg" alt="img" class="cover-image">
-												</div>
-												<div class="carousel-item">
-													<img src="../assets/images/products/products/h3.jpg" alt="img" class="cover-image">
-												</div>
-											</div>
-											<a class="carousel-control-prev start-0" href="#image-slider" role="button" data-bs-slide="prev">
-												<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-												<span class="sr-only">Previous</span>
-											</a>
-											<a class="carousel-control-next end-0" href="#image-slider" role="button" data-bs-slide="next">
-												<span class="carousel-control-next-icon" aria-hidden="true"></span>
-												<span class="sr-only">Next</span>
-											</a>
-										</div>
-										<div class="item7-card-text">
-											<span class="badge badge-info">Jobs</span>
-										</div>
-										<div class="item-card2-icons">
-											<span class="br-2 p-1 px-2 br-2 bg-dark-transparent text-white"><i class="fa fa-picture-o"></i> 2</span>
-										</div>
-									</div>
-									<div class="card-body">
-										<div class="item7-card-desc d-flex mb-2">
-											<a href="javascript:void(0)"><i class="fa fa-calendar-o text-muted me-2"></i>Nov-28-2019</a>
-											<div class="ms-auto">
-												<a class="me-0" href="javascript:void(0)"><i class="fa fa-comment-o text-muted me-2"></i>2 Comments</a>
-											</div>
-										</div>
-										<a href="blog-details-center.html" class="text-dark"><h4 class="font-weight-semibold">Sed ut perspiciatis unde omnis</h4></a>
-										<p>Lorem ipsum dolor sit amet, quis exercitationem into enim ad minima veniam, quis nostrum itationem </p>
-										<a href="blog-details-center.html" class="btn btn-secondary btn-sm">Read More</a>
-									</div>
-								</div>
-							</div>
-							<div class="col-xl-6 col-lg-12 col-md-12">
-								<div class="card">
-									<div class="youtube-video">
-										<iframe height="218" src="https://www.youtube.com/embed/AodRcbUg8Jk" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-									</div>
-									<div class="card-body">
-										<div class="item7-card-desc d-flex mb-2">
-											<a href="javascript:void(0)"><i class="fa fa-calendar-o text-muted me-2"></i>Nov-19-2019</a>
-											<div class="ms-auto">
-												<a class="me-0" href="javascript:void(0)"><i class="fa fa-comment-o text-muted me-2"></i>8 Comments</a>
-											</div>
-										</div>
-										<a href="blog-details.html" class="text-dark"><h4 class="font-weight-semibold">At vero eos et accusamus iusto</h4></a>
-										<p>Lorem ipsum dolor sit amet, quis exercitationem into enim ad minima veniam, quis nostrum itationem </p>
-										<a href="blog-details.html" class="btn btn-secondary btn-sm">Read More</a>
-									</div>
-								</div>
-							</div>
-							<div class="col-xl-6 col-lg-12 col-md-12">
-								<div class="card">
-									<div class="item7-card-img">
-										<a href="javascript:void(0)"></a>
-										<img src="../assets/images/products/products/h3.jpg" alt="img" class="cover-image">
-										<div class="item7-card-text">
-											<span class="badge badge-info">Real Estate</span>
-										</div>
-									</div>
-									<div class="card-body">
-										<div class="item7-card-desc d-flex mb-2">
-											<a href="javascript:void(0)"><i class="fa fa-calendar-o text-muted me-2"></i>Nov-13-2019</a>
+											<a href="javascript:void(0)"><i class="fa fa-calendar-o text-muted me-2"></i>{{$item->created_at->format('d M, Y')}}</a>
 											<div class="ms-auto">
 												<a class="me-0" href="javascript:void(0)"><i class="fa fa-comment-o text-muted me-2"></i>7 Comments</a>
 											</div>
 										</div>
-										<a href="blog-details-right.html" class="text-dark"><h4 class="font-weight-semibold"> Nam libero tempore, cum soluta </h4></a>
-										<p>Lorem ipsum dolor sit amet, quis exercitationem into enim ad minima veniam, quis nostrum itationem </p>
+										<a href="{{route('blog-details', $item->slug)}}" class="text-dark"><h4 class="font-weight-semibold">{{$item->name}} </h4></a>
+										<p>{{substr(strip_tags($item->sort_description),0,130)}}... </p>
 										<a href="blog-details-right.html" class="btn btn-secondary btn-sm">Read More</a>
 									</div>
 								</div>
 							</div>
-							<div class="col-xl-6 col-lg-12 col-md-12">
-								<div class="card">
-									<div class="youtube-video">
-										<iframe  height="218" src="https://www.youtube.com/embed/AodRcbUg8Jk" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-									</div>
-									<div class="card-body">
-										<div class="item7-card-desc d-flex mb-2">
-											<a href="javascript:void(0)"><i class="fa fa-calendar-o text-muted me-2"></i>Dec-10-2019</a>
-											<div class="ms-auto">
-												<a class="me-0" href="javascript:void(0)"><i class="fa fa-comment-o text-muted me-2"></i>1 Comments</a>
-											</div>
-										</div>
-										<a href="blog-details.html" class="text-dark"><h4 class="font-weight-semibold">Certain circumstances the claims</h4></a>
-										<p>Lorem ipsum dolor sit amet, quis exercitationem into enim ad minima veniam, quis nostrum itationem </p>
-										<a href="blog-details.html" class="btn btn-secondary btn-sm">Read More</a>
-									</div>
-								</div>
-							</div>
-							<div class="col-xl-6 col-lg-12 col-md-12">
-								<div class="card">
-									<div class="item7-card-img">
-										<a href="javascript:void(0)"></a>
-										<img src="../assets/images/products/products/pe1.jpg" alt="img" class="cover-image">
-										<div class="item7-card-text">
-											<span class="badge badge-info">Pets & Animals</span>
-										</div>
-									</div>
-									<div class="card-body">
-										<div class="item7-card-desc d-flex mb-2">
-											<a href="javascript:void(0)"><i class="fa fa-calendar-o text-muted me-2"></i>Nov-01-2019</a>
-											<div class="ms-auto">
-												<a class="me-0" href="javascript:void(0)"><i class="fa fa-comment-o text-muted me-2"></i>5 Comments</a>
-											</div>
-										</div>
-										<a href="blog-details-right.html" class="text-dark"><h4 class="font-weight-semibold">Itaque earum rerum sapiente</h4></a>
-										<p>Lorem ipsum dolor sit amet, quis exercitationem into enim ad minima veniam, quis nostrum itationem </p>
-										<a href="blog-details-right.html" class="btn btn-secondary btn-sm">Read More</a>
-									</div>
-								</div>
-							</div>
+							@endforeach
+							
 						</div>
 						<div class="d-sm-flex">
 							<h6 class="mb-0 mt-3">Showing 1 to 6 of 30 entries</h6>

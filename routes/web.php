@@ -23,8 +23,13 @@ use App\Http\Controllers\Frontend\companyController;
 Route::get('/' , [frontendController::class, 'home'])->name('home');
 Route::get('/listing' , [frontendController::class, 'businessList'])->name('company-list');
 Route::get('/listing-details/{slug}' , [frontendController::class, 'businessDetails'])->name('company-details');
+Route::get('/category/{slug}' , [frontendController::class, 'primaryCategory'])->name('primarycatcompany');
 Route::get('/blog' , [frontendController::class, 'blogList'])->name('blog-list');
-Route::get('/blog-details' , [frontendController::class, 'blogDetails'])->name('blog-details');
+Route::get('/blog-details/{slug}' , [frontendController::class, 'blogDetails'])->name('blog-details');
+
+// IT service pages
+Route::get('web-design',[frontendController::class,'webDesign'])->name('web-design');
+Route::get('web-development',[frontendController::class,'webDevelopment'])->name('web-development');
 
 Route::middleware('auth')->group(function (){
     Route::group(['prefix' => '/user'],function(){

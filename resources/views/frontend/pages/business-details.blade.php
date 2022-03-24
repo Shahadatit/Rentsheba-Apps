@@ -41,7 +41,7 @@
 				</div><!-- /header-text -->
 				<div class="details-absolute">
 					<div class="d-sm-flex container">
-						<div><a href="javascript:void(0)" class="text-white d-inline-block me-4 "><i class="icon icon-location-pin text-white me-2"></i>{{$company->c_address}} , {{$company->district}} , @if($company->cuntry) {{$company->cuntryFunc->name}} @endif</a></div>
+						<div><a href="javascript:void(0)" class="text-white d-inline-block me-4 "><i class="icon icon-location-pin text-white me-2"></i>{{$company->c_address}} , {{$company->c_district}} , @if($company->cuntry) {{$company->cuntrys->name}} @endif</a></div>
 						<div class="ms-auto"><a href="tel:{{$company->com_mobile}}" class="text-white d-inline-block mt-2 mt-sm-0 fs-18"><i class="icon icon-phone text-white me-2 fs-14"></i>{{$company->com_mobile}}</a></div>
 					</div>
 				</div>
@@ -57,7 +57,7 @@
 					<ol class="breadcrumb">
 						<li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
 						<li class="breadcrumb-item"><a href="javascript:void(0)">Categories</a></li>
-						<li class="breadcrumb-item active" aria-current="page">{{$company->categoryFunc->name}}</li>
+						<li class="breadcrumb-item active" aria-current="page">{{$company->categorys->name}}</li>
 					</ol>
 				</div>
 			</div>
@@ -78,8 +78,8 @@
 									<a href="javascript:void(0)" class="text-dark"><h3>{{$company->main_title}}</h3></a>
 									<div class=" d-md-flex">
 										<ul class="d-md-flex mb-0">
-											<li class="me-5"><a href="javascript:void(0)" class="icons"><i class="icon icon-briefcase text-muted me-1"></i> {{$company->categoryFunc->name}}</a></li>
-											<li class="me-5"><a href="javascript:void(0)" class="icons"><i class="icon icon-location-pin text-muted me-1"></i> @if($company->cuntryFunc){{$company->cuntryFunc->name}}@endif</a></li>
+											<li class="me-5"><a href="javascript:void(0)" class="icons"><i class="icon icon-briefcase text-muted me-1"></i> {{$company->categorys->name}}</a></li>
+											<li class="me-5"><a href="javascript:void(0)" class="icons"><i class="icon icon-location-pin text-muted me-1"></i> @if($company->cuntry){{$company->cuntrys->name}}@endif</a></li>
 											<li class="me-5"><a href="javascript:void(0)" class="icons"><i class="icon icon-calendar text-muted me-1"></i> @if($company->created_at) {{$company->created_at->format('d M, Y')}} @endif</a></li>
 											<li class="me-5"><a href="javascript:void(0)" class="icons"><i class="icon icon-eye text-muted me-1"></i> 765</a></li>
 										</ul>
@@ -134,7 +134,7 @@
 											</tr>
 											<tr>
 												<td class="font-weight-semibold px-0">Services</td>
-												<td class="px-0">{{$company->categoryFunc->name}}</td>
+												<td class="px-0">{{$company->categorys->name}}</td>
 											</tr>
 											<tr>
 												<td class="font-weight-semibold px-0">Facebook</td>
@@ -187,16 +187,16 @@
 						<!--Related Posts-->
 						<div id="myCarousel5" class="owl-carousel owl-carousel-icons3">
 							<!-- Wrapper for carousel items -->
-
+							@foreach($adminPosts as $item)
 							<div class="item">
 								<div class="card">
-									<div class="ribbon ribbon-top-left text-danger"><span class="bg-danger">Negotiable</span></div>
+									
 									<div class="item-card7-imgs">
-										<a href="business.html"></a>
-										<img src="../assets/images/products/products/ed1.jpg" alt="img" class="cover-image">
+										<a href="{{route('blog-details', $item->slug)}}"></a>
+										<img src="{{asset('image/' . $item->image)}}" alt="img" class="cover-image">
 									</div>
 									<div class="item-card7-overlaytext">
-										<a href="business.html" class="text-white"> Education</a>
+										<a href="business.html" class="text-white"> {{$item->categoryFunction->name}}</a>
 									</div>
 									<div class="item-card7-icons">
 										<a href="javascript:void(0)" class="item-card7-icons-l"> <i class="fa fa-pencil"></i></a>
@@ -209,186 +209,16 @@
 											<a class="text-white" href="javascript:void(0)">4 reviews</a>
 										</div>
 										<div class="item-card7-desc">
-											<a href="business.html" class="text-dark"><h4 class="font-weight-semibold">Record Writing <i class="ion-checkmark-circled text-success ms-1"></i></h4></a>
+											<a href="{{route('blog-details', $item->slug)}}" class="text-dark"><h4 class="font-weight-semibold">{{$item->name}} <i class="ion-checkmark-circled text-success ms-1"></i></h4></a>
 										</div>
 										<div class="item-card7-text">
-											<ul class="icon-card mb-0 mt-2">
-												<li ><a href="javascript:void(0)" class="icons"><i class="icon icon-location-pin text-muted me-1"></i>  USA</a></li>
-												<li><a href="javascript:void(0)" class="icons"><i class="icon icon-event text-muted me-1"></i> 2 hours ago</a></li>
-												<li class="mb-0"><a href="javascript:void(0)" class="icons"><i class="icon icon-user text-muted me-1"></i> Clara Pixley</a></li>
-												<li class="mb-0"><a href="javascript:void(0)" class="icons"><i class="icon icon-phone text-muted me-1"></i> 785 485 965</a></li>
-											</ul>
+										{{substr(strip_tags($item->sort_description),0,130)}}...
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="item">
-								<div class="card">
-									<div class="ribbon ribbon-top-left text-secondary"><span class="bg-secondary">featured</span></div>
-									<div class="item-card7-imgs">
-										<a href="business.html"></a>
-										<img src="../assets/images/products/products/ed2.jpg" alt="img" class="cover-image">
-									</div>
-									<div class="item-card7-overlaytext">
-										<a href="business.html" class="text-white">Education </a>
-									</div>
-									<div class="item-card7-icons">
-										<a href="javascript:void(0)" class="item-card7-icons-l"><i class="fa fa-pencil"></i></a>
-										<a href="javascript:void(0)" class="item-card7-icons-r"><i class="fa fa fa-heart-o"></i></a>
-									</div>
-									<div class="card-body">
-										<div class="mb-1 mt-0 d-flex">
-											<div class="rating-star sm my-rating-5" data-rating="4.5">
-											</div>
-											<a class="text-white" href="javascript:void(0)">14 reviews</a>
-										</div>
-										<div class="item-card7-desc">
-											<a href="business.html" class="text-dark"><h4 class="font-weight-semibold">Pg University <i class="ion-checkmark-circled text-success ms-1"></i></h4></a>
-										</div>
-										<div class="item-card7-text">
-											<ul class="icon-card mb-0 mt-2">
-												<li ><a href="javascript:void(0)" class="icons"><i class="icon icon-location-pin text-muted me-1"></i>  Los Angles</a></li>
-												<li><a href="javascript:void(0)" class="icons"><i class="icon icon-event text-muted me-1"></i> 5 hours ago</a></li>
-												<li class="mb-0"><a href="javascript:void(0)" class="icons"><i class="icon icon-user text-muted me-1"></i> Sally Peake</a></li>
-												<li class="mb-0"><a href="javascript:void(0)" class="icons"><i class="icon icon-phone text-muted me-1"></i> 567 987 608</a></li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="card">
-									<div class="item-card7-imgs">
-										<a href="business.html"></a>
-										<img src="../assets/images/products/products/ed3.jpg" alt="img" class="cover-image">
-									</div>
-									<div class="item-card7-overlaytext">
-										<a href="business.html" class="text-white">Education</a>
-									</div>
-									<div class="item-card7-icons">
-										<a href="javascript:void(0)" class="item-card7-icons-l"><i class="fa fa-pencil"></i></a>
-										<a href="javascript:void(0)" class="item-card7-icons-r"><i class="fa fa fa-heart-o"></i></a>
-									</div>
-									<div class="card-body">
-										<div class="mb-1 mt-0 d-flex">
-											<div class="rating-star sm my-rating-5" data-rating="4.5">
-											</div>
-											<a class="text-white" href="javascript:void(0)">25 reviews</a>
-										</div>
-										<div class="item-card7-desc">
-											<a href="business.html" class="text-dark"><h4 class="font-weight-semibold">Ug University</h4></a>
-										</div>
-										<div class="item-card7-text">
-											<ul class="icon-card mb-0 mt-2">
-												<li ><a href="javascript:void(0)" class="icons"><i class="icon icon-location-pin text-muted me-1"></i>  Los Angles</a></li>
-												<li><a href="javascript:void(0)" class="icons"><i class="icon icon-event text-muted me-1"></i> 4 hours ago</a></li>
-												<li class="mb-0"><a href="javascript:void(0)" class="icons"><i class="icon icon-user text-muted me-1"></i> Julio Gutirrez</a></li>
-												<li class="mb-0"><a href="javascript:void(0)" class="icons"><i class="icon icon-phone text-muted me-1"></i> 758 458 758</a></li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="card">
-									<div class="ribbon ribbon-top-left text-danger"><span class="bg-danger">Collection</span></div>
-									<div class="item-card7-imgs">
-										<a href="business.html"></a>
-										<img src="../assets/images/products/products/ed4.jpg" alt="img" class="cover-image">
-									</div>
-									<div class="item-card7-overlaytext">
-										<a href="business.html" class="text-white"> Coaching</a>
-									</div>
-									<div class="item-card7-icons">
-										<a href="javascript:void(0)" class="item-card7-icons-l"><i class="fa fa-pencil"></i></a>
-										<a href="javascript:void(0)" class="item-card7-icons-r"><i class="fa fa fa-heart-o"></i></a>
-									</div>
-									<div class="card-body">
-										<div class="mb-1 mt-0 d-flex">
-											<div class="rating-star sm my-rating-5" data-rating="4.5">
-											</div>
-											<a class="text-white" href="javascript:void(0)">4 reviews</a>
-										</div>
-										<div class="item-card7-desc">
-											<a href="rbusiness.html" class="text-dark"><h4 class="font-weight-semibold">Best Institutions <i class="ion-checkmark-circled text-success ms-1"></i></h4></a>
-										</div>
-										<div class="item-card7-text">
-											<ul class="icon-card mb-0 mt-2">
-												<li ><a href="javascript:void(0)" class="icons"><i class="icon icon-location-pin text-muted me-1"></i>  Spain</a></li>
-												<li><a href="javascript:void(0)" class="icons"><i class="icon icon-event text-muted me-1"></i> 12 hours ago</a></li>
-												<li class="mb-0"><a href="javascript:void(0)" class="icons"><i class="icon icon-user text-muted me-1"></i> Clara Pixley</a></li>
-												<li class="mb-0"><a href="javascript:void(0)" class="icons"><i class="icon icon-phone text-muted me-1"></i> 745 854 857</a></li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="card">
-									<div class="item-card7-imgs">
-										<a href="business.html"></a>
-										<img src="../assets/images/products/products/ed1.jpg" alt="img" class="cover-image">
-									</div>
-									<div class="item-card7-overlaytext">
-										<a href="business.html" class="text-white"> Training</a>
-									</div>
-									<div class="item-card7-icons">
-										<a href="javascript:void(0)" class="item-card7-icons-l"><i class="fa fa-pencil"></i></a>
-										<a href="javascript:void(0)" class="item-card7-icons-r"><i class="fa fa fa-heart-o"></i></a>
-									</div>
-									<div class="card-body">
-										<div class="mb-1 mt-0 d-flex">
-											<div class="rating-star sm my-rating-5" data-rating="4.5">
-											</div>
-											<a class="text-white" href="javascript:void(0)">No reviews</a>
-										</div>
-										<div class="item-card7-desc">
-											<a href="business.html" class="text-dark"><h4 class="font-weight-semibold">Care Brohzm</h4></a>
-										</div>
-										<div class="item-card7-text">
-											<ul class="icon-card mb-0 mt-2">
-												<li ><a href="javascript:void(0)" class="icons"><i class="icon icon-location-pin text-muted me-1"></i>  China</a></li>
-												<li><a href="javascript:void(0)" class="icons"><i class="icon icon-event text-muted me-1"></i> 1 Day ago</a></li>
-												<li class="mb-0"><a href="javascript:void(0)" class="icons"><i class="icon icon-user text-muted me-1"></i> Nicol Bretz</a></li>
-												<li class="mb-0"><a href="javascript:void(0)" class="icons"><i class="icon icon-phone text-muted me-1"></i> 485 965 854</a></li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="card">
-									<div class="item-card7-imgs">
-										<a href="business.html"></a>
-										<img src="../assets/images/products/products/ed2.jpg" alt="img" class="cover-image">
-									</div>
-									<div class="item-card7-overlaytext">
-										<a href="business.html" class="text-white"> Education</a>
-									</div>
-									<div class="item-card7-icons">
-										<a href="javascript:void(0)" class="item-card7-icons-l"><i class="fa fa-pencil"></i></a>
-										<a href="javascript:void(0)" class="item-card7-icons-r"><i class="fa fa fa-heart-o"></i></a>
-									</div>
-									<div class="card-body">
-										<div class="mb-1 mt-0 d-flex">
-											<div class="rating-star sm my-rating-5" data-rating="4.5">
-											</div>
-											<a class="text-white" href="javascript:void(0)">34 reviews</a>
-										</div>
-										<div class="item-card7-desc">
-											<a href="business.html" class="text-dark"><h4 class="font-weight-semibold">Digital Marketing Training <i class="ion-checkmark-circled text-success ms-1"></i></h4></a>
-										</div>
-										<div class="item-card7-text">
-											<ul class="icon-card mb-0 mt-2">
-												<li ><a href="javascript:void(0)" class="icons"><i class="icon icon-location-pin text-muted me-1"></i>  Canada</a></li>
-												<li><a href="javascript:void(0)" class="icons"><i class="icon icon-event text-muted me-1"></i> 2 days ago</a></li>
-												<li class="mb-0"><a href="javascript:void(0)" class="icons"><i class="icon icon-user text-muted me-1"></i> Sally Peake</a></li>
-												<li class="mb-0"><a href="javascript:void(0)" class="icons"><i class="icon icon-phone text-muted me-1"></i>859 654 857</a></li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
+							@endforeach
+							
 						</div>
 						<!--/Related Posts-->
 

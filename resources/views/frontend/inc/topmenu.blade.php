@@ -340,7 +340,6 @@
 						<li><a href="{{url('/')}}">Home </a></li>
 						<li><a href="{{route('company-list')}}">listing</a></li>
 						<li><a href="{{route('blog-list')}}">post</a></li>
-						<li><a href="{{route('blog-details')}}">post view</a></li>
 						
 						<li><a href="contact.html"> Contact Us <span class="wsarrow"></span></a></li>
 						<li class="d-lg-none mt-5 pb-5 mt-lg-0">

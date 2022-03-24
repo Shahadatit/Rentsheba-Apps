@@ -13,11 +13,14 @@ class Company extends Model
     'main_title','market','c_address','c_district','c_zipcode','p_name','p_email','p_phone','o_name','o_email','o_phone','logo',
     'user_id','packeg','admin_company','status'];
 
-    public function categoryFunc(){
+    public function categorys(){
         return $this->belongsTo(Category::class,'cat_id');
     }
-    public function cuntryFunc(){
+    public function cuntrys(){
         return $this->belongsTo(Cuntry::class,'cuntry');
+    }
+    public function users(){
+        return $this->belongsTo(User::class,'user_id');
     }
 
     

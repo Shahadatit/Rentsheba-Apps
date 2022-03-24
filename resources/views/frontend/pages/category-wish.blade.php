@@ -92,7 +92,8 @@
 								</div>
 								<div class="tab-content">
 									<div class="tab-pane active" id="tab-11">
-										@foreach( $companys as $item)
+                                        @foreach(App\Models\Category::where('status',1)->where('is_parent', $category->id)->get() as $sCut)
+										@foreach( App\Models\Company::where('status',1)->where('cat_id', $sCut->id)->get() as $item)
 										<div class="card overflow-hidden">
 											
 											<div class="d-md-flex">
@@ -177,11 +178,13 @@
 											</div>
 										</div>
 										@endforeach
+										@endforeach
 										
 									</div>
 									<div class="tab-pane" id="tab-12">
 										<div class="row">
-											@foreach($companys as $item)
+                                            @foreach(App\Models\Category::where('status',1)->where('is_parent', $category->id)->get() as $sCut)
+                                            @foreach( App\Models\Company::where('status',1)->where('cat_id', $sCut->id)->get() as $item)
 											<div class="col-lg-6 col-md-6 col-xl-6">
 												<div class="card overflow-hidden">
 													@if( $item->packeg == 2)
@@ -275,6 +278,7 @@
 													</div>
 												</div>
 											</div>
+											@endforeach
 											@endforeach
 											
 											

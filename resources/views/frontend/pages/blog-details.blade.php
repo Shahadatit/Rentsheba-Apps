@@ -30,40 +30,28 @@
 					<div class="col-xl-8 col-lg-8 col-md-12">
 						<div class="card">
 							<div class="card-body">
-								<a href="javascript:void(0)" class="text-dark"><h3 class="font-weight-semibold text-capitalize">Sed ut perspiciatis unde omnis iste</h3></a>
+								<a href="javascript:void(0)" class="text-dark"><h3 class="font-weight-semibold text-capitalize">{{$post->name}}</h3></a>
 								<div class="youtube-video">
-									<iframe  height="400" src="https://www.youtube.com/embed/AodRcbUg8Jk"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									<img src="{{asset('image/' . $post->image)}}" alt="">
+									<!-- <iframe  height="400" src="https://www.youtube.com/embed/AodRcbUg8Jk"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 								</div>
 								<div class="item7-card-desc d-flex mb-2 mt-3">
 									<a href="javascript:void(0)"><i class="fa fa-calendar-o text-muted me-2"></i>Nov-28-2019</a>
-									<a href="javascript:void(0)"><i class="fa fa-user text-muted me-2"></i>Nissy Sten</a>
+									<a href="javascript:void(0)"><i class="fa fa-tags text-muted me-2"></i>{{$post->categoryFunction->name}}</a>
 									<div class="ms-auto">
 										<a href="javascript:void(0)" class="me-0"><i class="fa fa-comment-o text-muted me-2"></i>12 Comments</a>
 									</div>
 								</div>
 
-								<p>I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure. </p>
-								<p>but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example</p>
-								<h4 class="mt-6 mb-3">Blog Images</h4>
-								<div class="row">
-									<div class="col-lg-3 col-sm-6">
-										<img src="../assets/images/products/products/ed1.jpg" alt="image" class="mt-3 br-7">
-									</div>
-									<div class="col-lg-3 col-sm-6">
-										<img src="../assets/images/products/products/ed2.jpg" alt="image" class="mt-3 br-7">
-									</div>
-									<div class="col-lg-3 col-sm-6">
-										<img src="../assets/images/products/products/ed3.jpg" alt="image" class="mt-3 br-7">
-									</div>
-									<div class="col-lg-3 col-sm-6">
-										<img src="../assets/images/products/products/ed4.jpg" alt="image" class="mt-3 br-7">
-									</div>
-								</div>
+								<p>{!! $post->discription !!}</p>
+								<p>{{$post->sort_description}}</p>
+								
+								
 							</div>
 						</div>
 
 						<!--Comments-->
-						<div class="card">
+						<!-- <div class="card">
 							<div class="card-header">
 								<h3 class="card-title">3 Comments</h3>
 							</div>
@@ -129,7 +117,7 @@
 									</div>
 								</div>
 							</div>
-						</div>
+						</div> -->
 						<!--/Comments-->
 
 						<div class="card mb-lg-0">

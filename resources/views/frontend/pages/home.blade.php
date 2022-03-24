@@ -38,7 +38,7 @@
 					<div class="card mb-0 overflow-hidden">
 						<div class="card-body">
 							<div class="cat-item text-center">
-								<a href="business-list.html"></a>
+								<a href="{{route('primarycatcompany' , $category->slug)}}"></a>
 								<div class="cat-img category-svg">
 
 									<!--Real-Estate Icon Svg -->
@@ -80,7 +80,7 @@
 								<a href="business.html" class="item-card2-icons-l"><i class="fa fa-cutlery"></i></a>
 								<a href="javascript:void(0)" class="item-card2-icons-r"><i class="fa fa fa-heart-o"></i></a>
 							</div>
-							<div class="blog--category">{{$company->cat_id}}</div>
+							<div class="blog--category">{{$company->categorys->name}}</div>
 						</div>
 						<div class="card-body pb-0">
 							<div class="item-card2">
@@ -94,7 +94,7 @@
 										<a href="mb-1">
 											<p class="pb-0 pt-0 mb-2 mt-2">
 												<i class="fa fa-map-marker me-2"></i>
-												{{$company->c_address}}, {{$company->c_district}}
+												{{$company->c_address}}
 											</p>
 										</a>
 										<a href="tel:{{$company->com_mobile}}">
@@ -286,45 +286,53 @@
 			</div>
 			<div id="myCarousel2" class="owl-carousel owl-carousel-icons2">
 				<!-- Wrapper for carousel items -->
-
+				@foreach($companys as $item)
 				<div class="item">
 					<div class="card mb-0 overflow-hidden">
-						<div class="arrow-ribbon bg-success">Open</div>
+						
 						<div class="item-card7-imgs">
-							<a href="business.html" class="absolute-link"></a>
-							<img src="../assets/images/products/products/b3.jpg" alt="img" class="cover-image">
+							<a href="{{route('company-details' , $company->slug)}}" class="absolute-link"></a>
+							<img src="{{asset('image/' . $item->logo)}}" alt="img" class="cover-image">
 						</div>
 						<div class="item-card7-overlaytext">
-							<a href="business.html" class="text-white"> Beauty & Spa </a>
+							<a href="business.html" class="text-white"> {{$item->categorys->name}} </a>
 						</div>
 						<div class="card-body">
 							<div class="item-card7-desc">
 								<div class="item-card7-text">
-									<a href="business.html" class="text-dark">
-										<h4 class="">Golik Beauty & Spa</h4>
+									<a href="{{route('company-details' , $company->slug)}}" class="text-dark">
+										<h4 class="">{{substr(strip_tags($item->main_title),0,25)}}..</h4>
 									</a>
 								</div>
 								<ul class="item-cards7-ic mb-0">
 									<li><a href="javascript:void(0)"><span class=""><i class="icon icon-eye me-1"></i> 12
 												Views</span></a></li>
 									<li><a href="javascript:void(0)" class="icons"><i class="icon icon-location-pin text-muted me-1"></i>
-											Canada</a></li>
+											{{$item->cuntrys->name}}</a></li>
 									<li class="mb-md-0"><a href="javascript:void(0)" class="icons"><i
 												class="icon icon-event text-muted me-1"></i> 1 hour ago</a></li>
 									<li class="mb-0"><a href="javascript:void(0)" class="icons"><i
-												class="icon icon-phone text-muted me-1"></i> 14 352 69855</a></li>
+												class="icon icon-phone text-muted me-1"></i> {{$item->com_mobile}}</a></li>
 								</ul>
-								<p class="mb-0">Omnis iste natus error sit dolore dg voluptatem accusantium</p>
+								<p class="mb-0">{{substr(strip_tags($item->description),0,58)}}</p>
 							</div>
 						</div>
 						<div class="card-footer">
 							<div class="footerimg d-flex mt-0 mb-0">
 								<div class="d-flex footerimg-l mb-0">
-									<img src="../assets/images/faces/female/17.jpg" alt="image"
-										class="avatar brround  me-2">
-									<h5 class="time-title text-muted p-0 leading-normal mt-2 mb-0">Victoria<i
-											class="icon icon-check text-success fs-12 ms-1" data-bs-toggle="tooltip"
-											data-bs-placement="top" title="verified"></i></h5>
+									@if($item->cat_id) 
+									
+									<img src="{{asset('image/' )}}/{{$item->users->profile}}" alt="image"class="avatar brround  me-2">
+									@else
+									<img src="../assets/images/faces/female/17.jpg" alt="image"	class="avatar brround  me-2">
+									@endif
+									
+									<h5 class="time-title text-muted p-0 leading-normal mt-2 mb-0">{{$item->users->name}} 
+										@if($item->packeg == 1) 
+										<i class="fa fa-exclamation-circle text-warning ms-1"data-bs-toggle="tooltip"	data-bs-placement="top" title=""	data-bs-original-title="Not Verified"></i> 
+										@elseif($item->packeg == 2) <i class="icon icon-check text-success fs-12 ms-1" data-bs-toggle="tooltip"data-bs-placement="top" title="verified"></i> 
+										@endif
+									</h5>
 								</div>
 								<div class="mt-2 footerimg-r ms-auto">
 									<a href="javascript:void(0)" class="text-pink" data-bs-toggle="tooltip" data-bs-placement="top"
@@ -334,192 +342,8 @@
 						</div>
 					</div>
 				</div>
-				<div class="item">
-					<div class="card mb-0 overflow-hidden">
-						<div class="item-card7-imgs">
-							<a href="business.html" class="absolute-link"></a>
-							<img src="../assets/images/products/products/h3.jpg" alt="img" class="cover-image">
-						</div>
-						<div class="item-card7-overlaytext">
-							<a href="business.html" class="text-white"> RealEstate</a>
-						</div>
-						<div class="card-body">
-							<div class="item-card7-desc">
-								<div class="item-card7-text">
-									<a href="business.html" class="text-dark">
-										<h4 class="">2Bk Deluxe Flat</h4>
-									</a>
-								</div>
-								<ul class="item-cards7-ic mb-0">
-									<li><a href="javascript:void(0)"><span class=""><i class="icon icon-eye me-1"></i> 9 Views</span></a>
-									</li>
-									<li><a href="javascript:void(0)" class="icons"><i class="icon icon-location-pin text-muted me-1"></i>
-											USA</a></li>
-									<li class="mb-md-0"><a href="javascript:void(0)" class="icons"><i
-												class="icon icon-event text-muted me-1"></i> 2 hours ago</a></li>
-									<li class="mb-0"><a href="javascript:void(0)" class="icons"><i
-												class="icon icon-phone text-muted me-1"></i> 14 358 96584</a></li>
-								</ul>
-								<p class="mb-0">Omnis iste natus error sit dolore dg voluptatem accusantium</p>
-							</div>
-						</div>
-						<div class="card-footer">
-							<div class="footerimg d-flex mt-0 mb-0">
-								<div class="d-flex footerimg-l mb-0">
-									<img src="../assets/images/faces/male/17.jpg" alt="image"
-										class="avatar brround  me-2">
-									<h5 class="time-title text-muted p-0 leading-normal mt-2 mb-0">Christopher<i
-											class="icon icon-check text-success fs-12 ms-1" data-bs-toggle="tooltip"
-											data-bs-placement="top" title="verified"></i></h5>
-								</div>
-								<div class="mt-2 footerimg-r ms-auto">
-									<a href="javascript:void(0)" class="text-muted" data-bs-toggle="tooltip" data-bs-placement="top"
-										title="Add Wishlist"><i class="fa fa-heart"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="card mb-0 overflow-hidden">
-						<div class="item-card7-imgs">
-							<a href="business.html" class="absolute-link"></a>
-							<img src="../assets/images/products/products/v4.jpg" alt="img" class="cover-image">
-						</div>
-						<div class="item-card7-overlaytext">
-							<a href="business.html" class="text-white"> AutoMobile</a>
-						</div>
-						<div class="card-body">
-							<div class="item-card7-desc">
-								<div class="item-card7-text">
-									<a href="business.html" class="text-dark">
-										<h4 class="">Gittbo AutoMobiles</h4>
-									</a>
-								</div>
-								<ul class="item-cards7-ic mb-0">
-									<li><a href="javascript:void(0)"><span class=""><i class="icon icon-eye me-1"></i> 22
-												Views</span></a></li>
-									<li><a href="javascript:void(0)" class="icons"><i class="icon icon-location-pin text-muted me-1"></i>
-											London</a></li>
-									<li class="mb-md-0"><a href="javascript:void(0)" class="icons"><i
-												class="icon icon-event text-muted me-1"></i> 5 hours ago</a></li>
-									<li class="mb-0"><a href="javascript:void(0)" class="icons"><i
-												class="icon icon-phone text-muted me-1"></i> 12 654 86596</a></li>
-								</ul>
-								<p class="mb-0">Omnis iste natus error sit dolore dg voluptatem accusantium</p>
-							</div>
-						</div>
-						<div class="card-footer">
-							<div class="footerimg d-flex mt-0 mb-0">
-								<div class="d-flex footerimg-l mb-0">
-									<img src="../assets/images/faces/male/18.jpg" alt="image"
-										class="avatar brround  me-2">
-									<h5 class="time-title text-muted p-0 leading-normal mt-2 mb-0">Wendy Peake<i
-											class="icon icon-check text-success fs-12 ms-1" data-bs-toggle="tooltip"
-											data-bs-placement="top" title="verified"></i></h5>
-								</div>
-								<div class="mt-2 footerimg-r ms-auto">
-									<a href="javascript:void(0)" class="text-muted" data-bs-toggle="tooltip" data-bs-placement="top"
-										title="Add Wishlist"><i class="fa fa-heart"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="card mb-0 overflow-hidden">
-						<div class="item-card7-imgs">
-							<a href="business.html" class="absolute-link"></a>
-							<img src="../assets/images/products/products/f2.jpg" alt="img" class="cover-image">
-						</div>
-						<div class="item-card7-overlaytext">
-							<a href="business.html" class="text-white"> Restaurant</a>
-						</div>
-						<div class="card-body">
-							<div class="item-card7-desc">
-								<div class="item-card7-text">
-									<a href="business.html" class="text-dark">
-										<h4 class="">Chinese Restaurant</h4>
-									</a>
-								</div>
-								<ul class="item-cards7-ic mb-0">
-									<li><a href="javascript:void(0)"><span class=""><i class="icon icon-eye me-1"></i> 12
-												Views</span></a></li>
-									<li><a href="javascript:void(0)" class="icons"><i class="icon icon-location-pin text-muted me-1"></i>
-											UK</a></li>
-									<li class="mb-md-0"><a href="javascript:void(0)" class="icons"><i
-												class="icon icon-event text-muted me-1"></i> 1 hours ago</a></li>
-									<li class="mb-0"><a href="javascript:void(0)" class="icons"><i
-												class="icon icon-phone text-muted me-1"></i> 14 675 65430</a></li>
-								</ul>
-								<p class="mb-0">Omnis iste natus error sit dolore dg voluptatem accusantium</p>
-							</div>
-						</div>
-						<div class="card-footer">
-							<div class="footerimg d-flex mt-0 mb-0">
-								<div class="d-flex footerimg-l mb-0">
-									<img src="../assets/images/faces/female/12.jpg" alt="image"
-										class="avatar brround  me-2">
-									<h5 class="time-title text-muted p-0 leading-normal mt-2 mb-0">Wendy Peake<i
-											class="icon icon-check text-success fs-12 ms-1" data-bs-toggle="tooltip"
-											data-bs-placement="top" title="verified"></i></h5>
-								</div>
-								<div class="mt-2 footerimg-r ms-auto">
-									<a href="javascript:void(0)" class="text-pink" data-bs-toggle="tooltip" data-bs-placement="top"
-										title="Remove from Wishlist"><i class="fa fa-heart"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="card mb-0 overflow-hidden">
-						<div class="arrow-ribbon bg-primary">Open at 5'o clock</div>
-						<div class="item-card7-imgs">
-							<a href="business.html" class="absolute-link"></a>
-							<img src="../assets/images/products/products/j3.jpg" alt="img" class="cover-image">
-						</div>
-						<div class="item-card7-overlaytext">
-							<a href="business.html" class="text-white"> Beauty</a>
-							<h4 class="mb-0">18% Off</h4>
-						</div>
-						<div class="card-body">
-							<div class="item-card7-desc">
-								<div class="item-card7-text  d-flex">
-									<a href="business.html" class="text-dark">
-										<h4 class="">FrogeBeauty & Spa</h4>
-									</a>
-								</div>
-								<ul class="item-cards7-ic mb-0">
-									<li><a href="javascript:void(0)"><span class=""><i class="icon icon-eye me-1"></i> 632
-												Views</span></a></li>
-									<li><a href="javascript:void(0)" class="icons"><i class="icon icon-location-pin text-muted me-1"></i>
-											USA</a></li>
-									<li class="mb-md-0"><a href="javascript:void(0)" class="icons"><i
-												class="icon icon-event text-muted me-1"></i> 22 hours ago</a></li>
-									<li class="mb-0"><a href="javascript:void(0)" class="icons"><i
-												class="icon icon-phone text-muted me-1"></i> 14 675 65430</a></li>
-								</ul>
-								<p class="mb-0">Omnis iste natus error sit dolore dg voluptatem accusantium</p>
-							</div>
-						</div>
-						<div class="card-footer">
-							<div class="footerimg d-flex mt-0 mb-0">
-								<div class="d-flex footerimg-l mb-0">
-									<img src="../assets/images/faces/female/19.jpg" alt="image"
-										class="avatar brround  me-2">
-									<h5 class="time-title text-muted p-0 leading-normal mt-2 mb-0">Elizabeth<i
-											class="icon icon-check text-success fs-12 ms-1" data-bs-toggle="tooltip"
-											data-bs-placement="top" title="verified"></i></h5>
-								</div>
-								<div class="mt-2 footerimg-r ms-auto">
-									<a href="business.html" class="text-muted" data-bs-toggle="tooltip"
-										data-bs-placement="top" title="Add Wishlist"><i class="fa fa-heart"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				@endforeach
+				
 			</div>
 		</div>
 	</section>
@@ -660,29 +484,29 @@
 							<div class="col-12">
 								<ul class="nav items-blog-tab-menu">
 									<li class=""><a href="#tab-1" class="active show" data-bs-toggle="tab">All</a></li>
-									<li><a href="#tab-2" data-bs-toggle="tab" class="">Business</a></li>
-									<li><a href="#tab-3" data-bs-toggle="tab" class="">Beauty</a></li>
-									<li><a href="#tab-4" data-bs-toggle="tab" class="">Real Estate</a></li>
-									<li><a href="#tab-5" data-bs-toggle="tab" class="">Restaurant</a></li>
+									<li><a href="#tab-2" data-bs-toggle="tab" class="">Latest News</a></li>
+									<li><a href="#tab-3" data-bs-toggle="tab" class="">Old News</a></li>
+									
 								</ul>
 							</div>
 						</div>
 						<div class="tab-content">
 							<div class="tab-pane active" id="tab-1">
 								<div class="row">
+									@foreach(App\Models\adminPost::where('status',1)->inRandomOrder()->limit(3)->get() as $allItem)
 									<div class="col-xl-4 col-lg-4 col-md-12">
 										<div class="card mb-xl-0">
 											<div class="item-card8-img  br-te-4 br-ts-4">
-												<img src="../assets/images/products/products/f2.jpg" alt="img"
+												<img src="{{asset('image/' . $allItem->image)}}" alt="img"
 													class="cover-image">
 											</div>
 											<div class="item-card8-overlaytext">
-												<h6 class="mb-0">Restaurants</h6>
+												<h6 class="mb-0">{{$allItem->categoryFunction->name}}</h6>
 											</div>
 											<div class="card-body">
 												<div class="item-card8-desc">
 													<p class="text-muted mb-2">18 November 2019.</p>
-													<h4 class="font-weight-semibold">Food &amp; Bar Restaurant</h4>
+													<h4 class="font-weight-semibold">{{$allItem->name}}</h4>
 													<p class="mb-0">Lorem ipsum dolor sit amet, quis nostrum
 														exercitationem ullam corporis suscipit laboriosam</p>
 												</div>
@@ -707,99 +531,26 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-xl-4 col-lg-4 col-md-12">
-										<div class="card mb-xl-0">
-											<div class="item-card8-img  br-te-4 br-ts-4">
-												<img src="../assets/images/products/products/h2.jpg" alt="img"
-													class="cover-image">
-											</div>
-											<div class="item-card8-overlaytext">
-												<h6 class="bg-primary mb-0">Real State</h6>
-											</div>
-											<div class="card-body">
-												<div class="item-card8-desc">
-													<p class="text-muted mb-2">22 November 2019.</p>
-													<h4 class="font-weight-semibold">RealEstate Company</h4>
-													<p class="mb-0">Lorem ipsum dolor sit amet, quis nostrum
-														exercitationem ullam corporis suscipit laboriosam</p>
-												</div>
-											</div>
-											<div class="card-footer">
-												<div class="footerimg d-flex mt-0 mb-0">
-													<div class="d-flex footerimg-l mb-0">
-														<img src="../assets/images/faces/female/1.jpg" alt="image"
-															class="avatar brround  me-2">
-														<h5 class="time-title text-muted p-0 leading-normal mt-2 mb-0">
-															Jodie Melton<i
-																class="icon icon-check text-success fs-12 ms-1"
-																data-bs-toggle="tooltip" data-bs-placement="top"
-																title="" data-bs-original-title="verified"></i></h5>
-													</div>
-													<div class="mt-2 footerimg-r ms-auto">
-														<a href="business.html" class="text-muted"
-															data-bs-toggle="tooltip" data-bs-placement="top" title=""
-															data-bs-original-title="Add Wishlist"><i
-																class="fa fa-heart"></i></a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-xl-4 col-lg-4 col-md-12">
-										<div class="card mb-lg-0">
-											<div class="item-card8-img  br-te-4 br-ts-4">
-												<img src="../assets/images/products/products/j1.jpg" alt="img"
-													class="cover-image">
-											</div>
-											<div class="item-card8-overlaytext">
-												<h6 class="bg-info mb-0">Beauty Spa</h6>
-											</div>
-											<div class="card-body">
-												<div class="item-card8-desc">
-													<p class="text-muted mb-2">16 Oct 2019.</p>
-													<h4 class="font-weight-semibold">Modern Beauty & Spa</h4>
-													<p class="mb-0">Lorem ipsum dolor sit amet, quis nostrum
-														exercitationem ullam corporis suscipit laboriosam</p>
-												</div>
-											</div>
-											<div class="card-footer">
-												<div class="footerimg d-flex mt-0 mb-0">
-													<div class="d-flex footerimg-l mb-0">
-														<img src="../assets/images/faces/male/19.jpg" alt="image"
-															class="avatar brround  me-2">
-														<h5 class="time-title text-muted p-0 leading-normal mt-2 mb-0">
-															Rogelio Brown<i
-																class="icon icon-check text-success fs-12 ms-1"
-																data-bs-toggle="tooltip" data-bs-placement="top"
-																title="" data-bs-original-title="verified"></i></h5>
-													</div>
-													<div class="mt-2 footerimg-r ms-auto">
-														<a href="business.html" class="text-muted"
-															data-bs-toggle="tooltip" data-bs-placement="top" title=""
-															data-bs-original-title="Add Wishlist"><i
-																class="fa fa-heart"></i></a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
+									@endforeach
+									
 								</div>
 							</div>
 							<div class="tab-pane" id="tab-2">
 								<div class="row">
+									@foreach(App\Models\adminPost::where('status',1)->inRandomOrder()->latest()->limit(3)->get() as $allItem)
 									<div class="col-xl-4 col-lg-4 col-md-12">
 										<div class="card mb-xl-0">
 											<div class="item-card8-img  br-te-4 br-ts-4">
-												<img src="../assets/images/products/products/f1.jpg" alt="img"
+												<img src="{{asset('image/' . $allItem->image)}}" alt="img"
 													class="cover-image">
 											</div>
 											<div class="item-card8-overlaytext">
-												<h6 class="bg-primary mb-0">Business</h6>
+												<h6 class="mb-0">{{$allItem->categoryFunction->name}}</h6>
 											</div>
 											<div class="card-body">
 												<div class="item-card8-desc">
-													<p class="text-muted mb-2">6 Aug 2019.</p>
-													<h4 class="font-weight-semibold">Business Analysis</h4>
+													<p class="text-muted mb-2">18 November 2019.</p>
+													<h4 class="font-weight-semibold">{{$allItem->name}}</h4>
 													<p class="mb-0">Lorem ipsum dolor sit amet, quis nostrum
 														exercitationem ullam corporis suscipit laboriosam</p>
 												</div>
@@ -807,11 +558,10 @@
 											<div class="card-footer">
 												<div class="footerimg d-flex mt-0 mb-0">
 													<div class="d-flex footerimg-l mb-0">
-														<img src="../assets/images/faces/female/2.jpg" alt="image"
+														<img src="../assets/images/faces/female/19.jpg" alt="image"
 															class="avatar brround  me-2">
 														<h5 class="time-title text-muted p-0 leading-normal mt-2 mb-0">
-															Thu Astudillo<i
-																class="icon icon-check text-success fs-12 ms-1"
+															Elizabeth<i class="icon icon-check text-success fs-12 ms-1"
 																data-bs-toggle="tooltip" data-bs-placement="top"
 																title="" data-bs-original-title="verified"></i></h5>
 													</div>
@@ -825,335 +575,25 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-xl-4 col-lg-4 col-md-12">
-										<div class="card mb-xl-0">
-											<div class="item-card8-img">
-												<img src="../assets/images/products/products/j2.jpg" alt="img"
-													class="cover-image">
-											</div>
-											<div class="item-card8-overlaytext">
-												<h6 class="bg-secondary mb-0">Business</h6>
-											</div>
-											<div class="card-body">
-												<div class="item-card8-desc">
-													<p class="text-muted mb-2">7 July 2019.</p>
-													<h4 class="font-weight-semibold">Business Styles</h4>
-													<p class="mb-0">Lorem ipsum dolor sit amet, quis nostrum
-														exercitationem ullam corporis suscipit laboriosam</p>
-												</div>
-											</div>
-											<div class="card-footer">
-												<div class="footerimg d-flex mt-0 mb-0">
-													<div class="d-flex footerimg-l mb-0">
-														<img src="../assets/images/faces/male/2.jpg" alt="image"
-															class="avatar brround  me-2">
-														<h5 class="time-title text-muted p-0 leading-normal mt-2 mb-0">
-															Shelton Vause <i
-																class="icon icon-check text-success fs-12 ms-1"
-																data-bs-toggle="tooltip" data-bs-placement="top"
-																title="" data-bs-original-title="verified"></i></h5>
-													</div>
-													<div class="mt-2 footerimg-r ms-auto">
-														<a href="business.html" class="text-muted"
-															data-bs-toggle="tooltip" data-bs-placement="top" title=""
-															data-bs-original-title="Add Wishlist"><i
-																class="fa fa-heart"></i></a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-xl-4 col-lg-4 col-md-12">
-										<div class="card mb-0">
-											<div class="item-card8-img">
-												<img src="../assets/images/products/products/j3.jpg" alt="img"
-													class="cover-image">
-											</div>
-											<div class="item-card8-overlaytext">
-												<h6 class="bg-info mb-0">Business</h6>
-											</div>
-											<div class="card-body">
-												<div class="item-card8-desc">
-													<p class="text-muted mb-2">16 April 2019.</p>
-													<h4 class="font-weight-semibold">Categorized Business</h4>
-													<p class="mb-0">Lorem ipsum dolor sit amet, quis nostrum
-														exercitationem ullam corporis suscipit laboriosam</p>
-												</div>
-											</div>
-											<div class="card-footer">
-												<div class="footerimg d-flex mt-0 mb-0">
-													<div class="d-flex footerimg-l mb-0">
-														<img src="../assets/images/faces/female/3.jpg" alt="image"
-															class="avatar brround  me-2">
-														<h5 class="time-title text-muted p-0 leading-normal mt-2 mb-0">
-															Ellena Beachy <i
-																class="icon icon-check text-success fs-12 ms-1"
-																data-bs-toggle="tooltip" data-bs-placement="top"
-																title="" data-bs-original-title="verified"></i></h5>
-													</div>
-													<div class="mt-2 footerimg-r ms-auto">
-														<a href="business.html" class="text-muted"
-															data-bs-toggle="tooltip" data-bs-placement="top" title=""
-															data-bs-original-title="Add Wishlist"><i
-																class="fa fa-heart"></i></a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
+									@endforeach
 								</div>
 							</div>
 							<div class="tab-pane" id="tab-3">
 								<div class="row">
+									@foreach(App\Models\adminPost::orderby('id','desc')->where('status',1)->inRandomOrder()->limit(3)->get() as $allItem)
 									<div class="col-xl-4 col-lg-4 col-md-12">
 										<div class="card mb-xl-0">
 											<div class="item-card8-img  br-te-4 br-ts-4">
-												<img src="../assets/images/products/products/b1.jpg" alt="img"
+												<img src="{{asset('image/' . $allItem->image)}}" alt="img"
 													class="cover-image">
 											</div>
 											<div class="item-card8-overlaytext">
-												<h6 class="bg-info mb-0">Spa</h6>
+												<h6 class="mb-0">{{$allItem->categoryFunction->name}}</h6>
 											</div>
 											<div class="card-body">
 												<div class="item-card8-desc">
-													<p class="text-muted mb-2">16 May 2019.</p>
-													<h4 class="font-weight-semibold">Spanish Spa</h4>
-													<p class="mb-0">Lorem ipsum dolor sit amet, quis nostrum
-														exercitationem ullam corporis suscipit laboriosam</p>
-												</div>
-											</div>
-											<div class="card-footer">
-												<div class="footerimg d-flex mt-0 mb-0">
-													<div class="d-flex footerimg-l mb-0">
-														<img src="../assets/images/faces/female/5.jpg" alt="image"
-															class="avatar brround  me-2">
-														<h5 class="time-title text-muted p-0 leading-normal mt-2 mb-0">
-															Vania Pease <i
-																class="icon icon-check text-success fs-12 ms-1"
-																data-bs-toggle="tooltip" data-bs-placement="top"
-																title="" data-bs-original-title="verified"></i></h5>
-													</div>
-													<div class="mt-2 footerimg-r ms-auto">
-														<a href="business.html" class="text-muted"
-															data-bs-toggle="tooltip" data-bs-placement="top" title=""
-															data-bs-original-title="Add Wishlist"><i
-																class="fa fa-heart"></i></a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-xl-4 col-lg-4 col-md-12">
-										<div class="card mb-0">
-											<div class="item-card8-img">
-												<img src="../assets/images/products/products/b2.jpg" alt="img"
-													class="cover-image">
-											</div>
-											<div class="item-card8-overlaytext">
-												<h6 class="bg-primary mb-0">Spa</h6>
-											</div>
-											<div class="card-body">
-												<div class="item-card8-desc">
-													<p class="text-muted mb-2">15 May 2019.</p>
-													<h4 class="font-weight-semibold">Beauty Saloon</h4>
-													<p class="mb-0">Lorem ipsum dolor sit amet, quis nostrum
-														exercitationem ullam corporis suscipit laboriosam</p>
-												</div>
-											</div>
-											<div class="card-footer">
-												<div class="footerimg d-flex mt-0 mb-0">
-													<div class="d-flex footerimg-l mb-0">
-														<img src="../assets/images/faces/male/5.jpg" alt="image"
-															class="avatar brround  me-2">
-														<h5 class="time-title text-muted p-0 leading-normal mt-2 mb-0">
-															Chery Fogle <i
-																class="icon icon-check text-success fs-12 ms-1"
-																data-bs-toggle="tooltip" data-bs-placement="top"
-																title="" data-bs-original-title="verified"></i></h5>
-													</div>
-													<div class="mt-2 footerimg-r ms-auto">
-														<a href="business.html" class="text-muted"
-															data-bs-toggle="tooltip" data-bs-placement="top" title=""
-															data-bs-original-title="Add Wishlist"><i
-																class="fa fa-heart"></i></a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-xl-4 col-lg-4 col-md-12">
-										<div class="card mb-lg-0">
-											<div class="item-card8-img  br-te-4 br-ts-4">
-												<img src="../assets/images/products/products/j1.jpg" alt="img"
-													class="cover-image">
-											</div>
-											<div class="item-card8-overlaytext">
-												<h6 class="bg-secondary mb-0">Spa</h6>
-											</div>
-											<div class="card-body">
-												<div class="item-card8-desc">
-													<p class="text-muted mb-2">16 Feb 2019.</p>
-													<h4 class="font-weight-semibold">Hiar Spa</h4>
-													<p class="mb-0">Lorem ipsum dolor sit amet, quis nostrum
-														exercitationem ullam corporis suscipit laboriosam</p>
-												</div>
-											</div>
-											<div class="card-footer">
-												<div class="footerimg d-flex mt-0 mb-0">
-													<div class="d-flex footerimg-l mb-0">
-														<img src="../assets/images/faces/female/6.jpg" alt="image"
-															class="avatar brround  me-2">
-														<h5 class="time-title text-muted p-0 leading-normal mt-2 mb-0">
-															Leonila Payson <i
-																class="icon icon-check text-success fs-12 ms-1"
-																data-bs-toggle="tooltip" data-bs-placement="top"
-																title="" data-bs-original-title="verified"></i></h5>
-													</div>
-													<div class="mt-2 footerimg-r ms-auto">
-														<a href="business.html" class="text-muted"
-															data-bs-toggle="tooltip" data-bs-placement="top" title=""
-															data-bs-original-title="Add Wishlist"><i
-																class="fa fa-heart"></i></a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="tab-pane" id="tab-4">
-								<div class="row">
-									<div class="col-xl-4 col-lg-4 col-md-12">
-										<div class="card mb-xl-0">
-											<div class="item-card8-img  br-te-4 br-ts-4">
-												<img src="../assets/images/products/products/h4.jpg" alt="img"
-													class="cover-image">
-											</div>
-											<div class="item-card8-overlaytext">
-												<h6 class="bg-primary mb-0">Real Estate</h6>
-											</div>
-											<div class="card-body">
-												<div class="item-card8-desc">
-													<p class="text-muted mb-2">22 November 2019.</p>
-													<h4 class="font-weight-semibold">Building RealEstate</h4>
-													<p class="mb-0">Lorem ipsum dolor sit amet, quis nostrum
-														exercitationem ullam corporis suscipit laboriosam</p>
-												</div>
-											</div>
-											<div class="card-footer">
-												<div class="footerimg d-flex mt-0 mb-0">
-													<div class="d-flex footerimg-l mb-0">
-														<img src="../assets/images/faces/male/7.jpg" alt="image"
-															class="avatar brround  me-2">
-														<h5 class="time-title text-muted p-0 leading-normal mt-2 mb-0">
-															Margarita Franklin <i
-																class="icon icon-check text-success fs-12 ms-1"
-																data-bs-toggle="tooltip" data-bs-placement="top"
-																title="" data-bs-original-title="verified"></i></h5>
-													</div>
-													<div class="mt-2 footerimg-r ms-auto">
-														<a href="business.html" class="text-muted"
-															data-bs-toggle="tooltip" data-bs-placement="top" title=""
-															data-bs-original-title="Add Wishlist"><i
-																class="fa fa-heart"></i></a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-xl-4 col-lg-4 col-md-12">
-										<div class="card mb-xl-0">
-											<div class="item-card8-img">
-												<img src="../assets/images/products/products/h2.jpg" alt="img"
-													class="cover-image">
-											</div>
-											<div class="item-card8-overlaytext">
-												<h6 class="bg-info mb-0">Real Estate</h6>
-											</div>
-											<div class="card-body">
-												<div class="item-card8-desc">
-													<p class="text-muted mb-2">28 December 2019.</p>
-													<h4 class="font-weight-semibold">Modern Ventures</h4>
-													<p class="mb-0">Lorem ipsum dolor sit amet, quis nostrum
-														exercitationem ullam corporis suscipit laboriosam</p>
-												</div>
-											</div>
-											<div class="card-footer">
-												<div class="footerimg d-flex mt-0 mb-0">
-													<div class="d-flex footerimg-l mb-0">
-														<img src="../assets/images/faces/male/8.jpg" alt="image"
-															class="avatar brround  me-2">
-														<h5 class="time-title text-muted p-0 leading-normal mt-2 mb-0">
-															Hobert Dillon <i
-																class="icon icon-check text-success fs-12 ms-1"
-																data-bs-toggle="tooltip" data-bs-placement="top"
-																title="" data-bs-original-title="verified"></i></h5>
-													</div>
-													<div class="mt-2 footerimg-r ms-auto">
-														<a href="business.html" class="text-muted"
-															data-bs-toggle="tooltip" data-bs-placement="top" title=""
-															data-bs-original-title="Add Wishlist"><i
-																class="fa fa-heart"></i></a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-xl-4 col-lg-4 col-md-12">
-										<div class="card mb-0">
-											<div class="item-card8-img">
-												<img src="../assets/images/products/products/h3.jpg" alt="img"
-													class="cover-image">
-											</div>
-											<div class="item-card8-overlaytext">
-												<h6 class="bg-secondary mb-0">Real Estate</h6>
-											</div>
-											<div class="card-body">
-												<div class="item-card8-desc">
-													<p class="text-muted mb-2">14 December 2019.</p>
-													<h4 class="font-weight-semibold">Consultancy Pvt Ltd</h4>
-													<p class="mb-0">Lorem ipsum dolor sit amet, quis nostrum
-														exercitationem ullam corporis suscipit laboriosam</p>
-												</div>
-											</div>
-											<div class="card-footer">
-												<div class="footerimg d-flex mt-0 mb-0">
-													<div class="d-flex footerimg-l mb-0">
-														<img src="../assets/images/faces/female/10.jpg" alt="image"
-															class="avatar brround  me-2">
-														<h5 class="time-title text-muted p-0 leading-normal mt-2 mb-0">
-															Angele Vorpahl <i
-																class="icon icon-check text-success fs-12 ms-1"
-																data-bs-toggle="tooltip" data-bs-placement="top"
-																title="" data-bs-original-title="verified"></i></h5>
-													</div>
-													<div class="mt-2 footerimg-r ms-auto">
-														<a href="business.html" class="text-muted"
-															data-bs-toggle="tooltip" data-bs-placement="top" title=""
-															data-bs-original-title="Add Wishlist"><i
-																class="fa fa-heart"></i></a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="tab-pane" id="tab-5">
-								<div class="row">
-									<div class="col-xl-4 col-lg-4 col-md-12">
-										<div class="card mb-xl-0">
-											<div class="item-card8-img  br-te-4 br-ts-4">
-												<img src="../assets/images/products/products/f4.jpg" alt="img"
-													class="cover-image">
-											</div>
-											<div class="item-card8-overlaytext">
-												<h6 class="bg-info mb-0">Restaurant</h6>
-											</div>
-											<div class="card-body">
-												<div class="item-card8-desc">
-													<p class="text-muted mb-2">16 November 2019.</p>
-													<h4 class="font-weight-semibold">Food Courts</h4>
+													<p class="text-muted mb-2">18 November 2019.</p>
+													<h4 class="font-weight-semibold">{{$allItem->name}}</h4>
 													<p class="mb-0">Lorem ipsum dolor sit amet, quis nostrum
 														exercitationem ullam corporis suscipit laboriosam</p>
 												</div>
@@ -1178,82 +618,10 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-xl-4 col-lg-4 col-md-12">
-										<div class="card mb-xl-0">
-											<div class="item-card8-img">
-												<img src="../assets/images/products/products/f3.jpg" alt="img"
-													class="cover-image">
-											</div>
-											<div class="item-card8-overlaytext">
-												<h6 class="bg-secondary mb-0">Restaurant</h6>
-											</div>
-											<div class="card-body">
-												<div class="item-card8-desc">
-													<p class="text-muted mb-2">7 May 2019.</p>
-													<h4 class="font-weight-semibold">Healthy Homely Food</h4>
-													<p class="mb-0">Lorem ipsum dolor sit amet, quis nostrum
-														exercitationem ullam corporis suscipit laboriosam</p>
-												</div>
-											</div>
-											<div class="card-footer">
-												<div class="footerimg d-flex mt-0 mb-0">
-													<div class="d-flex footerimg-l mb-0">
-														<img src="../assets/images/faces/female/19.jpg" alt="image"
-															class="avatar brround  me-2">
-														<h5 class="time-title text-muted p-0 leading-normal mt-2 mb-0">
-															Elizabeth<i class="icon icon-check text-success fs-12 ms-1"
-																data-bs-toggle="tooltip" data-bs-placement="top"
-																title="" data-bs-original-title="verified"></i></h5>
-													</div>
-													<div class="mt-2 footerimg-r ms-auto">
-														<a href="business.html" class="text-muted"
-															data-bs-toggle="tooltip" data-bs-placement="top" title=""
-															data-bs-original-title="Add Wishlist"><i
-																class="fa fa-heart"></i></a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-xl-4 col-lg-4 col-md-12">
-										<div class="card mb-0">
-											<div class="item-card8-img">
-												<img src="../assets/images/products/products/f2.jpg" alt="img"
-													class="cover-image">
-											</div>
-											<div class="item-card8-overlaytext">
-												<h6 class="bg-primary mb-0">Restaurant</h6>
-											</div>
-											<div class="card-body">
-												<div class="item-card8-desc">
-													<p class="text-muted mb-2">18 June 2019.</p>
-													<h4 class="font-weight-semibold">Spanish Styles</h4>
-													<p class="mb-0">Lorem ipsum dolor sit amet, quis nostrum
-														exercitationem ullam corporis suscipit laboriosam</p>
-												</div>
-											</div>
-											<div class="card-footer">
-												<div class="footerimg d-flex mt-0 mb-0">
-													<div class="d-flex footerimg-l mb-0">
-														<img src="../assets/images/faces/female/19.jpg" alt="image"
-															class="avatar brround  me-2">
-														<h5 class="time-title text-muted p-0 leading-normal mt-2 mb-0">
-															Elizabeth<i class="icon icon-check text-success fs-12 ms-1"
-																data-bs-toggle="tooltip" data-bs-placement="top"
-																title="" data-bs-original-title="verified"></i></h5>
-													</div>
-													<div class="mt-2 footerimg-r ms-auto">
-														<a href="business.html" class="text-muted"
-															data-bs-toggle="tooltip" data-bs-placement="top" title=""
-															data-bs-original-title="Add Wishlist"><i
-																class="fa fa-heart"></i></a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
+									@endforeach
 								</div>
 							</div>
+							
 						</div>
 					</div>
 				</div>

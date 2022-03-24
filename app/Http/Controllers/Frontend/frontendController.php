@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Cuntry;
+use App\Models\adminPost;
 use App\Models\Company;
 use App\Models\Category;
 use Illuminate\Http\Request;
@@ -20,7 +21,7 @@ class frontendController extends Controller
     public function home()
     {
         $categorys = Category::orderby('name','asc')->where('status',1)->where('is_parent',0)->get();
-        $companys  = DB::table('companies')->where('status',1)->inRandomOrder()->get();
+        $companys  = Company::where('status',1)->inRandomOrder()->get();
        
         return view('frontend.pages.home',compact('categorys','companys'));
     }
@@ -28,26 +29,44 @@ class frontendController extends Controller
     
     public function businessList()
     {
-        return view('frontend.pages.business-list');
+        $companys = Company::where('status',1)->inRandomOrder()->get();
+        return view('frontend.pages.business-list',compact('companys'));
     }
 
     public function businessDetails($slug)
     {
         $company = Company::where('slug', $slug)->first();
         if( !empty($company)){
-            return view('frontend.pages.business-details',compact('company'));
+            $category = $company->cat_id;
+            $adminPosts = adminPost::where('status',1)->where('cat_id',$category)->latest()->get();
+            return view('frontend.pages.business-details',compact('company','adminPosts'));
+        }
+        
+    }
+    public function primaryCategory($slug)
+    {
+        $category = Category::where('slug', $slug)->first();
+        if( !empty($category)){
+            return view('frontend.pages.category-wish',compact('category'));
         }
         
     }
 
     public function blogList()
     {
-        return view('frontend.pages.blog-list');
+        $adminPosts = adminPost::where('status',1)->inRandomOrder()->limit(6)->get();
+        return view('frontend.pages.blog-list',compact('adminPosts'));
     }
 
-    public function blogDetails()
+    public function blogDetails($slug)
     {
-        return view('frontend.pages.blog-details');
+        $post = adminPost::where('slug', $slug)->first();
+        if(!empty($post)){
+            return view('frontend.pages.blog-details',compact('post'));
+        }else{
+            return back();
+        }
+        
     }
 
     public function userDashboard()
@@ -57,15 +76,14 @@ class frontendController extends Controller
         return view('frontend.pages.user.dashboard',compact('cuntrys','business'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    
+    public function webDesign()
     {
-        //
+        return view('frontend.pages.it-service.web-design');
+    }
+    public function webDevelopment()
+    {
+        return view('frontend.pages.it-service.web-development');
     }
 
     /**
