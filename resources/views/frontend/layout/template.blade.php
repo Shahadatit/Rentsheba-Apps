@@ -211,6 +211,10 @@
 	<script src="/assets/js/select2.js"></script>
 	<!-- sticky Js-->
 	<script src="/assets/js/sticky.js"></script>
+	<!-- Bootstrap wizard -->
+	<script src="/assets/plugins/bootstrap-wizard/jquery.bootstrap.wizard.js"></script>
+	<script src="/assets/plugins/jquery-validation/dist/jquery.validate.min.js"></script>
+	<script src="/assets/js/wizard.js"></script>
 	<!-- Cookie js -->
 	<script src="/assets/plugins/cookie/jquery.ihavecookies.js"></script>
 	<script src="/assets/plugins/cookie/cookie.js"></script>
@@ -224,6 +228,12 @@
 	<script src="/assets/js/swipe.js"></script>
 	<!-- Scripts Js-->
 	<script src="/assets/js/scripts2.js"></script>
+	 <!--File-Uploads Js-->
+	 <script src="/assets/plugins/fancyuploder/jquery.ui.widget.js"></script>
+	<script src="/assets/plugins/fancyuploder/jquery.fileupload.js"></script>
+	<script src="/assets/plugins/fancyuploder/jquery.iframe-transport.js"></script>
+	<script src="/assets/plugins/fancyuploder/jquery.fancy-fileupload.js"></script>
+	<script src="/assets/plugins/fancyuploder/fancy-uploader.js"></script>
 	<!-- Custom Js-->
 	<script src="/assets/js/custom.js"></script>
 	<script src="/assets/js/themeColors.js"></script>

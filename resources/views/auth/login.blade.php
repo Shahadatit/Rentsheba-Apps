@@ -32,6 +32,11 @@
 						<div class="col-lg-5 col-xl-4 col-md-6 d-block mx-auto">
 							<div class="wrapper wrapper2">
 								<div class="card-body">
+								@if(session()->has('success'))
+									<div class="alert alert-info">
+										{{ session()->get('success') }}
+									</div>
+								@endif
 									<h3>Login</h3>
 									<div class="text-center">
 										<div class="btn-list d-flex">
@@ -42,9 +47,10 @@
 									</div>
 								</div>
 								<hr class="divider">
+								
                                  <!-- Session Status -->
-                                    <x-auth-session-status class="mb-4" :status="session('status')" />
-                                    <x-auth-validation-errors class="mb-4" :errors="$errors" />
+                                    <x-auth-session-status class="mb-4 text-dark" :status="session('status')" />
+                                    <x-auth-validation-errors class="mb-4 text-dark" :errors="$errors" />
 								<form method="POST" action="{{ route('login') }}" id="login" class="card-body" tabindex="500">
                                     @csrf
 									<div class="mail">

@@ -16,4 +16,9 @@ class Company extends Model
     public function categoryFunc(){
         return $this->belongsTo(Category::class,'cat_id');
     }
+    public function cuntryFunc(){
+        return $this->belongsTo(Cuntry::class,'cuntry');
+    }
+
+    
 }

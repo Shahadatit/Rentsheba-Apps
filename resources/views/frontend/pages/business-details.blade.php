@@ -4,6 +4,7 @@
 
 @section('content')
 
+
 		<!--Sliders Section-->
 		<div class="pattern-img">
 			<div class="relative sptb-12 pattern2 bg-background">
@@ -12,7 +13,7 @@
 						<div class="row">
 							<div class="col-xl-8 col-lg-12 col-md-12 d-block mx-auto">
 								<div class="text-center text-white ">
-									<h1 class="mb-2"><span class="font-weight-semibold">Bizdire University</span></h1>
+									<h1 class="mb-2"><span class="font-weight-semibold">{{$company->main_title}} - Rentsheba</span></h1>
 									<div class="mx-auto mb-2 mt-3 d-flex banner-ratings">
 										<div class="rating-star sm my-rating-5" data-rating="4.5">
 										</div>
@@ -20,27 +21,19 @@
 									</div>
 									<ul class="social-icons mb-4 ms-auto">
 										<li>
-											<a class="social-icon" href="javascript:void0"><i class="fa fa-facebook"></i></a>
+											<a class="social-icon" target="blank" href="{{$company->facebook}}"><i class="fa fa-facebook"></i></a>
 										</li>
+										
 										<li>
-											<a class="social-icon" href="javascript:void0"><i class="fa fa-twitter"></i></a>
+											<a class="social-icon" target="blank" href="{{$company->instagram}}"><i class="fa fa-instagram"></i></a>
 										</li>
+									
 										<li>
-											<a class="social-icon" href="javascript:void0"><i class="fa fa-rss"></i></a>
+											<a class="social-icon" target="blank" href="{{$company->linkedin}}"><i class="fa fa-linkedin"></i></a>
 										</li>
-										<li>
-											<a class="social-icon" href="javascript:void0"><i class="fa fa-youtube"></i></a>
-										</li>
-										<li>
-											<a class="social-icon" href="javascript:void0"><i class="fa fa-linkedin"></i></a>
-										</li>
-										<li>
-											<a class="social-icon" href="javascript:void0"><i class="fa fa-google-plus"></i></a>
-										</li>
+										
 									</ul>
-									<a class="btn btn-info mb-1 mt-1" href="javascript:void(0)"><i class="fa fa-heart-o"></i> Add Wishlist</a>
-									<a class="btn btn-success mb-1 mt-1" href="javascript:void(0)"><i class="fa fa-star"></i> Write Review</a>
-									<a href="javascript:void(0)" class="btn btn-danger icons mb-1 mt-1" data-bs-toggle="modal" data-bs-target="#report"><i class="icon icon-exclamation me-1"></i> Report Abuse</a>
+									
 								</div>
 							</div>
 						</div>
@@ -48,8 +41,8 @@
 				</div><!-- /header-text -->
 				<div class="details-absolute">
 					<div class="d-sm-flex container">
-						<div><a href="javascript:void(0)" class="text-white d-inline-block me-4 "><i class="icon icon-location-pin text-white me-2"></i>Mp-214, New York, NY 10012, US-52014</a></div>
-						<div class="ms-auto"><a href="javascript:void(0)" class="text-white d-inline-block mt-2 mt-sm-0 fs-18"><i class="icon icon-phone text-white me-2 fs-14"></i>+154 256-635-654</a></div>
+						<div><a href="javascript:void(0)" class="text-white d-inline-block me-4 "><i class="icon icon-location-pin text-white me-2"></i>{{$company->c_address}} , {{$company->district}} , @if($company->cuntry) {{$company->cuntryFunc->name}} @endif</a></div>
+						<div class="ms-auto"><a href="tel:{{$company->com_mobile}}" class="text-white d-inline-block mt-2 mt-sm-0 fs-18"><i class="icon icon-phone text-white me-2 fs-14"></i>{{$company->com_mobile}}</a></div>
 					</div>
 				</div>
 			</div>
@@ -64,7 +57,7 @@
 					<ol class="breadcrumb">
 						<li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
 						<li class="breadcrumb-item"><a href="javascript:void(0)">Categories</a></li>
-						<li class="breadcrumb-item active" aria-current="page">Business</li>
+						<li class="breadcrumb-item active" aria-current="page">{{$company->categoryFunc->name}}</li>
 					</ol>
 				</div>
 			</div>
@@ -82,12 +75,12 @@
 							<div class="ribbon ribbon-top-right text-danger"><span class="bg-danger">featured</span></div>
 							<div class="card-body">
 								<div class="item-det mb-4">
-									<a href="javascript:void(0)" class="text-dark"><h3>Bizdire University</h3></a>
+									<a href="javascript:void(0)" class="text-dark"><h3>{{$company->main_title}}</h3></a>
 									<div class=" d-md-flex">
 										<ul class="d-md-flex mb-0">
-											<li class="me-5"><a href="javascript:void(0)" class="icons"><i class="icon icon-briefcase text-muted me-1"></i> Education</a></li>
-											<li class="me-5"><a href="javascript:void(0)" class="icons"><i class="icon icon-location-pin text-muted me-1"></i> USA</a></li>
-											<li class="me-5"><a href="javascript:void(0)" class="icons"><i class="icon icon-calendar text-muted me-1"></i> 5 hours ago</a></li>
+											<li class="me-5"><a href="javascript:void(0)" class="icons"><i class="icon icon-briefcase text-muted me-1"></i> {{$company->categoryFunc->name}}</a></li>
+											<li class="me-5"><a href="javascript:void(0)" class="icons"><i class="icon icon-location-pin text-muted me-1"></i> @if($company->cuntryFunc){{$company->cuntryFunc->name}}@endif</a></li>
+											<li class="me-5"><a href="javascript:void(0)" class="icons"><i class="icon icon-calendar text-muted me-1"></i> @if($company->created_at) {{$company->created_at->format('d M, Y')}} @endif</a></li>
 											<li class="me-5"><a href="javascript:void(0)" class="icons"><i class="icon icon-eye text-muted me-1"></i> 765</a></li>
 										</ul>
 										<div class="d-flex me-5">
@@ -104,32 +97,7 @@
 									</div>
 								</div>
 								<div class="product-slider carousel-slide-1">
-									<div id="carouselFade" class="carousel slide carousel-fade" data-bs-ride="carousel"
-										data-bs-loop="false" data-bs-thumb="true" data-bs-dots="false">
-										<div class="arrow-ribbon2 bg-primary">$539</div>
-										<div class="carousel-inner slide-show-image" id=full-gallery>
-											<div class="carousel-item active"> <img src="../assets/images/products/products/ed1.jpg" alt="img"></div>
-											<div class="carousel-item"><img src="../assets/images/products/products/ed2.jpg" alt="img"> </div>
-											<div class="carousel-item"><img src="../assets/images/products/products/ed3.jpg" alt="img"> </div>
-											<div class="carousel-item"><img src="../assets/images/products/products/ed4.jpg" alt="img"> </div>
-											<div class="carousel-item"><img src="../assets/images/products/products/ed5.jpg" alt="img"> </div>
-											<div class="carousel-item"><img src="../assets/images/products/products/ed6.jpg" alt="img"> </div>
-											<div class="carousel-item"><img src="../assets/images/products/products/ed7.jpg" alt="img"> </div>
-											<div class="carousel-item"><img src="../assets/images/products/products/ed8.jpg" alt="img"> </div>
-											<div class="carousel-item"><img src="../assets/images/products/products/ed9.jpg" alt="img"> </div>
-											<div class="carousel-item"><img src="../assets/images/products/products/ed10.jpg" alt="img"> </div>
-											<div class="thumbcarousel">
-												<a class="carousel-control-prev" href="#carouselFade" role="button"
-													data-bs-slide="prev">
-													<i class="fa fa-angle-left" aria-hidden="true"></i>
-												</a>
-												<a class="carousel-control-next" href="#carouselFade" role="button"
-													data-bs-slide="next">
-													<i class="fa fa-angle-right" aria-hidden="true"></i>
-												</a>
-											</div>
-										</div>
-									</div>
+								<img src="{{asset('image/' . $company->logo)}}" alt="img">
 								</div>
 							</div>
 						</div>
@@ -139,19 +107,19 @@
 							</div>
 							<div class="card-body">
 								<div class="mb-0">
-									<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atcorrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
-									<p class="">On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoraliz the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble thena bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain.</p>
+									<p>{{$company->description}}</p>
+									
 								</div>
 								<h4 class="card-title mt-5 mb-3">Contact Info</h4>
 								<div class="item-user mt-3">
 									<div class="row">
 										<div class="col-md-6">
-											<h6 class="font-weight-normal"><span><i class="fa fa-map me-3 mb-2"></i></span><a href="javascript:void(0)" class="text-body"> Mp-214, New York, NY 10012, US-52014</a></h6>
-											<h6 class="font-weight-normal"><span><i class="fa fa-envelope me-3 mb-2"></i></span><a href="javascript:void(0)" class="text-body">spruko123@gmail.com</a></h6>
+											<h6 class="font-weight-normal"><span><i class="fa fa-map me-3 mb-2"></i></span><a href="javascript:void(0)" class="text-body"> {{$company->c_address}}, {{$company->c_district}}</a></h6>
+											<h6 class="font-weight-normal"><span><i class="fa fa-envelope me-3 mb-2"></i></span><a href="javascript:void(0)" class="text-body">{{$company->o_email}}</a></h6>
 										</div>
 										<div class="col-md-6">
-											<h6 class="font-weight-normal"><span><i class="fa fa-phone me-3  mb-2"></i></span><a href="javascript:void(0)" class="text-secondary"> 0-235-657-24587</a></h6>
-											<h6 class="font-weight-normal"><span><i class="fa fa-link me-3 "></i></span><a href="javascript:void(0)" class="text-secondary">https://spruko.com/</a></h6>
+											<h6 class="font-weight-normal"><span><i class="fa fa-phone me-3  mb-2"></i></span><a href="tel:{{$company->com_mobile}}" class="text-secondary"> {{$company->com_mobile}}</a></h6>
+											<h6 class="font-weight-normal"><span><i class="fa fa-link me-3 "></i></span><a href="{{$company->website}}" target="_blank" class="text-secondary">{{$company->website}}</a></h6>
 										</div>
 									</div>
 								</div>
@@ -159,30 +127,34 @@
 								<div class="table-responsive">
 									<table class="table mb-0 table-bordered-0">
 										<tbody>
+											
 											<tr>
-												<td class="font-weight-semibold px-0">Established Year</td>
-												<td class="px-0">1981</td>
+												<td class="font-weight-semibold px-0">Company Name</td>
+												<td class="px-0">{{$company->company_name}}</td>
 											</tr>
 											<tr>
 												<td class="font-weight-semibold px-0">Services</td>
-												<td class="px-0">Education, Courses</td>
+												<td class="px-0">{{$company->categoryFunc->name}}</td>
 											</tr>
 											<tr>
-												<td class="font-weight-semibold px-0">Payment Methods</td>
-												<td class="px-0">VISA, Mastercard, Discover, American Express</td>
+												<td class="font-weight-semibold px-0">Facebook</td>
+												<td class="px-0"><a href="{{$company->facebook}}" target="blank">{{$company->facebook}}</a></td>
 											</tr>
 											<tr>
-												<td class="font-weight-semibold px-0">Fax</td>
-												<td class="px-0">+25 485-9865-85</td>
+												<td class="font-weight-semibold px-0">Linkedin</td>
+												<td class="px-0"><a href="{{$company->linkedin}}" target="blank">{{$company->linkedin}}</a></td>
 											</tr>
 											<tr>
-												<td class="font-weight-semibold px-0">TollFree</td>
-												<td class="px-0">+25 485-9865-85</td>
+												<td class="font-weight-semibold px-0">Packeg</td>
+												<td class="px-0">
+													@if( $company->packeg == 1)
+													<span class='badge badge-info'>Free</span>
+													@elseif( $company->packeg == 2)
+													@else
+													@endif
+												</td>
 											</tr>
-											<tr>
-												<td class="font-weight-semibold px-0">Certification</td>
-												<td class="px-0">ISO Certified</td>
-											</tr>
+											
 										</tbody>
 									</table>
 								</div>

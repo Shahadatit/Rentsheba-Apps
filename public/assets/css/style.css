@@ -70347,3 +70347,14 @@ a.icon:hover {
     min-width: 150px;
 }
 /*# sourceMappingURL=style.css.map */
+
+a.nav-link.font-bold.active {
+    background: #ff8819 !important;
+    color: white;
+}
+.cat-item .cat-img img.category-card{
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    border-radius: 50%;
+}

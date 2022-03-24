@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Auth;
 
 class User extends Authenticatable
 {
@@ -19,6 +20,7 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'last_name',
         'email',
         'password',
         'phone',
@@ -30,6 +32,7 @@ class User extends Authenticatable
         'status',
         'role',
         'packeg',
+        'description',
     ];
 
     /**
@@ -50,4 +53,17 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    // user Company Cunt
+    public static function businessCount(){
+        if( Auth::check()){
+            $company = Company::where('user_id' , Auth::id())->count();
+            return $company;
+        }
+    }
+    // user Company Cunt
+    public function cuntryFunc(){
+        return $this->belongsTo(Cuntry::class , 'cuntry');
+    }
 }

@@ -229,24 +229,7 @@
 											</a>
 										</div>
 									</li>
-									<li class="dropdown">
-										<a href="javascript:void(0)" class="text-dark" data-bs-toggle="dropdown"><span>Currency <i
-													class="fa fa-caret-down text-muted"></i></span></a>
-										<div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-											<a href="javascript:void(0)" class="dropdown-item">
-												USD
-											</a>
-											<a class="dropdown-item" href="javascript:void(0)">
-												EUR
-											</a>
-											<a class="dropdown-item" href="javascript:void(0)">
-												INR
-											</a>
-											<a href="javascript:void(0)" class="dropdown-item">
-												GBP
-											</a>
-										</div>
-									</li>
+									
 								</ul>
 							</div>
 						</div>
@@ -259,7 +242,7 @@
 									<a href="javascript:void(0)" class="text-dark" data-bs-toggle="dropdown"><i
 											class="fa fa-home me-1"></i><span> My Dashboard</span></a>
 									<div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-										<a href="{{route('user-dashboard')}}" class="dropdown-item">
+										<a href="{{route('user-dashboard', Auth::user()->id)}}" class="dropdown-item">
 											<i class="dropdown-icon icon icon-user"></i> My Profile
 										</a>
 										<a class="dropdown-item" href="javascript:void(0)">
@@ -282,11 +265,11 @@
 								</li>
 								@else
 								<li>
-									<a href="register.html" class="text-dark"><i class="fa fa-user me-1"></i>
+									<a href="{{route('register')}}" class="text-dark"><i class="fa fa-user me-1"></i>
 										<span>Register</span></a>
 								</li>
 								<li>
-									<a href="login.html" class="text-dark"><i class="fa fa-sign-in me-1"></i>
+									<a href="{{route('login')}}" class="text-dark"><i class="fa fa-sign-in me-1"></i>
 										<span>Login</span></a>
 								</li>
 								@endif
@@ -343,7 +326,7 @@
 								<g></g>
 							</svg><span class="font-weight-semibold mb-0 fs-26 text-dark">RENTSHEBA</span></a>
 					</span>
-					<a href="ad-list.html" class="callusbtn"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+					<a href="{{route('add-listing')}}" class="callusbtn"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
 				</div>
 			</div>
 		</div>
@@ -356,7 +339,6 @@
 					<ul class="horizontalMenu-list">
 						<li><a href="{{url('/')}}">Home </a></li>
 						<li><a href="{{route('company-list')}}">listing</a></li>
-						<li><a href="{{route('company-details')}}">view</a></li>
 						<li><a href="{{route('blog-list')}}">post</a></li>
 						<li><a href="{{route('blog-details')}}">post view</a></li>
 						
@@ -367,8 +349,16 @@
 					</ul>
 					<ul class="mb-0">
 						<li class="mt-2 d-none d-lg-flex">
-							<span><a class="btn btn-secondary ad-post" href="ad-list.html"><i
+							@php  $companyCoutn = App\Models\User::businessCount() @endphp
+							@if( $companyCoutn > 0)
+								
+								<span><a class="btn btn-secondary ad-post" ><i
+										class=" text-white"></i> {{Auth::user()->name}} {{Auth::user()->last_name}}</a></span>
+							@else
+							<span><a class="btn btn-secondary ad-post" href="{{route('add-listing')}}"><i
 										class="fa fa-plus text-white"></i> Add Listing</a></span>
+							@endif
+							
 						</li>
 					</ul>
 				</nav>

@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('last_name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
@@ -28,6 +29,7 @@ return new class extends Migration
             $table->integer('status')->default(1)->comment('1=Active , 2=In-Active');
             $table->integer('role')->default(1)->comment('1=user , 2=Admin , 3=Manager');
             $table->integer('packeg')->default(1)->comment('1=Free , 2=Silder , 3=Gold');
+            $table->text('description')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
