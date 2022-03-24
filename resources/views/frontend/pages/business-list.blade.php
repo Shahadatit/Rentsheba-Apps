@@ -6,7 +6,7 @@
 
 	<!--Sliders Section-->
 	<div>
-		<div class="cover-image sptb-1 bg-background" data-bs-image-src="../assets/images/banners/banner1.jpg">
+		<div class="cover-image sptb-1 bg-background" data-bs-image-src="{{asset('frontend/img/businesbanner3.png')}}">
 			<div class="header-text1 mb-0">
 				<div class="container">
 					<div class="row">

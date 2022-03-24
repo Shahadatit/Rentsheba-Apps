@@ -106,7 +106,7 @@
 						</div>
 						<div class="col-lg-6">
 							<div class="border-5 br-4 mt-5 mt-lg-0 overflow-hidden">
-								<img src="" alt="">
+								<img src="{{asset('frontend/img/web-development.png')}}" alt="">
 							</div>
 						</div>
 					</div>

@@ -338,7 +338,27 @@
 				<nav class="horizontalMenu clearfix d-md-flex">
 					<ul class="horizontalMenu-list">
 						<li><a href="{{url('/')}}">Home </a></li>
-						<li><a href="{{route('company-list')}}">listing</a></li>
+						<li><a href="javascript:void(0)">Domain <span class="fa fa-caret-down m-0"></span></a>
+							<ul class="sub-menu">
+								<li><a href="#">Domain Register</a></li>
+								<li><a href="#">Domain Price</a></li>
+								<li><a href="#">Domain Transfer</a></li>
+							</ul>
+						</li>
+						<li><a href="javascript:void(0)">Hosting <span class="fa fa-caret-down m-0"></span></a>
+							<ul class="sub-menu">
+								<li><a href="#">Web Hosting</a></li>
+								<li><a href="#">WordPress Hosting</a></li>
+								<li><a href="#">VPS Hosting</a></li>
+							</ul>
+						</li>
+						<li><a href="javascript:void(0)">Web Service <span class="fa fa-caret-down m-0"></span></a>
+							<ul class="sub-menu">
+								<li><a href="{{route('web-design')}}">Web Design</a></li>
+								<li><a href="{{route('web-development')}}">Web Development</a></li>
+								<li><a href="#">Local SEO Service</a></li>
+							</ul>
+						</li>
 						<li><a href="{{route('blog-list')}}">post</a></li>
 						
 						<li><a href="contact.html"> Contact Us <span class="wsarrow"></span></a></li>

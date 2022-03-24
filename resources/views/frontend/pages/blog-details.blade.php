@@ -5,8 +5,8 @@
 @section('content')
 
 		<!--Breadcrumb-->
-		<section>
-			<div class="bannerimg cover-image bg-background3" data-bs-image-src="../assets/images/banners/banner2.jpg">
+		<section >
+			<div class="bannerimg cover-image bg-background3" data-bs-image-src="{{asset('image/' . $post->image)}}">
 				<div class="header-text mb-0">
 					<div class="container">
 						<div class="text-center text-white">

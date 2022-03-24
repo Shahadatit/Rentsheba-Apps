@@ -6,8 +6,8 @@
 
 
 		<!--Sliders Section-->
-		<div class="pattern-img">
-			<div class="relative sptb-12 pattern2 bg-background">
+		<div class="pattern-img" >
+			<div  class=" relative sptb-12 pattern2 bg-background banner-1 cover-image sptb-2 sptb-tab bg-background2" data-bs-image-src="{{asset('image/' . $company->logo)}}">
 				<div class="header-text1 mb-0">
 					<div class="container">
 						<div class="row">
