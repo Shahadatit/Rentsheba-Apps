@@ -1,6 +1,6 @@
 @extends('frontend.layout.template')
 
-@section('title') <title>Rentsheba | Rentsheba digital marketing agency</title> @endsection
+@section('title') <title> Website Design and Web Development Service </title> @endsection
 
 @section('content')
 
@@ -11,8 +11,8 @@
 			<div class="header-text text-1 mb-0">
 				<div class="container">
 					<div class="text-center text-white mb-7">
-						<h1 class="mb-1">Welcome To The Biggest Business Directory</h1>
-						<p>It is a long established fact that a reader will be distracted by the readable.</p>
+						<h1 class="mb-1"> Website Design and Web Development Service </h1>
+						<p>Welcome to Rentsheba! Rentsheba is the laargest and Trusted IT Development Service Company. It's Provides Website Design & Web Development, Domain & Hosting, Local SEO Service, Digital Marketting Service, and Business Direcotry. Grow your Business by Branding your company. High Quality Service Granted. 24/7 Suppport </p>
 					</div>
 					<div class="row">
 						<div class="col-xl-10 col-lg-12 col-md-12 d-block mx-auto">
@@ -59,6 +59,277 @@
 		</div>
 	</section>
 	<!--/Categories-->
+
+
+	<!-- web hosting service card start -->
+	<section class="sptb bg-white">
+		<div class="container">
+			<div class="section-title center-block text-center">
+				<h2> Domain & Web Hosting Service</h2>
+				<p> <b> Your domain, Your identity </b>. Your domain is a personalized address that’s easy to remember and easy to share. Build and grow your online presence with a custom domain. The best Hosting is the best for your Website. If you are looking best hosting to set up your website in less then a week, The best hosting is fast & safe for a website. </p>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-6 col-sm-6">
+					<div class="">
+						<div class="mb-lg-0 mb-4">
+							<div class="service-card text-center">
+								
+								<div class="servic-data mt-3">
+									<h3 class="font-weight-semibold mb-2">Domain Name Search </h3>
+									<p class="text-muted mb-0">A <b>Domain Names</b> are the human friendly address for Websites. Your Domain, Your identity. Check & Find Your Domain Today. Enroll in Easy Registration Process</p>
+									<a href="javascript:void(0)" class="btn btn-primary text-white w-100 px-6">Learn More</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-6">
+					<div class="">
+						<div class="mb-lg-0 mb-4">
+							<div class="service-card text-center">
+								
+								<div class="servic-data mt-3">
+									<h3 class="font-weight-semibold mb-2"> Web Hosting Service</h3>
+									<p class="text-muted mb-0">The <b> best Web Hosting</b> is best for Website. The best Hosting is fast & for a Website. If you are looking best hosting to set up your Website </p>
+									<a href="javascript:void(0)" class="btn btn-primary text-white w-100 px-6">Learn More</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-6">
+					<div class="">
+						<div class="mb-sm-0 mb-4">
+							<div class="service-card text-center">
+								
+								<div class="servic-data mt-3">
+									<h3 class="font-weight-semibold mb-2"> VPS Hosting Service</h3>
+									<p class="text-muted mb-0">A <b> Virtual Private Service (VPS) Hosting</b> is a Dedicated service instance running on shared hardware. <b> VPS Hosting </b>is most flexible </p>
+									<a href="javascript:void(0)" class="btn btn-primary text-white w-100 px-6">Learn More</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+
+	<!-- web development service card start -->
+	<section class="sptb bg-white">
+		<div class="container">
+			<div class="section-title center-block text-center">
+				<h2> Web Development Services</h2>
+				<p> The Expert Developer can be Develop best Develop about your Choice then Non-Expert Developers. So, We Should Hire an Expert Developer. </p>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-6 col-sm-6">
+					<div class="">
+						<div class="mb-lg-0 mb-4">
+							<div class="service-card text-center">
+								
+								<div class="servic-data mt-3">
+									<h3 class="font-weight-semibold mb-2"> Website Design</h3>
+									<p class="text-muted mb-0">Rentsheba Provide <b> Website Disign Services</b> by HTML-5, CSS-3, bootstrap-5, JavaScript, and jQuery. The best Web Design is available at cheap Price. The all Device Responsive with Mobile friendly Website, and SEO friendly design. </p>
+									<a href="javascript:void(0)" class="btn btn-primary text-white w-100 px-6">Learn more</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-6">
+					<div class="">
+						<div class="mb-lg-0 mb-4">
+							<div class="service-card text-center">
+								
+								<div class="servic-data mt-3">
+									<h3 class="font-weight-semibold mb-2"> Web Development Service</h3>
+									<p class="text-muted mb-0">We Provide <b> different types of Web Development Service</b> Like: (i) Statik Website (ii) Dynamic Website by the WordPress, PHP, Laravel, and Node js. Hi-Quality Web Development service is Granted in you budget. </p>
+									<a href="javascript:void(0)" class="btn btn-primary text-white w-100 px-6">Learn more</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-6">
+					<div class="">
+						<div class="mb-sm-0 mb-4">
+							<div class="service-card text-center">
+								
+								<div class="servic-data mt-3">
+									<h3 class="font-weight-semibold mb-2"> Full-Stack Development Service</h3>
+									<p class="text-muted mb-0"> We have a team of <b> Skilled full-Stack Developers</b> expertise. You can hire front-end & Back-end Development teams separately as well as. Contact us to hire Full-Stack Development </p>
+									<a href="javascript:void(0)" class="btn btn-primary text-white w-100 px-6">Learn more</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+
+	<!--Latest News-->
+	<section class="sptb">
+		<div class="container">
+			<div class="section-title center-block text-center">
+				<h2>Latest News</h2>
+				<p>Mauris ut cursus nunc. Morbi eleifend, ligula at consectetur vehicula</p>
+			</div>
+			<div>
+				<div class="items-gallery">
+					<div class="items-blog-tab text-center">
+						<div class="items-blog-tab-heading row mb-0">
+							<div class="col-12">
+								<ul class="nav items-blog-tab-menu">
+									<li class=""><a href="#tab-1" class="active show" data-bs-toggle="tab">All</a></li>
+									<li><a href="#tab-2" data-bs-toggle="tab" class="">Latest News</a></li>
+									<li><a href="#tab-3" data-bs-toggle="tab" class="">Old News</a></li>
+									
+								</ul>
+							</div>
+						</div>
+						<div class="tab-content">
+							<div class="tab-pane active" id="tab-1">
+								<div class="row">
+									@foreach(App\Models\adminPost::where('status',1)->inRandomOrder()->limit(3)->get() as $allItem)
+									<div class="col-xl-4 col-lg-4 col-md-12">
+										<div class="card mb-xl-0">
+											<div class="item-card8-img  br-te-4 br-ts-4">
+												<img src="{{asset('image/' . $allItem->image)}}" alt="img"
+													class="cover-image">
+											</div>
+											<div class="item-card8-overlaytext">
+												<h6 class="mb-0">{{$allItem->categoryFunction->name}}</h6>
+											</div>
+											<div class="card-body">
+												<div class="item-card8-desc">
+													<p class="text-muted mb-2">18 November 2019.</p>
+													<h4 class="font-weight-semibold">{{$allItem->name}}</h4>
+													<p class="mb-0">Lorem ipsum dolor sit amet, quis nostrum
+														exercitationem ullam corporis suscipit laboriosam</p>
+												</div>
+											</div>
+											<div class="card-footer">
+												<div class="footerimg d-flex mt-0 mb-0">
+													<div class="d-flex footerimg-l mb-0">
+														<img src="../assets/images/faces/female/19.jpg" alt="image"
+															class="avatar brround  me-2">
+														<h5 class="time-title text-muted p-0 leading-normal mt-2 mb-0">
+															Elizabeth<i class="icon icon-check text-success fs-12 ms-1"
+																data-bs-toggle="tooltip" data-bs-placement="top"
+																title="" data-bs-original-title="verified"></i></h5>
+													</div>
+													<div class="mt-2 footerimg-r ms-auto">
+														<a href="business.html" class="text-muted"
+															data-bs-toggle="tooltip" data-bs-placement="top" title=""
+															data-bs-original-title="Add Wishlist"><i
+																class="fa fa-heart"></i></a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									@endforeach
+									
+								</div>
+							</div>
+							<div class="tab-pane" id="tab-2">
+								<div class="row">
+									@foreach(App\Models\adminPost::where('status',1)->inRandomOrder()->latest()->limit(3)->get() as $allItem)
+									<div class="col-xl-4 col-lg-4 col-md-12">
+										<div class="card mb-xl-0">
+											<div class="item-card8-img  br-te-4 br-ts-4">
+												<img src="{{asset('image/' . $allItem->image)}}" alt="img"
+													class="cover-image">
+											</div>
+											<div class="item-card8-overlaytext">
+												<h6 class="mb-0">{{$allItem->categoryFunction->name}}</h6>
+											</div>
+											<div class="card-body">
+												<div class="item-card8-desc">
+													<p class="text-muted mb-2">18 November 2019.</p>
+													<h4 class="font-weight-semibold">{{$allItem->name}}</h4>
+													<p class="mb-0">Lorem ipsum dolor sit amet, quis nostrum
+														exercitationem ullam corporis suscipit laboriosam</p>
+												</div>
+											</div>
+											<div class="card-footer">
+												<div class="footerimg d-flex mt-0 mb-0">
+													<div class="d-flex footerimg-l mb-0">
+														<img src="../assets/images/faces/female/19.jpg" alt="image"
+															class="avatar brround  me-2">
+														<h5 class="time-title text-muted p-0 leading-normal mt-2 mb-0">
+															Elizabeth<i class="icon icon-check text-success fs-12 ms-1"
+																data-bs-toggle="tooltip" data-bs-placement="top"
+																title="" data-bs-original-title="verified"></i></h5>
+													</div>
+													<div class="mt-2 footerimg-r ms-auto">
+														<a href="business.html" class="text-muted"
+															data-bs-toggle="tooltip" data-bs-placement="top" title=""
+															data-bs-original-title="Add Wishlist"><i
+																class="fa fa-heart"></i></a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									@endforeach
+								</div>
+							</div>
+							<div class="tab-pane" id="tab-3">
+								<div class="row">
+									@foreach(App\Models\adminPost::orderby('id','desc')->where('status',1)->inRandomOrder()->limit(3)->get() as $allItem)
+									<div class="col-xl-4 col-lg-4 col-md-12">
+										<div class="card mb-xl-0">
+											<div class="item-card8-img  br-te-4 br-ts-4">
+												<img src="{{asset('image/' . $allItem->image)}}" alt="img"
+													class="cover-image">
+											</div>
+											<div class="item-card8-overlaytext">
+												<h6 class="mb-0">{{$allItem->categoryFunction->name}}</h6>
+											</div>
+											<div class="card-body">
+												<div class="item-card8-desc">
+													<p class="text-muted mb-2">18 November 2019.</p>
+													<h4 class="font-weight-semibold">{{$allItem->name}}</h4>
+													<p class="mb-0">Lorem ipsum dolor sit amet, quis nostrum
+														exercitationem ullam corporis suscipit laboriosam</p>
+												</div>
+											</div>
+											<div class="card-footer">
+												<div class="footerimg d-flex mt-0 mb-0">
+													<div class="d-flex footerimg-l mb-0">
+														<img src="../assets/images/faces/female/19.jpg" alt="image"
+															class="avatar brround  me-2">
+														<h5 class="time-title text-muted p-0 leading-normal mt-2 mb-0">
+															Elizabeth<i class="icon icon-check text-success fs-12 ms-1"
+																data-bs-toggle="tooltip" data-bs-placement="top"
+																title="" data-bs-original-title="verified"></i></h5>
+													</div>
+													<div class="mt-2 footerimg-r ms-auto">
+														<a href="business.html" class="text-muted"
+															data-bs-toggle="tooltip" data-bs-placement="top" title=""
+															data-bs-original-title="Add Wishlist"><i
+																class="fa fa-heart"></i></a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									@endforeach
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--Latest News-->
 
 	<!--Latest Listings-->
 	<section class="sptb bg-white">
@@ -470,165 +741,7 @@
 	</section>
 	<!--/Section-->
 
-	<!--Latest News-->
-	<section class="sptb">
-		<div class="container">
-			<div class="section-title center-block text-center">
-				<h2>Latest News</h2>
-				<p>Mauris ut cursus nunc. Morbi eleifend, ligula at consectetur vehicula</p>
-			</div>
-			<div>
-				<div class="items-gallery">
-					<div class="items-blog-tab text-center">
-						<div class="items-blog-tab-heading row mb-0">
-							<div class="col-12">
-								<ul class="nav items-blog-tab-menu">
-									<li class=""><a href="#tab-1" class="active show" data-bs-toggle="tab">All</a></li>
-									<li><a href="#tab-2" data-bs-toggle="tab" class="">Latest News</a></li>
-									<li><a href="#tab-3" data-bs-toggle="tab" class="">Old News</a></li>
-									
-								</ul>
-							</div>
-						</div>
-						<div class="tab-content">
-							<div class="tab-pane active" id="tab-1">
-								<div class="row">
-									@foreach(App\Models\adminPost::where('status',1)->inRandomOrder()->limit(3)->get() as $allItem)
-									<div class="col-xl-4 col-lg-4 col-md-12">
-										<div class="card mb-xl-0">
-											<div class="item-card8-img  br-te-4 br-ts-4">
-												<img src="{{asset('image/' . $allItem->image)}}" alt="img"
-													class="cover-image">
-											</div>
-											<div class="item-card8-overlaytext">
-												<h6 class="mb-0">{{$allItem->categoryFunction->name}}</h6>
-											</div>
-											<div class="card-body">
-												<div class="item-card8-desc">
-													<p class="text-muted mb-2">18 November 2019.</p>
-													<h4 class="font-weight-semibold">{{$allItem->name}}</h4>
-													<p class="mb-0">Lorem ipsum dolor sit amet, quis nostrum
-														exercitationem ullam corporis suscipit laboriosam</p>
-												</div>
-											</div>
-											<div class="card-footer">
-												<div class="footerimg d-flex mt-0 mb-0">
-													<div class="d-flex footerimg-l mb-0">
-														<img src="../assets/images/faces/female/19.jpg" alt="image"
-															class="avatar brround  me-2">
-														<h5 class="time-title text-muted p-0 leading-normal mt-2 mb-0">
-															Elizabeth<i class="icon icon-check text-success fs-12 ms-1"
-																data-bs-toggle="tooltip" data-bs-placement="top"
-																title="" data-bs-original-title="verified"></i></h5>
-													</div>
-													<div class="mt-2 footerimg-r ms-auto">
-														<a href="business.html" class="text-muted"
-															data-bs-toggle="tooltip" data-bs-placement="top" title=""
-															data-bs-original-title="Add Wishlist"><i
-																class="fa fa-heart"></i></a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									@endforeach
-									
-								</div>
-							</div>
-							<div class="tab-pane" id="tab-2">
-								<div class="row">
-									@foreach(App\Models\adminPost::where('status',1)->inRandomOrder()->latest()->limit(3)->get() as $allItem)
-									<div class="col-xl-4 col-lg-4 col-md-12">
-										<div class="card mb-xl-0">
-											<div class="item-card8-img  br-te-4 br-ts-4">
-												<img src="{{asset('image/' . $allItem->image)}}" alt="img"
-													class="cover-image">
-											</div>
-											<div class="item-card8-overlaytext">
-												<h6 class="mb-0">{{$allItem->categoryFunction->name}}</h6>
-											</div>
-											<div class="card-body">
-												<div class="item-card8-desc">
-													<p class="text-muted mb-2">18 November 2019.</p>
-													<h4 class="font-weight-semibold">{{$allItem->name}}</h4>
-													<p class="mb-0">Lorem ipsum dolor sit amet, quis nostrum
-														exercitationem ullam corporis suscipit laboriosam</p>
-												</div>
-											</div>
-											<div class="card-footer">
-												<div class="footerimg d-flex mt-0 mb-0">
-													<div class="d-flex footerimg-l mb-0">
-														<img src="../assets/images/faces/female/19.jpg" alt="image"
-															class="avatar brround  me-2">
-														<h5 class="time-title text-muted p-0 leading-normal mt-2 mb-0">
-															Elizabeth<i class="icon icon-check text-success fs-12 ms-1"
-																data-bs-toggle="tooltip" data-bs-placement="top"
-																title="" data-bs-original-title="verified"></i></h5>
-													</div>
-													<div class="mt-2 footerimg-r ms-auto">
-														<a href="business.html" class="text-muted"
-															data-bs-toggle="tooltip" data-bs-placement="top" title=""
-															data-bs-original-title="Add Wishlist"><i
-																class="fa fa-heart"></i></a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									@endforeach
-								</div>
-							</div>
-							<div class="tab-pane" id="tab-3">
-								<div class="row">
-									@foreach(App\Models\adminPost::orderby('id','desc')->where('status',1)->inRandomOrder()->limit(3)->get() as $allItem)
-									<div class="col-xl-4 col-lg-4 col-md-12">
-										<div class="card mb-xl-0">
-											<div class="item-card8-img  br-te-4 br-ts-4">
-												<img src="{{asset('image/' . $allItem->image)}}" alt="img"
-													class="cover-image">
-											</div>
-											<div class="item-card8-overlaytext">
-												<h6 class="mb-0">{{$allItem->categoryFunction->name}}</h6>
-											</div>
-											<div class="card-body">
-												<div class="item-card8-desc">
-													<p class="text-muted mb-2">18 November 2019.</p>
-													<h4 class="font-weight-semibold">{{$allItem->name}}</h4>
-													<p class="mb-0">Lorem ipsum dolor sit amet, quis nostrum
-														exercitationem ullam corporis suscipit laboriosam</p>
-												</div>
-											</div>
-											<div class="card-footer">
-												<div class="footerimg d-flex mt-0 mb-0">
-													<div class="d-flex footerimg-l mb-0">
-														<img src="../assets/images/faces/female/19.jpg" alt="image"
-															class="avatar brround  me-2">
-														<h5 class="time-title text-muted p-0 leading-normal mt-2 mb-0">
-															Elizabeth<i class="icon icon-check text-success fs-12 ms-1"
-																data-bs-toggle="tooltip" data-bs-placement="top"
-																title="" data-bs-original-title="verified"></i></h5>
-													</div>
-													<div class="mt-2 footerimg-r ms-auto">
-														<a href="business.html" class="text-muted"
-															data-bs-toggle="tooltip" data-bs-placement="top" title=""
-															data-bs-original-title="Add Wishlist"><i
-																class="fa fa-heart"></i></a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									@endforeach
-								</div>
-							</div>
-							
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--Latest News-->
+	
 
 	<!--Our Customers Says-->
 	<section class="sptb position-relative pattern">

@@ -39,7 +39,11 @@
                                             <div class="col-lg-12 col-md-12">
                                                 <div class="wideget-user-desc text-center">
                                                     <div class="wideget-user-img">
-                                                        <img class="brround" src="{{asset('image/')}}/{{Auth::user()->profile}}" alt="img">
+                                                        @if(Auth::user()->profile)
+                                                        <img class="brround" src="{{asset('image/')}}/{{Auth::user()->profile}}" style='max-width:150px;' alt="img">
+                                                        @else
+                                                        <img class="brround" src="{{asset('frontend/img/avater_profile.jpg')}}" style='max-width:150px;' alt="img">
+                                                        @endif
                                                     </div>
                                                     <div class="user-wrap wideget-user-info">
                                                         <a href="javascript:void(0)" class="text-white"><h4 class="font-weight-semibold">{{Auth::user()->name}} @if(Auth::user()->last_name) {{Auth::user()->last_name}} @endif</h4></a>

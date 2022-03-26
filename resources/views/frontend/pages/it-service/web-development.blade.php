@@ -94,7 +94,7 @@
 			</div>
 		</section>
 
-        <section class="sptb">
+        <section class="sptb bg-white">
 			<div class="content-text mb-0">
 				<div class="container">
 					<div class="row">
@@ -109,6 +109,40 @@
 								<img src="{{asset('frontend/img/web-development.png')}}" alt="">
 							</div>
 						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="sptb bg-white">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7">
+					<h3 class="leading-normal">Web Development Service & Solutions</h3>
+							<p class="leading-normal fs-16">A <b>dynamic Website</b> is a site that contains dynamic pages such as templates, contents , scripts etc, in a nutshell , the dynamic website displays various content types every time it is browsed . The web page can be changed with the reader that opens the page, character of consumer interplay , or day time. <br> <br>
+                    The Dynamic <b>WordPress Website Design</b> & <b>Professional Web Development</b> Expert team. client-focused , Customer-centric, creating Website Solutions, that deliver tangible business results,  Appnovation's Web Developers helps Brands the ever-changing digital landscape</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="sptb bg-white">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7">
+					<h3 class="leading-normal">Web Development Service & Solutions</h3>
+							<p class="leading-normal fs-16">A <b>dynamic Website</b> is a site that contains dynamic pages such as templates, contents , scripts etc, in a nutshell , the dynamic website displays various content types every time it is browsed . The web page can be changed with the reader that opens the page, character of consumer interplay , or day time. <br> <br>
+                    The Dynamic <b>WordPress Website Design</b> & <b>Professional Web Development</b> Expert team. client-focused , Customer-centric, creating Website Solutions, that deliver tangible business results,  Appnovation's Web Developers helps Brands the ever-changing digital landscape</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="sptb bg-white">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7">
+					<h3 class="leading-normal">Web Development Service & Solutions</h3>
+							<p class="leading-normal fs-16">A <b>dynamic Website</b> is a site that contains dynamic pages such as templates, contents , scripts etc, in a nutshell , the dynamic website displays various content types every time it is browsed . The web page can be changed with the reader that opens the page, character of consumer interplay , or day time. <br> <br>
+                    The Dynamic <b>WordPress Website Design</b> & <b>Professional Web Development</b> Expert team. client-focused , Customer-centric, creating Website Solutions, that deliver tangible business results,  Appnovation's Web Developers helps Brands the ever-changing digital landscape</p>
 					</div>
 				</div>
 			</div>

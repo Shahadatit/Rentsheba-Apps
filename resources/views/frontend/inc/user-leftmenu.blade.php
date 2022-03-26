@@ -7,7 +7,11 @@
 								<div class="profile-pic">
 									<div class="profile-pic-img">
 										<span class="bg-success dots" data-bs-toggle="tooltip" data-bs-placement="top" title="online"></span>
+										@if(Auth::user()->profile)
 										<img src="{{asset('image/')}}/{{Auth::user()->profile}}" style='width:5rem;height:5rem;' class="brround" alt="user">
+										@else
+										<img src="{{asset('frontend/img/avater_profile.jpg')}}" style='width:5rem;height:5rem;' class="brround" alt="user">
+										@endif
 									</div>
 									<a href="{{route('user-dashboard', Auth::user()->id)}}" class="text-dark"><h4 class="mt-3 mb-0 font-weight-semibold">{{Auth::user()->name}} @if(Auth::user()->last_name) {{Auth::user()->last_name}} @endif</h4></a>
 								</div>
