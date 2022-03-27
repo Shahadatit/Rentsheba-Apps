@@ -131,6 +131,9 @@
                                                             <div class="form-group">
                                                                 <label class="form-label">First Name</label>
                                                                 <input type="text" name='name' value="{{Auth::user()->name}}" class="form-control" placeholder="First Name">
+                                                                @error('name')
+                                                                <p class="text-danger">{{$message}}</p>
+                                                                @enderror
                                                             </div>
                                                         </div>
                                                         <div class="col-sm-6 col-md-6">
@@ -142,31 +145,43 @@
                                                         <div class="col-sm-6 col-md-6">
                                                             <div class="form-group">
                                                                 <label class="form-label">Email address</label>
-                                                                <input type="email" value="{{Auth::user()->email}}" name='email' class="form-control desable" disabled  placeholder="Email">
+                                                                <input type="email" value="{{Auth::user()->email}}"  class="form-control desable" disabled  placeholder="Email">
                                                             </div>
                                                         </div>
                                                         <div class="col-sm-6 col-md-6">
                                                             <div class="form-group">
                                                                 <label class="form-label">Phone Number</label>
                                                                 <input type="number" name='phone' value="{{Auth::user()->phone}}" class="form-control" placeholder="Number">
+                                                                @error('phone')
+                                                                <p class="text-danger">{{$message}}</p>
+                                                                @enderror
                                                             </div>
                                                         </div>
                                                         <div class="col-md-12">
                                                             <div class="form-group">
                                                                 <label class="form-label">Address</label>
                                                                 <input type="text" name='address' value="{{Auth::user()->address}}" class="form-control" placeholder="Home Address">
+                                                                @error('address')
+                                                                <p class="text-danger">{{$message}}</p>
+                                                                @enderror
                                                             </div>
                                                         </div>
                                                         <div class="col-sm-6 col-md-4">
                                                             <div class="form-group">
                                                                 <label class="form-label">City</label>
                                                                 <input type="text" name='city' value="{{Auth::user()->city}}" class="form-control" placeholder="City">
+                                                                @error('city')
+                                                                <p class="text-danger">{{$message}}</p>
+                                                                @enderror
                                                             </div>
                                                         </div>
                                                         <div class="col-sm-6 col-md-3">
                                                             <div class="form-group">
                                                                 <label class="form-label">Postal Code</label>
-                                                                <input type="number" name='post_code' value="{{Auth::user()->zip_code}}"  class="form-control" placeholder="ZIP Code">
+                                                                <input type="number" name='zip_code' value="{{Auth::user()->zip_code}}"  class="form-control" placeholder="ZIP Code">
+                                                                @error('zip_code')
+                                                                <p class="text-danger">{{$message}}</p>
+                                                                @enderror
                                                             </div>
                                                         </div>
                                                         <div class="col-md-5">
@@ -181,12 +196,18 @@
                                                                         
                                                                     </optgroup>
                                                                 </select>
+                                                                @error('cuntry')
+                                                                    <p class="text-danger">{{$message}}</p>
+                                                                @enderror
                                                             </div>
                                                         </div>
                                                         <div class="col-md-12">
                                                             <div class="form-group">
                                                                 <label class="form-label">About Me</label>
                                                                 <textarea rows="5" name='description' class="form-control" placeholder="Enter About your description" maxlength="160">{{Auth::user()->description}}</textarea>
+                                                                @error('description')
+                                                                <p class="text-danger">{{$message}}</p>
+                                                                @enderror
                                                             </div>
                                                         </div>
                                                         
@@ -195,6 +216,9 @@
                                                                 <label class="form-label">Upload Image</label>
                                                                 <div class="form-file">
                                                                     <input class="form-control example-file-input-custom" type="file" id="formFile" name="image">
+                                                                    @error('image')
+                                                                        <p class="text-danger">{{$message}}</p>
+                                                                    @enderror
                                                                 </div>
                                                             </div>
                                                         </div>

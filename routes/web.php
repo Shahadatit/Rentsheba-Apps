@@ -8,6 +8,7 @@ use App\Http\Controllers\Backend\divisionController;
 use App\Http\Controllers\Backend\districtController;
 use App\Http\Controllers\Backend\cuntryController;
 use App\Http\Controllers\Backend\userCompany;
+use App\Http\Controllers\Backend\backendUserController;
 
 // Frontend Controller
 use App\Http\Controllers\Frontend\frontendController;
@@ -38,9 +39,9 @@ Route::get('icu-ambulance-service',[frontendController::class,'icuAmbulance'])->
 Route::get('web-design',[frontendController::class,'webDesign'])->name('web-design');
 Route::get('web-development',[frontendController::class,'webDevelopment'])->name('web-development');
 
-Route::middleware('auth')->group(function (){
+Route::middleware('auth','verified')->group(function (){
     Route::group(['prefix' => '/user'],function(){
-        Route::get('/dashboard/{id}' , [frontendController::class,'userDashboard'])->name('user-dashboard');
+        Route::get('/dashboard' , [frontendController::class,'userDashboard'])->name('user-dashboard');
         Route::get('/edit/{id}',[userController::class,'edit'])->name('user.edit');
         Route::post('/update/{id}' , [userController::class,'update'])->name('user.update');
     });
@@ -55,7 +56,7 @@ Route::middleware('auth')->group(function (){
 
 // Frontedn Route
 
-Route::middleware('auth','role')->group(function (){
+Route::middleware('auth','role','verified')->group(function (){
     // Backend Route Group
     Route::group(['prefix' => 'admin'],function(){
         Route::get('/dashboard'  , [pageController::class , 'index'])->name('admin.dashboard');
@@ -78,6 +79,14 @@ Route::middleware('auth','role')->group(function (){
             Route::get('/edit{id}' , [userCompany::class , 'edit'])->name('business.edit');
             Route::post('/update{id}' , [userCompany::class , 'update'])->name('business.update');
             Route::post('/destroy{id}' , [userCompany::class , 'destroy'])->name('business.destroy');
+        });
+
+        // Category Route
+        Route::group(['prefix' => '/user'],function(){
+            Route::get('/manage' , [backendUserController::class , 'index'])->name('user.index');
+            Route::get('/edit{id}' , [backendUserController::class , 'edit'])->name('user.edit');
+            Route::post('/update{id}' , [backendUserController::class , 'update'])->name('user.update');
+            Route::post('/destroy{id}' , [backendUserController::class , 'destroy'])->name('user.destroy');
         });
 
         // Category Route

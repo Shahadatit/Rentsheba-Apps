@@ -77,6 +77,17 @@ class userController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $request->validate([
+            'name' => ['required', 'string', 'max:13'],
+            'address' => ['required', 'string', 'max:20'],
+            'phone' => ['required', 'string', 'max:12'],
+            'cuntry' => ['required'],
+            'zip_code' => ['required', 'string', 'max:20'],
+            'description' => ['required', 'string', 'max:160'],
+            
+        ]);
+
+
         $users = User::find($id);
         $users->name        = $request->name;
         $users->last_name   = $request->last_name;
@@ -84,7 +95,7 @@ class userController extends Controller
         $users->phone       = $request->phone;
         $users->city        = $request->city;
         $users->cuntry      = $request->cuntry;
-        $users->zip_code    = $request->post_code;
+        $users->zip_code    = $request->zip_code;
         $users->description = $request->description;
 
         if($request->image){
@@ -95,7 +106,7 @@ class userController extends Controller
             $users->profile = $imgName;
         }
         $users->save();
-        return redirect()->back()->with('success', 'Update Profile');
+        return redirect()->route('user-dashboard')->with('success', 'Update Profile');
     }
 
     /**

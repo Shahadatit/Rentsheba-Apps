@@ -41,11 +41,14 @@
 												<div class="form-group">
 													<label class="form-label">First Name</label>
 													<input type="text" class="form-control" name='name' value="{{Auth::user()->name}}" placeholder="First Name">
+													@error('name')
+													<p class="text-danger">{{$message}}</p>
+													@enderror
 												</div>
 											</div>
 											<div class="col-sm-6 col-md-6">
 												<div class="form-group">
-													<label class="form-label">Last Name</label>
+													<label class="form-label">Last Name (Optional)</label>
 													<input type="text" class="form-control" name='last_name' value="{{Auth::user()->last_name}}" placeholder="Last Name">
 												</div>
 											</div>
@@ -59,24 +62,36 @@
 												<div class="form-group">
 													<label class="form-label">Phone Number</label>
 													<input type="number" name='phone' value="{{Auth::user()->phone}}" class="form-control" placeholder="Number">
+													@error('phone')
+													<p class="text-danger">{{$message}}</p>
+													@enderror
 												</div>
 											</div>
 											<div class="col-md-12">
 												<div class="form-group">
 													<label class="form-label">Address</label>
 													<input type="text" class="form-control" name='address' value="{{Auth::user()->address}}" placeholder="Home Address">
+													@error('address')
+													<p class="text-danger">{{$message}}</p>
+													@enderror
 												</div>
 											</div>
 											<div class="col-sm-6 col-md-4">
 												<div class="form-group">
 													<label class="form-label">City</label>
 													<input type="text" name='city' value="{{$user->city}}" class="form-control" placeholder="City">
+													@error('city')
+													<p class="text-danger">{{$message}}</p>
+													@enderror
 												</div>
 											</div>
 											<div class="col-sm-6 col-md-3">
 												<div class="form-group">
 													<label class="form-label">Postal Code</label>
 													<input type="number" name="zip_code" value="{{$user->zip_code}}" class="form-control" placeholder="ZIP Code">
+													@error('zip_code')
+													<p class="text-danger">{{$message}}</p>
+													@enderror
 												</div>
 											</div>
 											<div class="col-md-5">
@@ -90,6 +105,9 @@
 															@endforeach
 														</optgroup>
 													</select>
+													@error('cuntry')
+													<p class="text-danger">{{$message}}</p>
+													@enderror
 												</div>
 											</div>
 											
@@ -97,14 +115,19 @@
 												<div class="form-group">
 													<label class="form-label">About Me</label>
 													<textarea rows="5" name='description' class="form-control"  placeholder="Enter About your description" maxlength="160">{{$user->description}}</textarea>
+													@error('description')
+													<p class="text-danger">{{$message}}</p>
+													@enderror
 												</div>
 											</div>
 											<div class="col-md-12">
 												<div class="form-group mb-0">
 													<label class="form-label">Upload Profile Picture</label>
 													<div class="form-file">
-														<input class="form-control example-file-input-custom" type="file" id="formFile" name="image">
+														<input class="form-control example-file-input-custom" type="file" id="formFile" name="profile">
+
 													</div>
+													
 												</div>
 											</div>
 										</div>

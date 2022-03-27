@@ -141,15 +141,27 @@
           </div><!-- dropdown -->
           <div class="dropdown">
             <a href="" class="nav-link nav-link-profile" data-toggle="dropdown">
-              <span class="logged-name hidden-md-down">Katherine</span>
+              <span class="logged-name hidden-md-down">{{Auth::user()->name}}</span>
+              @if(Auth::user()->profile)
+              <img src="{{asset('image/')}}/{{Auth::user()->profile}}" class="wd-32 rounded-circle" alt="">
+              @else
               <img src="https://via.placeholder.com/500" class="wd-32 rounded-circle" alt="">
+              @endif
               <span class="square-10 bg-success"></span>
             </a>
             <div class="dropdown-menu dropdown-menu-header wd-250">
               <div class="tx-center">
-                <a href=""><img src="https://via.placeholder.com/500" class="wd-80 rounded-circle" alt=""></a>
-                <h6 class="logged-fullname">Katherine P. Lumaad</h6>
-                <p>youremail@domain.com</p>
+                <a href="">
+                @if(Auth::user()->profile)
+                <img src="{{asset('image/')}}/{{Auth::user()->profile}}" class="wd-80 rounded-circle" alt="">
+             
+              @else
+              <img src="https://via.placeholder.com/500" class="wd-80 rounded-circle" alt="">
+              @endif
+                  
+                </a>
+                <h6 class="logged-fullname">{{Auth::user()->name}}</h6>
+                <p>{{Auth::user()->email}}</p>
               </div>
               <hr>
               <div class="tx-center">

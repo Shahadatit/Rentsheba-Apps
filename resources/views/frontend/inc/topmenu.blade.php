@@ -242,7 +242,7 @@
 									<a href="javascript:void(0)" class="text-dark" data-bs-toggle="dropdown"><i
 											class="fa fa-home me-1"></i><span> My Dashboard</span></a>
 									<div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-										<a href="{{route('user-dashboard', Auth::user()->id)}}" class="dropdown-item">
+										<a href="{{route('user-dashboard')}}" class="dropdown-item">
 											<i class="dropdown-icon icon icon-user"></i> My Profile
 										</a>
 										<a class="dropdown-item" href="javascript:void(0)">
