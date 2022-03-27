@@ -7,7 +7,7 @@
 
 		<!--Sliders Section-->
 		<div class="pattern-img" >
-			<div  class=" relative sptb-12 pattern2 bg-background banner-1 cover-image sptb-2 sptb-tab bg-background2" data-bs-image-src="{{asset('image/' . $company->logo)}}">
+			<div  class=" relative sptb-12 pattern2 bg-background banner-1 cover-image sptb-2 sptb-tab bg-background2" data-bs-image-src="{{asset('image/' . $company->cover_photo)}}">
 				<div class="header-text1 mb-0">
 					<div class="container">
 						<div class="row">
@@ -97,7 +97,7 @@
 									</div>
 								</div>
 								<div class="product-slider carousel-slide-1">
-								<img src="{{asset('image/' . $company->logo)}}" alt="img">
+								<img src="{{asset('image/' . $company->cover_photo)}}" alt="img">
 								</div>
 							</div>
 						</div>
@@ -365,7 +365,7 @@
 							<div class="card-body item-user">
 								<div class="profile-details">
 									<div class="profile-pic mb-0 mx-5">
-										<img src="../assets/images/other/logo.png" class="brround w-150 h-150" alt="user">
+										<img src="../assets/images/other/cover_photo.png" class="brround w-150 h-150" alt="user">
 									</div>
 								</div>
 								<div class="text-center mt-2">

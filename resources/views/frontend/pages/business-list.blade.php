@@ -99,7 +99,7 @@
 												<div class="item-card9-img">
 													<div class="item-card9-imgs">
 														<a href="{{route('company-details' , $item->slug)}}"></a>
-														<img src="{{asset('image/' . $item->logo)}}" alt="img"
+														<img src="{{asset('image/' . $item->cover_photo)}}" alt="img"
 															class="cover-image">
 													</div>
 													<div class="item-card9-icons">

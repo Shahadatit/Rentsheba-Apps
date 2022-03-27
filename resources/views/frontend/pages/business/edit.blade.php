@@ -38,7 +38,10 @@
 							<div class="card-body">
 								<div class="form-group">
 									<label class="form-label text-dark">Company Name</label>
-									<input type="text" name='name' value="{{$company->company_name}}" class="form-control" placeholder="Company Name" maxlength="30">
+									<input type="text" name='company_name' value="{{$company->company_name}}" class="form-control" placeholder="Company Name @error('company_name') is-invalid @enderror" maxlength="30">
+									@error('company_name')
+										<div class="text-danger">{{ $message }}</div>
+									@enderror
 								</div>
 								<div class="form-group">
 									<label class="form-label text-dark">Country</label>
@@ -61,7 +64,10 @@
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label class="form-label text-dark">Phone</label>
-                                                <input type="text" name='phone' value="{{$company->com_mobile}}" class="form-control" placeholder="Phone">
+                                                <input type="text" name='com_mobile' value="{{$company->com_mobile}}" class="form-control @error('com_mobile') is-invalid @enderror" placeholder="Phone">
+												@error('com_mobile')
+													<div class="text-danger">{{ $message }}</div>
+												@enderror
                                             </div>
                                         </div>
                                     </div>
@@ -69,20 +75,29 @@
 								</div>
 								<div class="form-group">
 									<label class="form-label text-dark">Address</label>
-									<input type="text" name='address' value="{{$company->c_address}}" class="form-control" placeholder="Address">
+									<input type="text" name='c_address' value="{{$company->c_address}}" class="form-control @error('c_address') is-invalid @enderror" placeholder="Address">
+									@error('c_address')
+										<div class="text-danger">{{ $message }}</div>
+									@enderror
 								</div>
 								<div class="form-group">
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label class="form-label text-dark">District</label>
-                                                <input type="text" name='district' value="{{$company->c_district}}" class="form-control" placeholder="District">
+                                                <input type="text" name='c_district' value="{{$company->c_district}}" class="form-control @error('c_district') is-invalid @enderror" placeholder="District">
+												@error('c_district')
+													<div class="text-danger">{{ $message }}</div>
+												@enderror
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label class="form-label text-dark">Zip Code</label>
-                                                <input type="text" name='zip_code' value="{{$company->c_zipcode}}" class="form-control" placeholder="Zip code">
+                                                <input type="text" name='c_zipcode' value="{{$company->c_zipcode}}" class="form-control @error('c_zipcode') is-invalid @enderror" placeholder="Zip code">
+												@error('c_zipcode')
+													<div class="text-danger">{{ $message }}</div>
+												@enderror
                                             </div>
                                         </div>
                                     </div>
@@ -98,11 +113,14 @@
 							<div class="card-body">
 								<div class="form-group">
 									<label class="form-label text-dark">Main Title</label>
-									<input type="text" name='main_title' value="{{$company->main_title}}" class="form-control" placeholder="Main title" maxlength="42">
+									<input type="text" name='main_title' value="{{$company->main_title}}" class="form-control @error('main_title') is-invalid @enderror" placeholder="Main title" maxlength="42">
+									@error('main_title')
+										<div class="text-danger">{{ $message }}</div>
+									@enderror
 								</div>
 								<div class="form-group">
 									<label class="form-label text-dark">Category</label>
-									<select name="category" class="form-control form-select select2-show-search">
+									<select name="cat_id" class="form-control form-select select2-show-search">
 										<option value="0">Select Category</option>
                                         @foreach($categorys as $category)
 											@foreach( App\Models\Category::orderby('name','asc')->where('is_parent', $category->id)->get() as $sCut)
@@ -117,7 +135,10 @@
 								
 								<div class="form-group">
 									<label class="form-label text-dark">Description</label>
-									<textarea class="form-control" name="description" rows="6" placeholder="text here.." maxlength="301">{{$company->description}}</textarea>
+									<textarea class="form-control @error('description') is-invalid @enderror" name="description" rows="6" placeholder="text here.." maxlength="301">{{$company->description}}</textarea>
+									@error('description')
+										<div class="text-danger">{{ $message }}</div>
+									@enderror
 								</div>
                                 <div class="form-group">
 									<label class="form-label text-dark">Search Keywords</label>
@@ -139,7 +160,7 @@
                                         <div class="dropify-errors-container">
                                             <ul></ul>
                                         </div>
-                                        <input type="file" name="image" class="dropify" data-height="180">
+                                        <input type="file" name="cover_photo" class="dropify " data-height="180">
                                         <button type="button" class="dropify-clear">Remove</button>
                                         <div class="dropify-preview">
                                             <span class="dropify-render"></span>
@@ -155,6 +176,7 @@
                                             </div>
                                         </div>
                                     </div>
+									
                                     <span>Image Size : (800px / 400px)</span>
                                     <!-- cover image upload end code -->
 								</div>
@@ -181,7 +203,10 @@
 									<div class="col-sm-6 col-md-12">
 										<div class="form-group mb-0">
 											<label class="form-label">Phone Number</label>
-											<input type="number" name='o_phone' value="{{$company->o_phone}}" class="form-control" placeholder="Number">
+											<input type="number" name='o_phone' value="{{$company->o_phone}}" class="form-control @error('o_phone') is-invalid @enderror" placeholder="Number">
+											@error('o_phone')
+												<div class="text-danger">{{ $message }}</div>
+											@enderror
 										</div>
 									</div>
 									

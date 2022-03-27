@@ -36,14 +36,23 @@
                                             <div class="form-group">
                                                 <label for="">Title</label>
                                                 <input type="text" name="name" value="{{$post->name}}" class='form-control' >
+                                                @error('name')
+                                                <p class="text-danger">{{$message}}</p>
+                                                @enderror
                                             </div>
                                             <div class="form-group">
                                                 <label for=""></label>
-                                                <textarea name="editor1">{{$post->discription}}</textarea>
+                                                <textarea name="discription">{{$post->discription}}</textarea>
+                                                @error('discription')
+                                                    <div class="text-danger">{{ $message }}</div>
+                                                @enderror
                                             </div>
                                             <div class="form-group">
                                                 <label for="">Sort Discription</label>
-                                                <textarea name="sort_descriopton" id="" cols="30" class='form-control' rows="2">{{$post->sort_description}}</textarea>
+                                                <textarea name="sort_description" id="" cols="30" class='form-control' rows="2">{{$post->sort_description}}</textarea>
+                                                @error('sort_description')
+                                                    <div class="text-danger">{{ $message }}</div>
+                                                @enderror
                                             </div>
                                             <div class="form-group">
                                                 <label for="">Tags</label>
@@ -56,8 +65,8 @@
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for="">Category </label>
-                                                <select name="category" class='form-control' id="">
-                                                    <option value="1">-Select Category-</option>
+                                                <select name="cat_id" class='form-control' id="">
+                                                    <option value="">-Select Category-</option>
                                                     @foreach( $categorys as $category)
                                                     <option value="{{$category->id}}" @if( $category->id == $post->cat_id) selected @endif>{{$category->name}}</option>
                                                     @foreach(App\Models\Category::orderby('name','asc')->where('is_parent',$category->id)->get() as $subCat)
@@ -65,6 +74,9 @@
                                                     @endforeach
                                                     @endforeach
                                                 </select>
+                                                @error('cat_id')
+                                                    <div class="text-danger">{{ $message }}</div>
+                                                @enderror
                                             </div>
                                             <div class="form-group">
                                                 <label for="">Focus Keyword</label>
@@ -88,6 +100,9 @@
                                                     <input type="file" name='image' class="custom-file-input" id="customFile">
                                                     <label class="custom-file-label"  for="customFile">Choose file</label>
                                                 </div>
+                                                @error('image')
+                                                <p class="text-danger">{{$message}}</p>
+                                                @enderror
                                             </div>
                                             <div class="form-group">
                                                

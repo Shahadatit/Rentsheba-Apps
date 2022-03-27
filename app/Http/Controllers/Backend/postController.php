@@ -43,12 +43,26 @@ class postController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'cat_id'            => "required",
+            'name'              => ['required', 'string', 'max:55'],
+            'discription'       => "required",
+            'sort_description'  => ['required'],
+            'image'             => ['required','mimes:jpg,png'],
+            
+        ],[
+            'cat_id'                     => "Category required",
+            'name.required'              => 'Post Title required',
+            'discription.required'       => "Post Description required",
+            'sort_description.required'  => "Sort Description required",
+            'image.required'             => "Fiture Image required ",
+        ]);
+
         $posts = new adminPost();
-        
         $posts->name                = $request->name;
-        $posts->discription         = $request->editor1;
-        $posts->sort_description    = $request->sort_descriopton;
-        $posts->cat_id              = $request->category;
+        $posts->discription         = $request->discription;
+        $posts->sort_description    = $request->sort_description;
+        $posts->cat_id              = $request->cat_id;
         $posts->slug                = Str::slug($request->focus_keyword);
         $posts->focus_keyword       = $request->focus_keyword;
         // $posts->user_id             = $request->user_id;
@@ -59,7 +73,7 @@ class postController extends Controller
             $imgCatch = $request->file('image');
             $imgName = time() . '_' . $imgCatch->getClientOriginalName();
             $location = public_path('image/' . $imgName);
-            Image::make($imgCatch)->save($location);
+            Image::make($imgCatch)->resize(1200, 800)->save($location);
             $posts->image = $imgName;
 
         }
@@ -70,16 +84,7 @@ class postController extends Controller
         
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
+  
 
     /**
      * Show the form for editing the specified resource.
@@ -105,17 +110,34 @@ class postController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $request->validate([
+            'cat_id'            => "required",
+            'name'              => ['required', 'string', 'max:55'],
+            'discription'       => "required",
+            'sort_description'  => ['required'],
+          
+        ],[
+            'cat_id'                     => "Category field required",
+            'name.required'              => 'Post Title required',
+            'discription.required'       => "Post Description required",
+            'sort_description.required'  => "Sort Description required",
+            
+            
+        ]);
+
+
         $posts = adminPost::find($id);
         
         $posts->name                = $request->name;
-        $posts->discription         = $request->editor1;
-        $posts->sort_description    = $request->sort_descriopton;
-        $posts->cat_id              = $request->category;
+        $posts->discription         = $request->discription;
+        $posts->sort_description    = $request->sort_description;
+        $posts->cat_id              = $request->cat_id;
         $posts->slug                = Str::slug($request->focus_keyword);
         $posts->focus_keyword       = $request->focus_keyword;
         // $posts->user_id             = $request->user_id;
         $posts->tags                = $request->tags;
         $posts->status              = $request->status;
+
 
         if( $request->image){
             
@@ -126,7 +148,7 @@ class postController extends Controller
             $imgCatch = $request->file('image');
             $imgName = time() . '_' . $imgCatch->getClientOriginalName();
             $location = public_path('image/' . $imgName);
-            Image::make($imgCatch)->save($location);
+            Image::make($imgCatch)->resize(1200, 800)->save($location);
             $posts->image = $imgName;
 
         }

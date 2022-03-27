@@ -45,7 +45,7 @@
                                     <tr>
                                         <th scope="row">{{$i}}</th>
                                         <td>{{$item->company_name}}</td>
-                                        <td>{{$item->categoryFunc->name}}</td>
+                                        <td>{{$item->categorys->name}}</td>
                                         <td>{{$item->com_mobile}}</td>
                                         <td>{{$item->o_email}}</td>
                                         <td>
@@ -57,7 +57,7 @@
                                         </td>
                                         <td>
                                             <div>
-                                                <a href="{{route('division.edit' , $item->id)}}" class='btn btn-primary btn-sm text-white'><i class='fa fa-edit'></i> EDIT</a>
+                                                <a href="{{route('business.edit' , $item->id)}}" class='btn btn-primary btn-sm text-white'><i class='fa fa-edit'></i> EDIT</a>
                                                 <a href="" class='btn btn-danger btn-sm text-white'><i class='fa fa-trash'></i> DELETE</a>
                                             </div>
                                         </td>

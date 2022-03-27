@@ -12,7 +12,7 @@
 
         <li class="br-menu-item">
           <a href="#" class="br-menu-link with-sub">
-            <i class="menu-item-icon icon ion-ios-photos-outline tx-20"></i>
+            <i class="icon ion-pin icon ion-ios-photos-outline tx-20"></i>
             <span class="menu-item-label">Posts</span>
           </a><!-- br-menu-link -->
           <ul class="br-menu-sub">
@@ -23,7 +23,7 @@
 
         <li class="br-menu-item">
           <a href="#" class="br-menu-link with-sub">
-            <i class="menu-item-icon icon ion-ios-photos-outline tx-20"></i>
+          <i class="menu-item-icon icon ion-ios-navigate-outline tx-24"></i>
             <span class="menu-item-label">Business</span>
           </a><!-- br-menu-link -->
           <ul class="br-menu-sub">
@@ -35,7 +35,7 @@
           
         <li class="br-menu-item">
           <a href="#" class="br-menu-link with-sub">
-            <i class="menu-item-icon icon ion-ios-photos-outline tx-20"></i>
+            <i class="icon ion-more icon ion-ios-photos-outline tx-20"></i>
             <span class="menu-item-label">Categorys</span>
           </a><!-- br-menu-link -->
           <ul class="br-menu-sub">
@@ -46,7 +46,7 @@
        
         <li class="br-menu-item">
           <a href="#" class="br-menu-link with-sub">
-            <i class="menu-item-icon icon ion-ios-photos-outline tx-20"></i>
+            <i class="icon ion-location icon ion-ios-photos-outline tx-20"></i>
             <span class="menu-item-label">Cuntry</span>
           </a><!-- br-menu-link -->
           <ul class="br-menu-sub">
@@ -57,7 +57,7 @@
        
         <li class="br-menu-item">
           <a href="#" class="br-menu-link with-sub">
-            <i class="menu-item-icon icon ion-ios-photos-outline tx-20"></i>
+            <i class="icon ion-location icon ion-ios-photos-outline tx-20"></i>
             <span class="menu-item-label">Division</span>
           </a><!-- br-menu-link -->
           <ul class="br-menu-sub">
@@ -68,7 +68,7 @@
        
         <li class="br-menu-item">
           <a href="#" class="br-menu-link with-sub">
-            <i class="menu-item-icon icon ion-ios-photos-outline tx-20"></i>
+            <i class="icon ion-location icon ion-ios-photos-outline tx-20"></i>
             <span class="menu-item-label">District</span>
           </a><!-- br-menu-link -->
           <ul class="br-menu-sub">

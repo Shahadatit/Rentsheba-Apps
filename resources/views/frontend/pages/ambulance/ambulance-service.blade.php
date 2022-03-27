@@ -1,32 +1,39 @@
 @extends('frontend.layout.template')
 
-@section('title') <title>Rentsheba | Rentsheba post listing</title> @endsection
+@section('title') <title> Website Design and Web Development Service </title> @endsection
 
 @section('content')
 
-		
-		<!--Breadcrumb-->
-		<section>
-			<div class="bannerimg cover-image bg-background3" data-bs-image-src="../assets/images/banners/banner2.jpg">
-				<div class="header-text mb-0">
-					<div class="container">
-						<div class="text-center text-white">
-							<h1 class="py-5">Web Development Service Company</h1>
-							<ol class="breadcrumb text-center">
-								<li class="breadcrumb-item"><p class='text-center'> Web Development is the word involved in development a web site for the internet (World Wide Web) or an internet. Rentsheba Company provide different types of Web Development service. We Provide WordPress Website Design, Web Development Service, Dynamic Website in PHP, Laravel, JavaScript etc. </p></li>
-								
-							</ol>
+
+	<!--Sliders Section-->
+	<section>
+		<div class="banner-1 cover-image sptb-2 sptb-tab bg-background2" data-bs-image-src="{{asset('frontend/img/ambulance.png')}}">
+			<div class="header-text text-1 mb-0">
+				<div class="container">
+					<div class="text-center text-white mb-7">
+						<h1 class="mb-1 mb-5"> Website Design and Web Development Service </h1>
+						<p>Welcome to Rentsheba! Rentsheba is the laargest and Trusted IT Development Service Company. It's Provides Website Design & Web Development, Domain & Hosting, Local SEO Service, Digital Marketting Service, and Business Direcotry. Grow your Business by Branding your company. High Quality Service Granted. 24/7 Suppport </p>
+					</div>
+					<div class="row">
+						<div class="col-xl-10 col-lg-12 col-md-12 d-block mx-auto">
+							<div class="search-background px-4 ">
+								<div class="form row row-sm">
+								<!-- Banner Seaarch  -->
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
-		<!--/Breadcrumb-->
+			</div><!-- /header-text -->
+		</div>
+	</section>
+	<!--Sliders Section-->
 
-		<section class="sptb bg-white">
+
+    <section class="sptb bg-white">
 			<div class="container">
 				<div class="section-title center-block text-center">
-					<h2>Web Development Service & Solutions</h2>
+					<h2>Web Design Service & Solutions</h2>
 				
 				</div>
 				<div class="row">
@@ -38,7 +45,7 @@
 								<div class="servic-data mt-3">
 									<h3 class="font-weight-semibold mb-2"> Website Design</h3>
 									<p class="text-muted mb-0">Rentsheba Provide <b> Website Disign Services</b> by HTML-5, CSS-3, bootstrap-5, JavaScript, and jQuery. The best Web Design is available at cheap Price. The all Device Responsive with Mobile friendly Website, and SEO friendly design. </p>
-									
+									<a href="javascript:void(0)" class="btn btn-primary text-white w-100 px-6">Learn more</a>
 								</div>
 								</div>
 							</div>
@@ -52,7 +59,7 @@
 									<div class="servic-data mt-3">
 										<h3 class="font-weight-semibold mb-2"> Web Development Service</h3>
 										<p class="text-muted mb-0">We Provide <b> different types of Web Development Service</b> Like: (i) Statik Website (ii) Dynamic Website by the WordPress, PHP, Laravel, and Node js. Hi-Quality Web Development service is Granted in you budget. </p>
-										
+										<a href="javascript:void(0)" class="btn btn-primary text-white w-100 px-6">Learn more</a>
 									</div>
 								</div>
 							</div>
@@ -66,7 +73,7 @@
 								<div class="servic-data mt-3">
 									<h3 class="font-weight-semibold mb-2"> Full-Stack Development Service</h3>
 									<p class="text-muted mb-0"> We have a team of <b> Skilled full-Stack Developers</b> expertise. You can hire front-end & Back-end Development teams separately as well as. Contact us to hire Full-Stack Development </p>
-									
+									<a href="javascript:void(0)" class="btn btn-primary text-white w-100 px-6">Learn more</a>
 								</div>
 								</div>
 							</div>
@@ -161,8 +168,6 @@
 				</div>
 			</div>
 		</section>
-
-
 
 
 

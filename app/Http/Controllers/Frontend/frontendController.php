@@ -76,7 +76,29 @@ class frontendController extends Controller
         return view('frontend.pages.user.dashboard',compact('cuntrys','business'));
     }
 
-    
+    // All ambulance function class
+    public function ambulanceService()
+    {
+        return view('frontend.pages.ambulance.ambulance-service');
+    }
+    public function acAmbulance()
+    {
+        return view('frontend.pages.ambulance.ac-ambulance');
+    }
+    public function nonAcAmbulance()
+    {
+        return view('frontend.pages.ambulance.ac-ambulance');
+    }
+    public function freezingAmbulance()
+    {
+        return view('frontend.pages.ambulance.freezing');
+    }
+    public function icuAmbulance()
+    {
+        return view('frontend.pages.ambulance.icu-ambulance');
+    }
+
+    // IT service function class
     public function webDesign()
     {
         return view('frontend.pages.it-service.web-design');

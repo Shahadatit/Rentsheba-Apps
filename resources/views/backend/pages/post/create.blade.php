@@ -35,15 +35,24 @@
                                         <div class="col-lg-9">
                                             <div class="form-group">
                                                 <label for="">Title</label>
-                                                <input type="text" name="name" class='form-control' >
+                                                <input type="text" name="name" class="form-control" >
+                                                @error('name')
+                                                    <div class="text-danger">{{ $message }}</div>
+                                                @enderror
                                             </div>
                                             <div class="form-group">
                                                 <label for=""></label>
-                                                <textarea name="editor1"></textarea>
+                                                <textarea name="discription" class=""></textarea>
+                                                @error('discription')
+                                                    <div class="text-danger">{{ $message }}</div>
+                                                @enderror
                                             </div>
                                             <div class="form-group">
                                                 <label for="">Sort Discription</label>
-                                                <textarea name="sort_descriopton" id="" cols="30" class='form-control' rows="2"></textarea>
+                                                <textarea name="sort_description" id="" cols="30" class="form-control" rows="2"></textarea>
+                                                @error('sort_description')
+                                                    <div class="text-danger">{{ $message }}</div>
+                                                @enderror
                                             </div>
                                             <div class="form-group">
                                                 <label for="">Tags</label>
@@ -56,8 +65,8 @@
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for="">Category </label>
-                                                <select name="category" class='form-control' id="">
-                                                    <option value="1">-Select Category-</option>
+                                                <select name="cat_id" class="form-control " id="">
+                                                    <option value="">-Select Category-</option>
                                                     @foreach( $categorys as $category)
                                                     <option value="{{$category->id}}">{{$category->name}}</option>
                                                     @foreach(App\Models\Category::orderby('name','asc')->where('is_parent',$category->id)->get() as $subCat)
@@ -65,6 +74,9 @@
                                                     @endforeach
                                                     @endforeach
                                                 </select>
+                                                @error('cat_id')
+                                                    <div class="text-danger">{{ $message }}</div>
+                                                @enderror
                                             </div>
                                             <div class="form-group">
                                                 <label for="">Focus Keyword</label>
@@ -80,7 +92,10 @@
                                             </div>
                                             <div class="form-group">
                                                 <div class="custom-file">
-                                                    <input type="file" name='image' class="custom-file-input" id="customFile">
+                                                    <input type="file" name='image' class="custom-file-input " id="customFile">
+                                                    @error('image')
+                                                        <div class="text-danger">{{ $message }}</div>
+                                                    @enderror
                                                     <label class="custom-file-label"  for="customFile">Choose file</label>
                                                 </div>
                                             </div>

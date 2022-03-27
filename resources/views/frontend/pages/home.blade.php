@@ -212,24 +212,7 @@
 														exercitationem ullam corporis suscipit laboriosam</p>
 												</div>
 											</div>
-											<div class="card-footer">
-												<div class="footerimg d-flex mt-0 mb-0">
-													<div class="d-flex footerimg-l mb-0">
-														<img src="../assets/images/faces/female/19.jpg" alt="image"
-															class="avatar brround  me-2">
-														<h5 class="time-title text-muted p-0 leading-normal mt-2 mb-0">
-															Elizabeth<i class="icon icon-check text-success fs-12 ms-1"
-																data-bs-toggle="tooltip" data-bs-placement="top"
-																title="" data-bs-original-title="verified"></i></h5>
-													</div>
-													<div class="mt-2 footerimg-r ms-auto">
-														<a href="business.html" class="text-muted"
-															data-bs-toggle="tooltip" data-bs-placement="top" title=""
-															data-bs-original-title="Add Wishlist"><i
-																class="fa fa-heart"></i></a>
-													</div>
-												</div>
-											</div>
+											
 										</div>
 									</div>
 									@endforeach
@@ -256,24 +239,7 @@
 														exercitationem ullam corporis suscipit laboriosam</p>
 												</div>
 											</div>
-											<div class="card-footer">
-												<div class="footerimg d-flex mt-0 mb-0">
-													<div class="d-flex footerimg-l mb-0">
-														<img src="../assets/images/faces/female/19.jpg" alt="image"
-															class="avatar brround  me-2">
-														<h5 class="time-title text-muted p-0 leading-normal mt-2 mb-0">
-															Elizabeth<i class="icon icon-check text-success fs-12 ms-1"
-																data-bs-toggle="tooltip" data-bs-placement="top"
-																title="" data-bs-original-title="verified"></i></h5>
-													</div>
-													<div class="mt-2 footerimg-r ms-auto">
-														<a href="business.html" class="text-muted"
-															data-bs-toggle="tooltip" data-bs-placement="top" title=""
-															data-bs-original-title="Add Wishlist"><i
-																class="fa fa-heart"></i></a>
-													</div>
-												</div>
-											</div>
+											
 										</div>
 									</div>
 									@endforeach
@@ -299,24 +265,7 @@
 														exercitationem ullam corporis suscipit laboriosam</p>
 												</div>
 											</div>
-											<div class="card-footer">
-												<div class="footerimg d-flex mt-0 mb-0">
-													<div class="d-flex footerimg-l mb-0">
-														<img src="../assets/images/faces/female/19.jpg" alt="image"
-															class="avatar brround  me-2">
-														<h5 class="time-title text-muted p-0 leading-normal mt-2 mb-0">
-															Elizabeth<i class="icon icon-check text-success fs-12 ms-1"
-																data-bs-toggle="tooltip" data-bs-placement="top"
-																title="" data-bs-original-title="verified"></i></h5>
-													</div>
-													<div class="mt-2 footerimg-r ms-auto">
-														<a href="business.html" class="text-muted"
-															data-bs-toggle="tooltip" data-bs-placement="top" title=""
-															data-bs-original-title="Add Wishlist"><i
-																class="fa fa-heart"></i></a>
-													</div>
-												</div>
-											</div>
+											
 										</div>
 									</div>
 									@endforeach
@@ -346,7 +295,7 @@
 									class="fa fa-bolt"></i></span></div>
 						<div class="item-card2-img">
 							<a href="{{route('company-details' , $company->slug)}}" class="absolute-link"></a>
-							<img src="{{asset('image/' . $company->logo)}}" alt="img" class="cover-image">
+							<img src="{{asset('image/' . $company->cover_photo)}}" alt="img" class="cover-image">
 							<div class="item-card2-icons">
 								<a href="business.html" class="item-card2-icons-l"><i class="fa fa-cutlery"></i></a>
 								<a href="javascript:void(0)" class="item-card2-icons-r"><i class="fa fa fa-heart-o"></i></a>
@@ -552,7 +501,7 @@
 	<section class="sptb bg-patterns bg-white">
 		<div class="container">
 			<div class="section-title center-block text-center">
-				<h2>Featured Listings</h2>
+				<h2>Featured Listings test</h2>
 				<p>Mauris ut cursus nunc. Morbi eleifend, ligula at consectetur vehicula</p>
 			</div>
 			<div id="myCarousel2" class="owl-carousel owl-carousel-icons2">
@@ -563,7 +512,7 @@
 						
 						<div class="item-card7-imgs">
 							<a href="{{route('company-details' , $company->slug)}}" class="absolute-link"></a>
-							<img src="{{asset('image/' . $item->logo)}}" alt="img" class="cover-image">
+							<img src="{{asset('image/' . $item->cover_photo)}}" alt="img" class="cover-image">
 						</div>
 						<div class="item-card7-overlaytext">
 							<a href="business.html" class="text-white"> {{$item->categorys->name}} </a>
@@ -591,14 +540,18 @@
 						<div class="card-footer">
 							<div class="footerimg d-flex mt-0 mb-0">
 								<div class="d-flex footerimg-l mb-0">
-									@if($item->cat_id) 
-									
+								@if($item->user_id) 
+									@if(!empty($item->users->profile))
 									<img src="{{asset('image/' )}}/{{$item->users->profile}}" alt="image"class="avatar brround  me-2">
 									@else
-									<img src="../assets/images/faces/female/17.jpg" alt="image"	class="avatar brround  me-2">
+									<img src="{{asset('frontend/img/avater_profile.jpg')}}" alt="image"	class="avatar brround  me-2">
 									@endif
+								
+								@else
+								<img src="{{asset('frontend/img/avater_profile.jpg')}}" alt="image"	class="avatar brround  me-2">
+								@endif
 									
-									<h5 class="time-title text-muted p-0 leading-normal mt-2 mb-0">{{$item->users->name}} 
+									<h5 class="time-title text-muted p-0 leading-normal mt-2 mb-0">@if($item->user_id) {{$item->users->name}} @endif 
 										@if($item->packeg == 1) 
 										<i class="fa fa-exclamation-circle text-warning ms-1"data-bs-toggle="tooltip"	data-bs-placement="top" title=""	data-bs-original-title="Not Verified"></i> 
 										@elseif($item->packeg == 2) <i class="icon icon-check text-success fs-12 ms-1" data-bs-toggle="tooltip"data-bs-placement="top" title="verified"></i> 

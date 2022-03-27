@@ -91,7 +91,7 @@ class userController extends Controller
             $catchImg = $request->file('image');
             $imgName = time()."_". $catchImg->getClientOriginalName();
             $location = public_path('image/' . $imgName);
-            Image::make($catchImg)->save($location);
+            Image::make($catchImg)->resize(200,200)->save($location);
             $users->profile = $imgName;
         }
         $users->save();

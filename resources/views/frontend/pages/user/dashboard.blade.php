@@ -216,7 +216,7 @@
                                                         <div class="item-card9-img">
                                                             <div class="item-card9-imgs">
                                                                 <a href="business.html"></a>
-                                                                <img src="{{asset('image/' . $item->logo)}}" alt="img" class="cover-image">
+                                                                <img src="{{asset('image/' . $item->cover_photo)}}" alt="img" class="cover-image">
                                                             </div>
                                                             <div class="item-cardreview-absolute">
                                                                 <div class="d-flex">
@@ -230,7 +230,7 @@
                                                             <div class="card-body py-4">
                                                                 <div class="item-card9">
                                                                     <div class="d-flex">
-                                                                        <a href="business.html">{{$item->categoryFunc->name}}</a>
+                                                                        <a href="business.html">{{$item->categorys->name}}</a>
                                                                     </div>
                                                                     <a href="business.html" class="text-dark"><h4 class="font-weight-semibold mt-0">{{$item->main_title}}<i class="ion-checkmark-circled text-success ms-1"></i></h4></a>
                                                                     <div class="item-card2-desc mt-3">

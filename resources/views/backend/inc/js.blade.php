@@ -19,7 +19,7 @@
     <!-- ck editor -->
     <script src="https://cdn.ckeditor.com/4.18.0/standard/ckeditor.js"></script>
     <script>
-      CKEDITOR.replace( 'editor1' );
+      CKEDITOR.replace( 'discription' );
     </script>
 
     <script src="{{asset('backend')}}/js/bracket.js"></script>

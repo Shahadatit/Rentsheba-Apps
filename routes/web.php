@@ -27,6 +27,13 @@ Route::get('/category/{slug}' , [frontendController::class, 'primaryCategory'])-
 Route::get('/blog' , [frontendController::class, 'blogList'])->name('blog-list');
 Route::get('/blog-details/{slug}' , [frontendController::class, 'blogDetails'])->name('blog-details');
 
+// Ambulance
+Route::get('ambulance-service',[frontendController::class,'ambulanceService'])->name('ambulnace-service');
+Route::get('ac-ambulance-service',[frontendController::class,'acAmbulance'])->name('ac-ambulnace');
+Route::get('non-ac-ambulance-service',[frontendController::class,'nonAcAmbulance'])->name('non-ac-ambulnace');
+Route::get('freezing-ambulance-service',[frontendController::class,'freezingAmbulance'])->name('freezing-ambulnace');
+Route::get('icu-ambulance-service',[frontendController::class,'icuAmbulance'])->name('freezing-ambulnace');
+
 // IT service pages
 Route::get('web-design',[frontendController::class,'webDesign'])->name('web-design');
 Route::get('web-development',[frontendController::class,'webDevelopment'])->name('web-development');

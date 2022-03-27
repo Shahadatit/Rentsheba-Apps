@@ -359,7 +359,13 @@
 								<li><a href="#">Local SEO Service</a></li>
 							</ul>
 						</li>
-						<li><a href="{{route('blog-list')}}">post</a></li>
+						<li><a href="{{route('ambulnace-service')}}">Ambulance<span class="fa fa-caret-down m-0"></span></a>
+							<ul class="sub-menu">
+								<li><a href="{{route('ac-ambulnace')}}">Ac Ambulance</a></li>
+								<li><a href="{{route('non-ac-ambulnace')}}">Non Ac Ambulance</a></li>
+								<li><a href="{{route('freezing-ambulnace')}}">Freezing Ac Ambulance</a></li>
+							</ul>
+						</li>
 						
 						<li><a href="contact.html"> Contact Us <span class="wsarrow"></span></a></li>
 						<li class="d-lg-none mt-5 pb-5 mt-lg-0">

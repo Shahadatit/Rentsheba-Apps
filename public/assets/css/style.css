@@ -70379,3 +70379,7 @@ a.nav-link.font-bold.active {
 .bg-background:before {
     background: #040e47c0 !important;
 }
+
+ul.slide-menu.open li {
+    line-height: 32px;
+}
