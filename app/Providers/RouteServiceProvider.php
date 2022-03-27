@@ -18,6 +18,8 @@ class RouteServiceProvider extends ServiceProvider
      * @var string
      */
     public const HOME = '/';
+    public const ADMIN = '/admin/dashboard';
+    public const EMAIL_VERIFY = 'verify-email';
 
     /**
      * Define your route model bindings, pattern filters, etc.

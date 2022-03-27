@@ -39,9 +39,9 @@ Route::get('icu-ambulance-service',[frontendController::class,'icuAmbulance'])->
 Route::get('web-design',[frontendController::class,'webDesign'])->name('web-design');
 Route::get('web-development',[frontendController::class,'webDevelopment'])->name('web-development');
 
-Route::middleware('auth','verified')->group(function (){
+// Route::middleware('auth','verified')->group(function (){
     Route::group(['prefix' => '/user'],function(){
-        Route::get('/dashboard' , [frontendController::class,'userDashboard'])->name('user-dashboard');
+        Route::get('/dashboard' , [frontendController::class,'userDashboard'])->name('user-dashboard')->middleware('verified','auth');
         Route::get('/edit/{id}',[userController::class,'edit'])->name('user.edit');
         Route::post('/update/{id}' , [userController::class,'update'])->name('user.update');
     });
@@ -50,7 +50,7 @@ Route::middleware('auth','verified')->group(function (){
     Route::post('/business-store' , [companyController::class , 'store'] )->name('store-listing');
     Route::get('/listig-edit/{id}' , [companyController::class , 'edit'] )->name('edit-listing');
     Route::post('/listig-update/{id}' , [companyController::class , 'update'] )->name('update-listing');
-});
+// });
 
 
 
