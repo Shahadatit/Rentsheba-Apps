@@ -27,6 +27,7 @@ Route::get('/listing-details/{slug}' , [frontendController::class, 'businessDeta
 Route::get('/category/{slug}' , [frontendController::class, 'primaryCategory'])->name('primarycatcompany');
 Route::get('/blog' , [frontendController::class, 'blogList'])->name('blog-list');
 Route::get('/blog-details/{slug}' , [frontendController::class, 'blogDetails'])->name('blog-details');
+Route::get('/search',[frontendController::class, 'search']);
 
 // Ambulance
 Route::get('ambulance-service',[frontendController::class,'ambulanceService'])->name('ambulnace-service');

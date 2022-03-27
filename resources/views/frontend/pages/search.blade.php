@@ -74,7 +74,7 @@
 							<div class="item2-gl business-list-01">
 								<div class="">
 									<div class="bg-white p-5 item2-gl-nav d-md-flex">
-										<h6 class="mb-0 mt-3">Showing 9 to  {{App\Models\Company::companyCount()}} entries</h6>
+										<h6 class="mb-0 mt-3">Showing 9 to {{App\Models\Company::companyCount()}} entries</h6>
 										<ul class="nav item2-gl-menu ms-auto mt-1">
 											<li class=""><a href="#tab-11" class="active show" data-bs-toggle="tab"
 													title="List style"><i class="fa fa-list"></i></a></li>
@@ -189,7 +189,7 @@
 														<div class="item-card9-img">
 															<div class="item-card9-imgs">
 																<a href="{{route('company-details' , $item->slug)}}"></a>
-																<img src="{{asset('image/' . $item->cover_photo)}}"
+																<img src="{{asset('image/' . $item->logo)}}"
 																	alt="img" class="cover-image">
 															</div>
 															<div class="item-card9-icons">
@@ -309,27 +309,6 @@
 									</button>
 								</div>
 							</div>
-						</div>
-					</div>
-					<div class="card mb-5 overflow-hidden">
-						<div class="card-header">
-							<h3 class="card-title">Populer Service</h3>
-						</div>
-						<div class="card-body p-0">
-							<ul class="vertical-scroll">
-								@foreach($adminPost as $item)
-								<li class="item2">
-									<div class="footerimg d-flex mt-0 mb-0">
-										<div class="d-flex footerimg-l mb-0">
-											<img src="{{asset('image/'. $item->image)}}" alt="image" class="avatar brround  me-2">
-											<a href="{{route('blog-details', $item->slug)}}" class="time-title p-0 leading-normal mt-2">{{$item->name}}<i class="icon icon-check text-success fs-12 ms-1" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="verified"></i></a>
-										</div>
-										
-									</div>
-								</li>
-								@endforeach
-								
-							</ul>
 						</div>
 					</div>
 					<div class="card mb-0">

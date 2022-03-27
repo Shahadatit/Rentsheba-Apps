@@ -32,7 +32,7 @@
 
 	<!--Loader-->
 	<div id="global-loader">
-		<img src="/assets/images/products/products/loader.png" class="loader-img floating" alt="">
+		<img src="{{asset('frontend/img/loader.png')}}" class="loader-img floating" alt="">
 	</div>
 
 	@include('frontend.inc.topmenu')
@@ -228,6 +228,9 @@
 	<script src="/assets/js/swipe.js"></script>
 	<!-- Scripts Js-->
 	<script src="/assets/js/scripts2.js"></script>
+	<!-- Vertical scrollbar -->
+	<script src="/assets/plugins/vertical-scroll/jquery.bootstrap.newsbox.js"></script>
+	<script src="/assets/plugins/vertical-scroll/vertical-scroll.js"></script>
 	 <!--File-Uploads Js-->
 	 <script src="/assets/plugins/fancyuploder/jquery.ui.widget.js"></script>
 	<script src="/assets/plugins/fancyuploder/jquery.fileupload.js"></script>

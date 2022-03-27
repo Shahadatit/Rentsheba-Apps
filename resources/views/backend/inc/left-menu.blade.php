@@ -9,10 +9,10 @@
             <span class="menu-item-label">Dashboard</span>
           </a><!-- br-menu-link -->
         </li><!-- br-menu-item -->
-
+        <label class="sidebar-label pd-x-10 mg-t-25 mg-b-20 tx-info">Information Summary</label>
         <li class="br-menu-item">
           <a href="#" class="br-menu-link with-sub">
-            <i class="icon ion-pin icon ion-ios-photos-outline tx-20"></i>
+          <i class="menu-item-icon icon ion-ios-color-filter-outline tx-24"></i>
             <span class="menu-item-label">Posts</span>
           </a><!-- br-menu-link -->
           <ul class="br-menu-sub">

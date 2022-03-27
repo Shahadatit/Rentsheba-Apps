@@ -1,8 +1,17 @@
+@if(session()->has('success'))
+
+	<div class="alert alert-success alert-dismissible fade show text-center" role="alert" style="border-radius:0px">
+		{{ session()->get('success') }}  <strong>{{Auth::user()->name}}</strong> 
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>
+@endif
+
 @extends('frontend.layout.template')
 
 @section('title') <title> Website Design and Web Development Service </title> @endsection
 
 @section('content')
+
 
 
 	<!--Sliders Section-->
@@ -76,7 +85,7 @@
 								
 								<div class="servic-data mt-3">
 									<h3 class="font-weight-semibold mb-2">Domain Name Search </h3>
-									<p class="text-muted mb-0">A <b>Domain Names</b> are the human friendly address for Websites. Your Domain, Your identity. Check & Find Your Domain Today. Enroll in Easy Registration Process</p>
+									<p class="text-muted mb-4">A <b>Domain Names</b> are the human friendly address for Websites. Your Domain, Your identity. Check & Find Your Domain Today. Enroll in Easy Registration Process</p>
 									<a href="javascript:void(0)" class="btn btn-primary text-white w-100 px-6">Learn More</a>
 								</div>
 							</div>
@@ -90,7 +99,7 @@
 								
 								<div class="servic-data mt-3">
 									<h3 class="font-weight-semibold mb-2"> Web Hosting Service</h3>
-									<p class="text-muted mb-0">The <b> best Web Hosting</b> is best for Website. The best Hosting is fast & for a Website. If you are looking best hosting to set up your Website </p>
+									<p class="text-muted mb-4">The <b> best Web Hosting</b> is best for Website. The best Hosting is fast & for a Website. If you are looking best hosting to set up your Website </p>
 									<a href="javascript:void(0)" class="btn btn-primary text-white w-100 px-6">Learn More</a>
 								</div>
 							</div>
@@ -104,7 +113,7 @@
 								
 								<div class="servic-data mt-3">
 									<h3 class="font-weight-semibold mb-2"> VPS Hosting Service</h3>
-									<p class="text-muted mb-0">A <b> Virtual Private Service (VPS) Hosting</b> is a Dedicated service instance running on shared hardware. <b> VPS Hosting </b>is most flexible </p>
+									<p class="text-muted mb-4">A <b> Virtual Private Service (VPS) Hosting</b> is a Dedicated service instance running on shared hardware. <b> VPS Hosting </b>is most flexible </p>
 									<a href="javascript:void(0)" class="btn btn-primary text-white w-100 px-6">Learn More</a>
 								</div>
 							</div>
@@ -131,7 +140,7 @@
 								
 								<div class="servic-data mt-3">
 									<h3 class="font-weight-semibold mb-2"> Website Design</h3>
-									<p class="text-muted mb-0">Rentsheba Provide <b> Website Disign Services</b> by HTML-5, CSS-3, bootstrap-5, JavaScript, and jQuery. The best Web Design is available at cheap Price. The all Device Responsive with Mobile friendly Website, and SEO friendly design. </p>
+									<p class="text-muted mb-4">Rentsheba Provide <b> Website Disign Services</b> by HTML-5, CSS-3, bootstrap-5, JavaScript, and jQuery. The best Web Design is available at cheap Price. The all Device Responsive with Mobile friendly Website, and SEO friendly design. </p>
 									<a href="javascript:void(0)" class="btn btn-primary text-white w-100 px-6">Learn more</a>
 								</div>
 							</div>
@@ -145,7 +154,7 @@
 								
 								<div class="servic-data mt-3">
 									<h3 class="font-weight-semibold mb-2"> Web Development Service</h3>
-									<p class="text-muted mb-0">We Provide <b> different types of Web Development Service</b> Like: (i) Statik Website (ii) Dynamic Website by the WordPress, PHP, Laravel, and Node js. Hi-Quality Web Development service is Granted in you budget. </p>
+									<p class="text-muted mb-4">We Provide <b> different types of Web Development Service</b> Like: (i) Statik Website (ii) Dynamic Website by the WordPress, PHP, Laravel, and Node js. Hi-Quality Web Development service is Granted in you budget. </p>
 									<a href="javascript:void(0)" class="btn btn-primary text-white w-100 px-6">Learn more</a>
 								</div>
 							</div>
@@ -159,7 +168,7 @@
 								
 								<div class="servic-data mt-3">
 									<h3 class="font-weight-semibold mb-2"> Full-Stack Development Service</h3>
-									<p class="text-muted mb-0"> We have a team of <b> Skilled full-Stack Developers</b> expertise. You can hire front-end & Back-end Development teams separately as well as. Contact us to hire Full-Stack Development </p>
+									<p class="text-muted mb-4"> We have a team of <b> Skilled full-Stack Developers</b> expertise. You can hire front-end & Back-end Development teams separately as well as. Contact us to hire Full-Stack Development </p>
 									<a href="javascript:void(0)" class="btn btn-primary text-white w-100 px-6">Learn more</a>
 								</div>
 							</div>

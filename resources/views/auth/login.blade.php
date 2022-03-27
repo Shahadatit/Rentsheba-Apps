@@ -68,7 +68,7 @@
 										
 									</div>
 									<p class="mb-2"><a href="{{ route('password.request') }}" >Forgot Password</a></p>
-									<p class="text-dark mb-0">Don't have account?<a href="register.html" class="text-secondary ms-1">Sign UP</a></p>
+									<p class="text-dark mb-0">Don't have account?<a href="{{route('register')}}" class="text-secondary ms-1">Sign UP</a></p>
 								</form>
 							</div>
 						</div>

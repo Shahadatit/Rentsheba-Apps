@@ -1,3 +1,12 @@
+@if(session()->has('success'))
+
+	<div class="alert alert-success alert-dismissible fade show text-center" role="alert" style="border-radius:0px">
+	{{ session()->get('success') }} <strong>{{Auth::user()->name}}</strong>   Registered to Rentsheba
+		<button type="button" class="btn-close text-white" data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>
+@endif
+
+
 @extends('frontend.layout.template')
 
 @section('title') <title>Rentsheba | Rentsheba digital marketing agency</title> @endsection

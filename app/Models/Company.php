@@ -25,5 +25,10 @@ class Company extends Model
         return $this->belongsTo(User::class,'user_id');
     }
 
+    public static function companyCount(){
+        $compa = Company::where('status',1)->count();
+        return $compa;
+    }
+
     
 }

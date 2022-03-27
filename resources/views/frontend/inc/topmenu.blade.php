@@ -276,7 +276,7 @@
 								
 								
 								<li>
-									<a href="myfavorite.html" class="text-dark"><i class="fa fa-heart me-1"></i>
+									<a href="#" class="text-dark"><i class="fa fa-heart me-1"></i>
 										<span>My favorities</span></a>
 								</li>
 							</ul>

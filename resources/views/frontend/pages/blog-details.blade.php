@@ -143,16 +143,28 @@
 
 					<!--Rightside Content-->
 					<div class="col-xl-4 col-lg-4 col-md-12">
-						<div class="card">
-							<div class="card-body">
-								<div class="input-group">
-									<input type="text" class="form-control br-ts-3  br-bs-3" placeholder="Search">
-									<div class="input-group-text p-0 border-0">
-										<button type="button" class="btn btn-secondary br-te-3  br-be-3">
-											Search
-										</button>
-									</div>
-								</div>
+					<div class="card mb-5 overflow-hidden">
+							<div class="card-header">
+								<h3 class="card-title">Populer Service</h3>
+							</div>
+							<div class="card-body p-0">
+								<ul class="vertical-scroll">
+									@foreach($adminPost as $item)
+									<li class="item2">
+										<div class="footerimg d-flex mt-0 mb-0">
+											<div class="d-flex footerimg-l mb-0">
+												<img src="{{asset('image/'. $item->image)}}" alt="image" class="avatar brround  me-2">
+												<a href="{{route('blog-details', $item->slug)}}" class="time-title p-0 leading-normal mt-2">{{$item->name}}<i class="icon icon-check text-success fs-12 ms-1" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="verified"></i></a>
+											</div>
+											<div class="mt-2 footerimg-r ms-auto">
+												<a href="javascript:void(0)" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Articles"><span class="text-muted me-2"><i class="fa fa-comment-o"></i> 16</span></a>
+												<a href="javascript:void(0)" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Likes"><span class="text-muted"><i class="fa fa-thumbs-o-up"></i> 36</span></a>
+											</div>
+										</div>
+									</li>
+									@endforeach
+									
+								</ul>
 							</div>
 						</div>
 						<div class="card">
@@ -232,75 +244,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="card mb-0 overflow-hidden">
-							<div class="card-header">
-								<h3 class="card-title">Blog Authors</h3>
-							</div>
-							<div class="card-body p-0">
-								<ul class="vertical-scroll">
-									<li class="item2">
-										<div class="footerimg d-flex mt-0 mb-0">
-											<div class="d-flex footerimg-l mb-0">
-												<img src="../assets/images/faces/female/18.jpg" alt="image" class="avatar brround  me-2">
-												<a href="javascript:void(0)" class="time-title p-0 leading-normal mt-2">Boris	Nash <i class="icon icon-check text-success fs-12 ms-1" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="verified"></i></a>
-											</div>
-											<div class="mt-2 footerimg-r ms-auto">
-												<a href="javascript:void(0)" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Articles"><span class="text-muted me-2"><i class="fa fa-comment-o"></i> 16</span></a>
-												<a href="javascript:void(0)" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Likes"><span class="text-muted"><i class="fa fa-thumbs-o-up"></i> 36</span></a>
-											</div>
-										</div>
-									</li>
-									<li class="item2">
-										<div class="footerimg d-flex mt-0 mb-0">
-											<div class="d-flex footerimg-l mb-0">
-												<img src="../assets/images/faces/female/10.jpg" alt="image" class="avatar brround  me-2">
-												<a href="javascript:void(0)" class="time-title p-0 leading-normal mt-2">Lorean Mccants <i class="icon icon-check text-success fs-12 ms-1" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="verified"></i></a>
-											</div>
-											<div class="mt-2 footerimg-r ms-auto">
-												<a href="javascript:void(0)" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Articles"><span class="text-muted me-2"><i class="fa fa-comment-o"></i> 43</span></a>
-												<a href="javascript:void(0)" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Likes"><span class="text-muted"><i class="fa fa-thumbs-o-up"></i> 23</span></a>
-											</div>
-										</div>
-									</li>
-									<li class="item2">
-										<div class="footerimg d-flex mt-0 mb-0">
-											<div class="d-flex footerimg-l mb-0">
-												<img src="../assets/images/faces/male/18.jpg" alt="image" class="avatar brround  me-2">
-												<a href="javascript:void(0)" class="time-title p-0 leading-normal mt-2">Dewitt Hennessey <i class="icon icon-check text-success fs-12 ms-1" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="verified"></i></a>
-											</div>
-											<div class="mt-2 footerimg-r ms-auto">
-												<a href="javascript:void(0)" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Articles"><span class="text-muted me-2"><i class="fa fa-comment-o"></i> 34</span></a>
-												<a href="javascript:void(0)" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Likes"><span class="text-muted"><i class="fa fa-thumbs-o-up"></i> 12</span></a>
-											</div>
-										</div>
-									</li>
-									<li class="item2">
-										<div class="footerimg d-flex mt-0 mb-0">
-											<div class="d-flex footerimg-l mb-0">
-												<img src="../assets/images/faces/male/8.jpg" alt="image" class="avatar brround  me-2">
-												<a href="javascript:void(0)" class="time-title p-0 leading-normal mt-2">Archie Overturf <i class="icon icon-check text-success fs-12 ms-1" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="verified"></i></a>
-											</div>
-											<div class="mt-2 footerimg-r ms-auto">
-												<a href="javascript:void(0)" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Articles"><span class="text-muted me-2"><i class="fa fa-comment-o"></i> 12</span></a>
-												<a href="javascript:void(0)" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Likes"><span class="text-muted"><i class="fa fa-thumbs-o-up"></i> 32</span></a>
-											</div>
-										</div>
-									</li>
-									<li class="item2">
-										<div class="footerimg d-flex mt-0 mb-0">
-											<div class="d-flex footerimg-l mb-0">
-												<img src="../assets/images/faces/female/21.jpg" alt="image" class="avatar brround  me-2">
-												<a href="javascript:void(0)" class="time-title p-0 leading-normal mt-2">Barbra Flegle <i class="icon icon-check text-success fs-12 ms-1" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="verified"></i></a>
-											</div>
-											<div class="mt-2 footerimg-r ms-auto">
-												<a href="javascript:void(0)" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Articles"><span class="text-muted me-2"><i class="fa fa-comment-o"></i> 21</span></a>
-												<a href="javascript:void(0)" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Likes"><span class="text-muted"><i class="fa fa-thumbs-o-up"></i> 32</span></a>
-											</div>
-										</div>
-									</li>
-								</ul>
-							</div>
-						</div>
+						
 					</div>
 					<!--/Rightside Content-->
 				</div>

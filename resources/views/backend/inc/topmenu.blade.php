@@ -176,7 +176,11 @@
                 <li><a href=""><i class="icon ion-ios-download"></i> Downloads</a></li>
                 <li><a href=""><i class="icon ion-ios-star"></i> Favorites</a></li>
                 <li><a href=""><i class="icon ion-ios-folder"></i> Collections</a></li>
-                <li><a href=""><i class="icon ion-power"></i> Sign Out</a></li>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                  <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                this.closest('form').submit();"><i class="icon ion-power"></i> Sign Out</a></li>
+                </form>
               </ul>
             </div><!-- dropdown-menu -->
           </div><!-- dropdown -->

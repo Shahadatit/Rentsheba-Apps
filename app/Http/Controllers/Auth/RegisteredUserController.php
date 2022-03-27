@@ -49,6 +49,6 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        return redirect(RouteServiceProvider::EMAIL_VERIFY);
+        return redirect(RouteServiceProvider::EMAIL_VERIFY)->with('success','Congratulations!');
     }
 }

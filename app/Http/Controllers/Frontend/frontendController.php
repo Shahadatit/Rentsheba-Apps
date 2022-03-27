@@ -30,7 +30,8 @@ class frontendController extends Controller
     public function businessList()
     {
         $companys = Company::where('status',1)->inRandomOrder()->get();
-        return view('frontend.pages.business-list',compact('companys'));
+        $adminPost = adminPost::where('status',1)->inRandomOrder()->limit(6)->get();
+        return view('frontend.pages.business-list',compact('companys','adminPost'));
     }
 
     public function businessDetails($slug)
@@ -38,8 +39,9 @@ class frontendController extends Controller
         $company = Company::where('slug', $slug)->first();
         if( !empty($company)){
             $category = $company->cat_id;
+            $adminPost = adminPost::where('status',1)->inRandomOrder()->limit(6)->get();
             $adminPosts = adminPost::where('status',1)->where('cat_id',$category)->latest()->get();
-            return view('frontend.pages.business-details',compact('company','adminPosts'));
+            return view('frontend.pages.business-details',compact('company','adminPosts','adminPost'));
         }
         
     }
@@ -62,11 +64,22 @@ class frontendController extends Controller
     {
         $post = adminPost::where('slug', $slug)->first();
         if(!empty($post)){
-            return view('frontend.pages.blog-details',compact('post'));
+            $adminPost = adminPost::where('status',1)->inRandomOrder()->limit(6)->get();
+            return view('frontend.pages.blog-details',compact('post','adminPost'));
         }else{
             return back();
         }
         
+    }
+
+    public function search(Request $request){
+
+        $busines = Company::where('main_title','LIKE','%'.$request->search.'%');
+        if($request->category != "ALL"){
+            $busines->where('cat_id',$request->category);
+        }
+        $companys  = $busines->get();
+        return view('frontend.pages.search',compact('companys'));
     }
 
     public function userDashboard()
