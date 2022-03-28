@@ -1,6 +1,6 @@
 @extends('frontend.layout.template')
 
-@section('title') <title> Website Design and Web Development Service </title> @endsection
+@section('title') <title> Freezing Ambulance Service in Dhaka, Bangladesh </title> @endsection
 
 @section('content')
 
@@ -11,8 +11,8 @@
 			<div class="header-text text-1 mb-0">
 				<div class="container">
 					<div class="text-center text-white mb-7">
-						<h1 class="mb-1"> Website Design and Web Development Service </h1>
-						<p>Welcome to Rentsheba! Rentsheba is the laargest and Trusted IT Development Service Company. It's Provides Website Design & Web Development, Domain & Hosting, Local SEO Service, Digital Marketting Service, and Business Direcotry. Grow your Business by Branding your company. High Quality Service Granted. 24/7 Suppport </p>
+						<h1 class="mb-1"> Freezing Ambulance Service in Dhaka, Bangladesh </h1>
+						<p> Freezing Ambulance Service in Dhaka, Bangladesh. We Provide latest Model Freezing ambulance to carry or long time Save the dead body. Freezing ambulance is best way than others to carry or save. High Quality ambualnce & Service is Granted. 24/7 Suppport </p>
 					</div>
 					<div class="row">
 						<div class="col-xl-10 col-lg-12 col-md-12 d-block mx-auto">
@@ -30,21 +30,21 @@
 	<!--Sliders Section-->
 
 
-    <section class="sptb bg-white">
+    	<section class="sptb bg-white">
 			<div class="container">
 				<div class="section-title center-block text-center">
-					<h2>Web Design Service & Solutions</h2>
+					<h2>Freezing Ambulance Service</h2>
 				
 				</div>
 				<div class="row">
 					<div class="col-lg-4 col-md-6 col-sm-6">
 						<div class="">
 							<div class="mb-lg-0 mb-4">
-								<div class="service-card text-center">
+								<div class="service-card text-center"> 
 									
 								<div class="servic-data mt-3">
-									<h3 class="font-weight-semibold mb-2"> Website Design</h3>
-									<p class="text-muted mb-0">Rentsheba Provide <b> Website Disign Services</b> by HTML-5, CSS-3, bootstrap-5, JavaScript, and jQuery. The best Web Design is available at cheap Price. The all Device Responsive with Mobile friendly Website, and SEO friendly design. </p>
+									<h3 class="font-weight-semibold mb-2"> 24/7 support </h3>
+									<p class="text-muted mb-0"> 24 Hours Emergency Ambulance Services is available </p>
 									
 								</div>
 								</div>
@@ -57,8 +57,8 @@
 								<div class="service-card text-center">
 										
 									<div class="servic-data mt-3">
-										<h3 class="font-weight-semibold mb-2"> Web Development Service</h3>
-										<p class="text-muted mb-0">We Provide <b> different types of Web Development Service</b> Like: (i) Statik Website (ii) Dynamic Website by the WordPress, PHP, Laravel, and Node js. Hi-Quality Web Development service is Granted in you budget. </p>
+										<h3 class="font-weight-semibold mb-2"> Quality Service</h3>
+										<p class="text-muted mb-0"> The best ambulance forf best service </b> </p>
 										
 									</div>
 								</div>
@@ -71,8 +71,8 @@
 								<div class="service-card text-center">
 									
 								<div class="servic-data mt-3">
-									<h3 class="font-weight-semibold mb-2"> Full-Stack Development Service</h3>
-									<p class="text-muted mb-0"> We have a team of <b> Skilled full-Stack Developers</b> expertise. You can hire front-end & Back-end Development teams separately as well as. Contact us to hire Full-Stack Development </p>
+									<h3 class="font-weight-semibold mb-2"> 100% Stisfied Service</h3>
+									<p class="text-muted mb-0"> We will more try to provide about your requirements. </p>
 									
 								</div>
 								</div>
@@ -89,9 +89,8 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-6">
-							<h3 class="leading-normal">Dynamic Website Development</h3>
-							<p class="leading-normal fs-16">A <b>dynamic Website</b> is a site that contains dynamic pages such as templates, contents , scripts etc, in a nutshell , the dynamic website displays various content types every time it is browsed . The web page can be changed with the reader that opens the page, character of consumer interplay , or day time. <br> <br>
-                    The Dynamic <b>WordPress Website Design</b> & <b>Professional Web Development</b> Expert team. client-focused , Customer-centric, creating Website Solutions, that deliver tangible business results,  Appnovation's Web Developers helps Brands the ever-changing digital landscape</p>
+							<h3 class="leading-normal"> Freezing Ambulance Service </h3>
+							<p class="leading-normal fs-16"> The <b>Freezing Ambulance Service</b> is available in Dhaka, Bangladesh. A freezing ambulance is a kind of vehicle that is made to carry a dead body. It has a freezing compartment inside the vehicle that is perfect to contain a dead body and the ice compartment protects the dead body from decay. No matter how long the distance would have passed the body, the ambulance properly managed the body with its under 7-degree temperature. Even there is no chance of bad odor or internal infections when the body is inside the ambulance. If you require to transport the dead body from one side to another, you can find a freezing ambulance service to do the job perfectly. </p> 
 							<a class="btn btn-secondary btn-lg mt-2" href="javascript:void0">View More</a>
 						</div>
 						<div class="col-lg-6">
@@ -109,8 +108,12 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-7">
-					<h3 class="leading-normal">Static Website</h3>
-							<p class="leading-normal fs-16">A <b>Static Website</b> contains Web pages with fixed content. Each page is coded in HTML and displays the same information to every visitor. Static sites are them most basic type of website and are them easiest to create. Unlike <b>Dynamic Websites</b> , they do not require any Web Programming or Database design. Astatic site can be simply creating a few HTML pages and publishing them to a web server. </p>
+					<h3 class="leading-normal"> Rent of Freezer Ambulance </h3>
+							<p class="leading-normal fs-16"> The <b>freezer ambulance</b> fare is a bit higher than a normal ambulance. Usually, we charge you 8,000-10,000 Taka for the body 100 km away from the pick-up point and Rs 600 per hour to wait for the fridge ambulance. Long-distance fares will be even higher. For example, the fare from Chittagong city to Dhaka airport will be 20,000 rupees. <br> <br> 
+							
+							Remember, the country offers ambulance services at a lower cost and higher quality ambulances than others. Freezing ambulance Service in Dhaka or any other district of Bangladesh we will go after your call. <br> <br> 
+							
+							Sometimes, you wanted to know how intact the temperature would be for the corpse. For your kind information, keep the temperature at -6 degrees or -7 degrees lower.  </p>
 					</div>
 				</div>
 			</div>

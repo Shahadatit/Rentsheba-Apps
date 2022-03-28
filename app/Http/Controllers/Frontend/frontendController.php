@@ -7,6 +7,7 @@ use App\Models\Cuntry;
 use App\Models\adminPost;
 use App\Models\Company;
 use App\Models\Category;
+use App\Models\Comment;
 use Illuminate\Http\Request;
 use Auth;
 use DB;
@@ -39,6 +40,7 @@ class frontendController extends Controller
         $company = Company::where('slug', $slug)->first();
         if( !empty($company)){
             $category = $company->cat_id;
+            $company->increment('views');
             $adminPost = adminPost::where('status',1)->inRandomOrder()->limit(6)->get();
             $adminPosts = adminPost::where('status',1)->where('cat_id',$category)->latest()->get();
             return view('frontend.pages.business-details',compact('company','adminPosts','adminPost'));
@@ -63,9 +65,13 @@ class frontendController extends Controller
     public function blogDetails($slug)
     {
         $post = adminPost::where('slug', $slug)->first();
+       
         if(!empty($post)){
+            
             $adminPost = adminPost::where('status',1)->inRandomOrder()->limit(6)->get();
-            return view('frontend.pages.blog-details',compact('post','adminPost'));
+            $post->increment('views');
+            $comments = Comment::orderby('id','desc')->where('status',1)->where('post_id', $post->id)->get();
+            return view('frontend.pages.blog-details',compact('post','adminPost','comments'));
         }else{
             return back();
         }

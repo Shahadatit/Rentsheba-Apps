@@ -364,6 +364,7 @@
 								<li><a href="{{route('ac-ambulnace')}}">Ac Ambulance</a></li>
 								<li><a href="{{route('non-ac-ambulnace')}}">Non Ac Ambulance</a></li>
 								<li><a href="{{route('freezing-ambulnace')}}">Freezing Ac Ambulance</a></li>
+								<li><a href="{{route('icu-ambulnace')}}">ICU Ambulance service</a></li>
 							</ul>
 						</li>
 						

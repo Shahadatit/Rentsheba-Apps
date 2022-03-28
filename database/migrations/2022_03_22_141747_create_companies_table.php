@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('company_name')->unique();
             $table->text('slug')->nullable();
+            $table->integer('views')->default(0);
             $table->string('cuntry')->nullable();
             $table->string('website')->nullable();
             $table->string('com_mobile')->nullable();

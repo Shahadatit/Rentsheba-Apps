@@ -8,8 +8,8 @@
         <div class="br-pagetitle" style='background:linear-gradient(to right, #1CAF9A 0%, #17A2B8 100%)'>
             <i class="icon ion-ios-home-outline"></i>
             <div>
-                <h4>District</h4>
-                <p class="mg-b-0 text-white">District Management.</p>
+                <h4>User</h4>
+                <p class="mg-b-0 text-white">User Management.</p>
             </div>
         </div>
 
@@ -20,8 +20,8 @@
                     <div class="card">
                         <div class="card-header tx-medium">
                             <div class='d-flex align-items-center justify-content-between'>
-                                <h5 class='br-section-label m-0'>District List</h5>
-                                <a href="{{route('district.create')}}" class='btn btn-info btn-sm'>Add New District</a>
+                                <h5 class='br-section-label m-0'>User List</h5>
+                                <!-- <a href="{{route('district.create')}}" class='btn btn-info btn-sm'>Add New User</a> -->
                             </div>
                         </div><!-- card-header -->
                         <div class="card-body">

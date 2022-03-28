@@ -33,10 +33,11 @@
 							<div class="wrapper wrapper2">
 								<div class="card-body">
 								@if(session()->has('success'))
-									<div class="alert alert-info">
+									<div class="alert alert-info ">
 										{{ session()->get('success') }}
 									</div>
 								@endif
+								
 									<h3>Login</h3>
 									<div class="text-center">
 										<div class="btn-list d-flex">

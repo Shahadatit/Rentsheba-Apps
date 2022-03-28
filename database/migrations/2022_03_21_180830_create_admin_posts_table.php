@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name')->unique();
             $table->string('slug');
+            $table->integer('views')->default(0);
             $table->string('focus_keyword')->nullable();
             $table->text('discription')->nullable();
             $table->text('sort_description')->nullable();

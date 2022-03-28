@@ -66,4 +66,8 @@ class User extends Authenticatable implements MustVerifyEmail
     public function cuntryFunc(){
         return $this->belongsTo(Cuntry::class , 'cuntry');
     }
+
+    public function comments(){
+        return $this->hasMany(Comment::class);
+    }
 }

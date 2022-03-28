@@ -49,7 +49,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="">Sort Discription</label>
-                                                <textarea name="sort_description" id="" cols="30" class="form-control" rows="2"></textarea>
+                                                <textarea name="sort_description" id="" cols="30" class="form-control" maxlength="100" rows="2"></textarea>
                                                 @error('sort_description')
                                                     <div class="text-danger">{{ $message }}</div>
                                                 @enderror

@@ -50,7 +50,7 @@
 										<div class="item7-card-desc d-flex mb-2">
 											<a href="javascript:void(0)"><i class="fa fa-calendar-o text-muted me-2"></i>{{$item->created_at->format('d M, Y')}}</a>
 											<div class="ms-auto">
-												<a class="me-0" href="javascript:void(0)"><i class="fa fa-comment-o text-muted me-2"></i>7 Comments</a>
+												<a class="me-0" href="javascript:void(0)"><i class="icon icon-eye text-muted me-1"></i> {{$item->views}} Views</a>
 											</div>
 										</div>
 										<a href="{{route('blog-details', $item->slug)}}" class="text-dark"><h4 class="font-weight-semibold">{{$item->name}} </h4></a>

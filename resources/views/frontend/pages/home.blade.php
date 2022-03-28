@@ -194,6 +194,7 @@
 							<div class="col-12">
 								<ul class="nav items-blog-tab-menu">
 									<li class=""><a href="#tab-1" class="active show" data-bs-toggle="tab">All</a></li>
+									<li><a href="#tab-4" data-bs-toggle="tab" class="">Popular</a></li>
 									<li><a href="#tab-2" data-bs-toggle="tab" class="">Latest News</a></li>
 									<li><a href="#tab-3" data-bs-toggle="tab" class="">Old News</a></li>
 									
@@ -207,18 +208,20 @@
 									<div class="col-xl-4 col-lg-4 col-md-12">
 										<div class="card mb-xl-0">
 											<div class="item-card8-img  br-te-4 br-ts-4">
-												<img src="{{asset('image/' . $allItem->image)}}" alt="img"
+												<a href="{{route('blog-details', $allItem->slug)}}">
+													<img src="{{asset('image/' . $allItem->image)}}" alt="img"
 													class="cover-image">
+												</a>
+												
 											</div>
 											<div class="item-card8-overlaytext">
 												<h6 class="mb-0">{{$allItem->categoryFunction->name}}</h6>
 											</div>
 											<div class="card-body">
 												<div class="item-card8-desc">
-													<p class="text-muted mb-2">18 November 2019.</p>
-													<h4 class="font-weight-semibold">{{$allItem->name}}</h4>
-													<p class="mb-0">Lorem ipsum dolor sit amet, quis nostrum
-														exercitationem ullam corporis suscipit laboriosam</p>
+													<p class="text-muted mb-2">{{$allItem->created_at->format('d M, Y')}}</p>
+													<h4 class="font-weight-semibold"><a href="{{route('blog-details', $allItem->slug)}}">{{$allItem->name}}</a></h4>
+													<p class="mb-0">{{$allItem->sort_description}}</p>
 												</div>
 											</div>
 											
@@ -234,18 +237,20 @@
 									<div class="col-xl-4 col-lg-4 col-md-12">
 										<div class="card mb-xl-0">
 											<div class="item-card8-img  br-te-4 br-ts-4">
-												<img src="{{asset('image/' . $allItem->image)}}" alt="img"
+												<a href="{{route('blog-details', $allItem->slug)}}">
+													<img src="{{asset('image/' . $allItem->image)}}" alt="img"
 													class="cover-image">
+												</a>
+												
 											</div>
 											<div class="item-card8-overlaytext">
 												<h6 class="mb-0">{{$allItem->categoryFunction->name}}</h6>
 											</div>
 											<div class="card-body">
 												<div class="item-card8-desc">
-													<p class="text-muted mb-2">18 November 2019.</p>
-													<h4 class="font-weight-semibold">{{$allItem->name}}</h4>
-													<p class="mb-0">Lorem ipsum dolor sit amet, quis nostrum
-														exercitationem ullam corporis suscipit laboriosam</p>
+													<p class="text-muted mb-2">{{$allItem->created_at->format('d M, Y')}}</p>
+													<h4 class="font-weight-semibold"><a href="{{route('blog-details', $allItem->slug)}}">{{$allItem->name}}</a></h4>
+													<p class="mb-0">{{$allItem->sort_description}}</p>
 												</div>
 											</div>
 											
@@ -260,18 +265,48 @@
 									<div class="col-xl-4 col-lg-4 col-md-12">
 										<div class="card mb-xl-0">
 											<div class="item-card8-img  br-te-4 br-ts-4">
-												<img src="{{asset('image/' . $allItem->image)}}" alt="img"
+												<a href="{{route('blog-details', $allItem->slug)}}">
+													<img src="{{asset('image/' . $allItem->image)}}" alt="img"
 													class="cover-image">
+												</a>
+												
 											</div>
 											<div class="item-card8-overlaytext">
 												<h6 class="mb-0">{{$allItem->categoryFunction->name}}</h6>
 											</div>
 											<div class="card-body">
 												<div class="item-card8-desc">
-													<p class="text-muted mb-2">18 November 2019.</p>
-													<h4 class="font-weight-semibold">{{$allItem->name}}</h4>
-													<p class="mb-0">Lorem ipsum dolor sit amet, quis nostrum
-														exercitationem ullam corporis suscipit laboriosam</p>
+													<p class="text-muted mb-2">{{$allItem->created_at->format('d M, Y')}}</p>
+													<h4 class="font-weight-semibold"><a href="{{route('blog-details', $allItem->slug)}}">{{$allItem->name}}</a></h4>
+													<p class="mb-0">{{$allItem->sort_description}}</p>
+												</div>
+											</div>
+											
+										</div>
+									</div>
+									@endforeach
+								</div>
+							</div>
+							<div class="tab-pane" id="tab-4">
+								<div class="row">
+									@foreach(App\Models\adminPost::orderby('views','desc')->where('status',1)->limit(3)->get() as $allItem)
+									<div class="col-xl-4 col-lg-4 col-md-12">
+										<div class="card mb-xl-0">
+											<div class="item-card8-img  br-te-4 br-ts-4">
+												<a href="{{route('blog-details', $allItem->slug)}}">
+													<img src="{{asset('image/' . $allItem->image)}}" alt="img"
+													class="cover-image">
+												</a>
+												
+											</div>
+											<div class="item-card8-overlaytext">
+												<h6 class="mb-0">{{$allItem->categoryFunction->name}}</h6>
+											</div>
+											<div class="card-body">
+												<div class="item-card8-desc">
+													<p class="text-muted mb-2">{{$allItem->created_at->format('d M, Y')}}</p>
+													<h4 class="font-weight-semibold"><a href="{{route('blog-details', $allItem->slug)}}">{{$allItem->name}}</a></h4>
+													<p class="mb-0">{{$allItem->sort_description}}</p>
 												</div>
 											</div>
 											
@@ -534,12 +569,12 @@
 									</a>
 								</div>
 								<ul class="item-cards7-ic mb-0">
-									<li><a href="javascript:void(0)"><span class=""><i class="icon icon-eye me-1"></i> 12
+									<li><a href="javascript:void(0)"><span class=""><i class="icon icon-eye me-1"></i> {{$item->views}}
 												Views</span></a></li>
 									<li><a href="javascript:void(0)" class="icons"><i class="icon icon-location-pin text-muted me-1"></i>
 											{{$item->cuntrys->name}}</a></li>
 									<li class="mb-md-0"><a href="javascript:void(0)" class="icons"><i
-												class="icon icon-event text-muted me-1"></i> 1 hour ago</a></li>
+												class="icon icon-event text-muted me-1"></i> {{$item->created_at->diffForHumans()}}</a></li>
 									<li class="mb-0"><a href="javascript:void(0)" class="icons"><i
 												class="icon icon-phone text-muted me-1"></i> {{$item->com_mobile}}</a></li>
 								</ul>
@@ -847,90 +882,7 @@
 	</section>
 	<!--/post section-->
 
-	<!--Blogs-->
-	<section class="sptb bg-white">
-		<div class="container">
-			<div class="section-title center-block text-center">
-				<h2>Best Rated Locations</h2>
-				<p>Mauris ut cursus nunc. Morbi eleifend, ligula at consectetur vehicula</p>
-			</div>
-			<div class="row">
-				<div class="col-sm-12 col-lg-3 col-md-6">
-					<div class="item-card overflow-hidden">
-						<div class="item-card-desc">
-							<a href="business-list.html"></a>
-							<div class="card text-center overflow-hidden mb-lg-0">
-								<div class="card-img">
-									<img src="../assets/images/locations/germany1.jpg" alt="img" class="cover-image">
-								</div>
-								<div class="item-card-text text-start">
-									<div class="rating-star sm my-rating-5" data-rating="5"></div>
-									<h4 class="mb-2">Germany</h4>
-									<small class="text-white"><i class="fa fa-moon-o"></i> 8 Cities <i
-											class="ms-3 fa fa-map-o"></i> 140+ Listings </small>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-12 col-lg-3 col-md-6">
-					<div class="item-card overflow-hidden">
-						<div class="item-card-desc">
-							<a href="business-list.html"></a>
-							<div class="card text-center overflow-hidden mb-lg-0">
-								<div class="card-img">
-									<img src="../assets/images/locations/london1.jpg" alt="img" class="cover-image">
-								</div>
-								<div class="item-card-text text-start">
-									<div class="rating-star sm my-rating-5" data-rating="5"></div>
-									<h4 class="mb-2">London</h4>
-									<small class="text-white"><i class="fa fa-moon-o"></i> 17 Cities <i
-											class="ms-3 fa fa-map-o"></i> 24+ Listings </small>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-12 col-lg-3 col-md-6">
-					<div class="item-card overflow-hidden">
-						<div class="item-card-desc">
-							<a href="business-list.html"></a>
-							<div class="card text-center overflow-hidden mb-md-0">
-								<div class="card-img">
-									<img src="../assets/images/locations/austrelia1.jpg" alt="img" class="cover-image">
-								</div>
-								<div class="item-card-text text-start">
-									<div class="rating-star sm my-rating-5" data-rating="5"></div>
-									<h4 class="mb-2">Australia</h4>
-									<small class="text-white"><i class="fa fa-moon-o"></i> 12 Cities <i
-											class="ms-3 fa fa-map-o"></i> 18+ Listings </small>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-12 col-lg-3 col-md-6">
-					<div class="item-card overflow-hidden">
-						<div class="item-card-desc">
-							<a href="business-list.html"></a>
-							<div class="card text-center overflow-hidden mb-0">
-								<div class="card-img">
-									<img src="../assets/images/locations/canada1.jpg" alt="img" class="cover-image">
-								</div>
-								<div class="item-card-text text-start">
-									<div class="rating-star sm my-rating-5" data-rating="5"></div>
-									<h4 class="mb-2">Canada</h4>
-									<small class="text-white"><i class="fa fa-moon-o"></i> 12 Cities <i
-											class="ms-3 fa fa-map-o"></i> 40+ Listings </small>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--Blogs-->
+	
 
 	<!--Section-->
 	<section class="sptb cover-image patter-image" data-bs-image-src="../assets/images/pngs/7.png">

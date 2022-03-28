@@ -9,11 +9,13 @@ use App\Http\Controllers\Backend\districtController;
 use App\Http\Controllers\Backend\cuntryController;
 use App\Http\Controllers\Backend\userCompany;
 use App\Http\Controllers\Backend\backendUserController;
+use App\Http\Controllers\Backend\adminCommintController;
 
 // Frontend Controller
 use App\Http\Controllers\Frontend\frontendController;
 use App\Http\Controllers\Frontend\userController;
 use App\Http\Controllers\Frontend\companyController;
+use App\Http\Controllers\Frontend\commentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,13 +36,16 @@ Route::get('ambulance-service',[frontendController::class,'ambulanceService'])->
 Route::get('ac-ambulance-service',[frontendController::class,'acAmbulance'])->name('ac-ambulnace');
 Route::get('non-ac-ambulance-service',[frontendController::class,'nonAcAmbulance'])->name('non-ac-ambulnace');
 Route::get('freezing-ambulance-service',[frontendController::class,'freezingAmbulance'])->name('freezing-ambulnace');
-Route::get('icu-ambulance-service',[frontendController::class,'icuAmbulance'])->name('freezing-ambulnace');
+Route::get('icu-ambulance-service',[frontendController::class,'icuAmbulance'])->name('icu-ambulnace');
 
 // IT service pages
 Route::get('web-design',[frontendController::class,'webDesign'])->name('web-design');
 Route::get('web-development',[frontendController::class,'webDevelopment'])->name('web-development');
 
-// Route::middleware('auth','verified')->group(function (){
+// Commetn Route
+Route::post('/commetn-store' , [commentController::class,'store'])->name('comment.store');
+
+Route::middleware('auth','verified')->group(function (){
     Route::group(['prefix' => '/user'],function(){
         Route::get('/dashboard' , [frontendController::class,'userDashboard'])->name('user-dashboard')->middleware('verified','auth');
         Route::get('/edit/{id}',[userController::class,'edit'])->name('user.edit');
@@ -51,7 +56,7 @@ Route::get('web-development',[frontendController::class,'webDevelopment'])->name
     Route::post('/business-store' , [companyController::class , 'store'] )->name('store-listing');
     Route::get('/listig-edit/{id}' , [companyController::class , 'edit'] )->name('edit-listing');
     Route::post('/listig-update/{id}' , [companyController::class , 'update'] )->name('update-listing');
-// });
+});
 
 
 
@@ -98,6 +103,14 @@ Route::middleware('auth','role','verified')->group(function (){
             Route::get('/edit{id}' , [categoryController::class , 'edit'])->name('category.edit');
             Route::post('/update{id}' , [categoryController::class , 'update'])->name('category.update');
             Route::post('/destroy{id}' , [categoryController::class , 'destroy'])->name('category.destroy');
+        });
+
+        // Category Route
+        Route::group(['prefix' => '/comment'],function(){
+            Route::get('/manage' , [adminCommintController::class , 'index'])->name('comment.index');
+            Route::get('/edit{id}' , [adminCommintController::class , 'edit'])->name('comment.edit');
+            Route::post('/update{id}' , [adminCommintController::class , 'update'])->name('comment.update');
+            Route::post('/destroy{id}' , [adminCommintController::class , 'destroy'])->name('comment.destroy');
         });
 
         // Category Route

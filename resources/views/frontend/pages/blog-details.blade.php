@@ -39,7 +39,7 @@
 									<a href="javascript:void(0)"><i class="fa fa-calendar-o text-muted me-2"></i>Nov-28-2019</a>
 									<a href="javascript:void(0)"><i class="fa fa-tags text-muted me-2"></i>{{$post->categoryFunction->name}}</a>
 									<div class="ms-auto">
-										<a href="javascript:void(0)" class="me-0"><i class="fa fa-comment-o text-muted me-2"></i>12 Comments</a>
+										<a href="javascript:void(0)" class="me-0"><i class="fa fa-comment-o text-muted me-2"></i> {{$comments->count()}} Comments | <i class="icon icon-eye text-muted me-1"></i> {{$post->views}} Views</a>
 									</div>
 								</div>
 
@@ -51,24 +51,35 @@
 						</div>
 
 						<!--Comments-->
-						<!-- <div class="card">
+						<div class="card">
 							<div class="card-header">
-								<h3 class="card-title">3 Comments</h3>
+								<h3 class="card-title">{{$comments->count()}} Comments</h3>
 							</div>
 							<div class="card-body">
+								@foreach($comments as $comment)
 								<div class="d-sm-flex mt-0 p-5 sub-review-section border border-bottom-0 br-bs-0 br-be-0">
                                     <div class="d-flex me-3">
-                                        <a href="javascript:void(0)"><img class="media-object brround avatar-md" alt="64x64" src="../assets/images/faces/male/1.jpg"> </a>
+                                        <a href="javascript:void(0)"><img class="media-object brround avatar-md" alt="64x64" src="{{asset('image/' . $comment->user->profile)}}"> </a>
                                     </div>
                                     <div class="media-body">
-                                        <h5 class="mt-0 mb-1 font-weight-semibold">Joanne Scott
+                                        <h5 class="mt-0 mb-1 font-weight-semibold">{{$comment->user->name}}
 											<span class="fs-14 ms-0" data-bs-toggle="tooltip" data-bs-placement="top" title="verified"><i class="fa fa-check-circle-o text-success"></i></span>
-											<span class="fs-14 ms-2"> 4.5 <i class="fa fa-star text-yellow"></i></span>
+											<span class="fs-14 ms-2"> 
+												@if($comment->star == 1)
+												Poor Rating
+												@elseif($comment->star == 2)
+												2
+												@elseif($comment->star == 3)
+												3
+												@elseif($comment->star == 4)
+												4
+												@elseif($comment->star == 5)
+												5
+												@endif
+											<i class="fa fa-star text-yellow"></i></span>
 										</h5>
-										<small class="text-muted"><i class="fa fa-calendar"></i> Dec 21st  <i class=" ms-3 fa fa-clock-o"></i> 13.00  <i class=" ms-3 fa fa-map-marker"></i> Brezil</small>
-                                        <p class="font-13  mb-2 mt-2">
-                                           Lorem ipsum dolor sit amet, quis Neque porro quisquam est, nostrud exercitation ullamco laboris   commodo consequat.
-                                        </p>
+										<small class="text-muted"><i class="fa fa-calendar"></i> {{$comment->created_at->format('d M, Y')}}  <i class=" ms-3 fa fa-clock-o"></i> {{$comment->created_at->diffForHumans()}} </small>
+                                        <p class="font-13  mb-2 mt-2">{{$comment->comment}} </p>
 										<a href="javascript:void(0)" class="me-2 mt-1"><span class="badge badge-secondary">Helpful</span></a>
 										<a href="javascript:void0" class="me-2 mt-1" data-bs-toggle="modal" data-bs-target="#Comment"><span class="badge badge-light">Comment</span></a>
 										<a href="javascript:void0" class="me-2 mt-1" data-bs-toggle="modal" data-bs-target="#report"><span  class="badge badge-light">Report</span></a>
@@ -78,72 +89,50 @@
 										</div>
 									</div>
 								</div>
-								<div class="d-sm-flex p-5 sub-review-section border subsection-color br-ts-0 br-te-0">
-									<div class="d-flex me-3">
-										<a href="javascript:void(0)"><img class="media-object brround avatar-md" alt="64x64" src="../assets/images/faces/female/2.jpg"> </a>
-									</div>
-									<div class="media-body">
-										<h5 class="mt-0 mb-1 font-weight-semibold">Rose Slater <span class="fs-14 ms-0" data-bs-toggle="tooltip" data-bs-placement="top" title="verified"><i class="fa fa-check-circle-o text-success"></i></span></h5>
-										<p class="font-13  mb-2 mt-2">
-											Lorem ipsum dolor sit amet nostrud exercitation ullamco laboris   commodo consequat.
-										</p>
-										<a href="javascript:void0" data-bs-toggle="modal" data-bs-target="#Comment" class="mt-1"><span class="badge badge-default">Comment</span></a>
-										<div class="btn-group btn-group-sm mb-1 ms-auto float-end mt-1">
-											<button class="btn btn-light" type="button"><i class="fa fa-thumbs-up"></i></button>
-											<button class="btn btn-light" type="button"><i class="fa fa-thumbs-down"></i></button>
-										</div>
-									</div>
-								</div>
-								<div class="d-sm-flex p-5 mt-4 border sub-review-section">
-									<div class="d-flex me-3">
-										<a href="javascript:void(0)"><img class="media-object brround avatar-md" alt="64x64" src="../assets/images/faces/male/3.jpg"> </a>
-									</div>
-									<div class="media-body">
-										<h5 class="mt-0 mb-1 font-weight-semibold">Edward
-										<span class="fs-14 ms-0" data-bs-toggle="tooltip" data-bs-placement="top" title="verified"><i class="fa fa-check-circle-o text-success"></i></span>
-										<span class="fs-14 ms-2"> 4 <i class="fa fa-star text-yellow"></i></span>
-										</h5>
-										<small class="text-muted"><i class="fa fa-calendar"></i> Dec 21st  <i class=" ms-3 fa fa-clock-o"></i> 16.35  <i class=" ms-3 fa fa-map-marker"></i> UK</small>
-                                        <p class="font-13  mb-2 mt-2">
-                                           Lorem ipsum dolor sit amet, quis Neque porro quisquam est, nostrud exercitation ullamco laboris   commodo consequat.
-                                        </p>
-										<a href="javascript:void(0)" class="me-2 mt-1"><span class="badge badge-secondary">Helpful</span></a>
-										<a href="javascript:void0" class="me-2 mt-1" data-bs-toggle="modal" data-bs-target="#Comment"><span class="badge badge-light">Comment</span></a>
-										<a href="javascript:void0" class="me-2 mt-1" data-bs-toggle="modal" data-bs-target="#report"><span  class="badge badge-light">Report</span></a>
-										<div class="btn-group btn-group-sm mb-1 ms-auto float-sm-end mt-1">
-											<button class="btn btn-light" type="button"><i class="fa fa-thumbs-up"></i></button>
-											<button class="btn btn-light" type="button"><i class="fa fa-thumbs-down"></i></button>
-										</div>
-									</div>
-								</div>
+								@endforeach
+								
 							</div>
-						</div> -->
+						</div>
 						<!--/Comments-->
 
 						<div class="card mb-lg-0">
 							<div class="card-header">
 								<h3 class="card-title">Add a Comment</h3>
 							</div>
-							<div class="card-body">
-								<div class="mt-2">
-									<div class="form-group">
-										<input type="text" class="form-control" id="name1" placeholder="Your Name">
+								
+							<form action="{{route('comment.store')}}" method="POST">
+								@csrf 
+								<div class="card-body">
+									@if(session()->has('success'))
+										<div class="alert alert-success text-center" style='border-radius:0px'>
+											{{ session()->get('success') }}
+										</div>
+									@endif
+									<div class="mt-2">
+										<div class="form-group">
+											<textarea class="form-control" name="comment" rows="6" placeholder="Write Review"></textarea>
+										</div>
+										<div class="form-group">
+											<select name="star" class='form-control' id="">
+												<option value="5">Select Review</option>
+												<option value="1"> Ratings &#9733; </option>
+												<option value="2"> Ratings &#9733; &#9733; </option>
+												<option value="3"> Ratings &#9733; &#9733; &#9733;</option>
+												<option value="4"> Ratings &#9733; &#9733; &#9733; &#9733;</option>
+												<option value="5"> Ratings &#9733; &#9733; &#9733; &#9733; &#9733;</option>
+											</select>
+										</div>
+										<input type="hidden" name='post_id' value="{{$post->id}}">
+										<button type="submit" class="btn btn-secondary">Send Reply</button>
 									</div>
-									<div class="form-group">
-										<input type="email" class="form-control" id="email" placeholder="Email Address">
-									</div>
-									<div class="form-group">
-										<textarea class="form-control" name="example-textarea-input" rows="6" placeholder="Write Review"></textarea>
-									</div>
-									<a href="javascript:void(0)" class="btn btn-secondary">Send Reply</a>
 								</div>
-							</div>
+							</form>
 						</div>
 					</div>
 
 					<!--Rightside Content-->
 					<div class="col-xl-4 col-lg-4 col-md-12">
-					<div class="card mb-5 overflow-hidden">
+						<div class="card mb-5 overflow-hidden">
 							<div class="card-header">
 								<h3 class="card-title">Populer Service</h3>
 							</div>
@@ -158,7 +147,7 @@
 											</div>
 											<div class="mt-2 footerimg-r ms-auto">
 												<a href="javascript:void(0)" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Articles"><span class="text-muted me-2"><i class="fa fa-comment-o"></i> 16</span></a>
-												<a href="javascript:void(0)" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Likes"><span class="text-muted"><i class="fa fa-thumbs-o-up"></i> 36</span></a>
+												<a href="javascript:void(0)" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Likes"><span class="text-muted"><i class="icon icon-eye text-muted me-1"></i> {{$item->views}}</span></a>
 											</div>
 										</div>
 									</li>

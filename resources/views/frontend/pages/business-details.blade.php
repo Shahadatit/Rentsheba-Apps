@@ -81,7 +81,7 @@
 											<li class="me-5"><a href="javascript:void(0)" class="icons"><i class="icon icon-briefcase text-muted me-1"></i> {{$company->categorys->name}}</a></li>
 											<li class="me-5"><a href="javascript:void(0)" class="icons"><i class="icon icon-location-pin text-muted me-1"></i> @if($company->cuntry){{$company->cuntrys->name}}@endif</a></li>
 											<li class="me-5"><a href="javascript:void(0)" class="icons"><i class="icon icon-calendar text-muted me-1"></i> @if($company->created_at) {{$company->created_at->format('d M, Y')}} @endif</a></li>
-											<li class="me-5"><a href="javascript:void(0)" class="icons"><i class="icon icon-eye text-muted me-1"></i> 765</a></li>
+											<li class="me-5"><a href="javascript:void(0)" class="icons"><i class="icon icon-eye text-muted me-1"></i> {{$company->views}} views</a></li>
 										</ul>
 										<div class="d-flex me-5">
 											<div class="rating-star sm my-rating-5" data-rating="4.5">
