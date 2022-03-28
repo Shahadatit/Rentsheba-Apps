@@ -110,7 +110,7 @@
 									@endif
 									<div class="mt-2">
 										<div class="form-group">
-											<textarea class="form-control" name="comment" rows="6" placeholder="Write Review"></textarea>
+											<textarea class="form-control" name="comment" rows="6" maxlength="100" placeholder="Write Review"></textarea>
 										</div>
 										<div class="form-group">
 											<select name="star" class='form-control' id="">
@@ -146,7 +146,7 @@
 												<a href="{{route('blog-details', $item->slug)}}" class="time-title p-0 leading-normal mt-2">{{$item->name}}<i class="icon icon-check text-success fs-12 ms-1" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="verified"></i></a>
 											</div>
 											<div class="mt-2 footerimg-r ms-auto">
-												<a href="javascript:void(0)" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Articles"><span class="text-muted me-2"><i class="fa fa-comment-o"></i> 16</span></a>
+												<a href="javascript:void(0)" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Articles"><span class="text-muted me-2"><i class="fa fa-comment-o"></i> {{App\Models\Comment::where('post_id' , $item->id)->count()}}</span></a>
 												<a href="javascript:void(0)" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Likes"><span class="text-muted"><i class="icon icon-eye text-muted me-1"></i> {{$item->views}}</span></a>
 											</div>
 										</div>

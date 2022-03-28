@@ -4,71 +4,28 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Comment;
+use App\Models\companyComment;
 use Illuminate\Http\Request;
 
 class adminCommintController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+  
+    // Post Comment list
+    public function postComment()
     {
         $comments = Comment::all();
         return view('backend.pages.comment.manage',compact('comments'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    // Company Comment list
+    public function companyComment()
     {
-        //
+        $comments = companyComment::all();
+        return view('backend.pages.comment.companycomment',compact('comments'));
     }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+   
+    // Post Comment Update 
     public function update(Request $request, $id)
     {
         $comments = Comment::find($id);
@@ -77,16 +34,33 @@ class adminCommintController extends Controller
         $comments->save();
         return redirect()->back();
     }
+ 
+    // Company Comment Update
+    public function companyupdate(Request $request, $id)
+    {
+        $comments = companyComment::find($id);
+        $comments->comment  = $request->comment;
+        $comments->status   = $request->status;
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+        $comments->save();
+        return redirect()->back();
+    }
+
+   
+    // Post Comment Delete
     public function destroy($id)
     {
         $destroy = Comment::find($id);
+        if(!empty($destroy)){
+            $destroy->delete();
+        }
+        return back();
+    }
+
+    // Company Comment Delete
+    public function companydestroy($id)
+    {
+        $destroy = companyComment::find($id);
         if(!empty($destroy)){
             $destroy->delete();
         }

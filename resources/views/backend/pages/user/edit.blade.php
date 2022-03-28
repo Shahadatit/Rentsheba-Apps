@@ -29,7 +29,7 @@
 
                             <!-- Category form -->
                             <div>
-                                <form action="{{route('user.update', $user->id)}}" method="POST" enctype="multipart/form-data">
+                                <form action="{{route('adminuser.update', $user->id)}}" method="POST" enctype="multipart/form-data">
                                     @csrf 
                                     <div class="row">
                                         <div class="col-lg-6 ">

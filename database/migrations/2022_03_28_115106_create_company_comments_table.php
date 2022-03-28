@@ -13,16 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('comments', function (Blueprint $table) {
+        Schema::create('company_comments', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('post_id');
+            $table->unsignedInteger('company_id');
             $table->unsignedInteger('user_id');
             $table->text('comment')->nullable();
             $table->integer('star')->default(5);
-            $table->integer('status')->default(1)->comment('1=active, 2=in active');
+            $table->integer('status')->default(1)->comment('1=active , 2=in-active');
             $table->timestamps();
-            $table->foreign('post_id')->refference('id')->on('admin_posts')->onDelete('cascade');
-            $table->foreign('user_id')->refference('id')->on('users')->onDelete('cascade');
+
+            $table->foreign('company_id')->refference('id')->on('companies')->onDelete('cascate');
+            $table->foreign('user_id')->refference('id')->on('users')->onDelete('cascate');
         });
     }
 
@@ -33,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('comments');
+        Schema::dropIfExists('company_comments');
     }
 };

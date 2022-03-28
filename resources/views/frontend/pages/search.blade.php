@@ -12,7 +12,7 @@
 					<div class="row">
 						<div class="col-xl-8 col-lg-12 col-md-12 d-block mx-auto">
 							<div class="text-center text-white ">
-								<h1 class=""><span class="font-weight-bold">{{App\Models\Company::companyCount()}}</span> listings available</h1>
+								<h1 class=""><span class="font-weight-bold"></span> listings available</h1>
 							</div>
 							<form action="{{url('/search')}}" method="GET">
 								<div class="search-background px-4 py-3 mt-4">

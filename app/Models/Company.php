@@ -24,6 +24,10 @@ class Company extends Model
     public function users(){
         return $this->belongsTo(User::class,'user_id');
     }
+    public static function review(){
+        $comment = CompanyComment::where('status',1)->where('star',5)->count();
+        return $comment;
+    }
 
     public static function companyCount(){
         $compa = Company::where('status',1)->count();

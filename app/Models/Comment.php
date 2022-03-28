@@ -9,7 +9,7 @@ class Comment extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['post_id','user_id','comment'];
+    protected $fillable = ['post_id','user_id','comment','star','status'];
 
     // Commetn belong User
     public function user(){
@@ -19,5 +19,10 @@ class Comment extends Model
     // comment belong post
     public function post(){
         return $this->belongsTo(adminPost::class,'post_id');
+    }
+
+    public function comment(){
+        $return = Comment::where('status',1)->count();
+        return $return;
     }
 }

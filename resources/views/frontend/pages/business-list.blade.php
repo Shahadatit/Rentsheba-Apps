@@ -126,7 +126,7 @@
 																<div class="rating-star sm my-rating-5"
 																	data-rating="4.5">
 																</div>
-																<a class="fs-13 leading-tight mt-1" href="javascript:void(0)">13
+																<a class="fs-13 leading-tight mt-1" href="javascript:void(0)">{{App\Models\CompanyComment::where('company_id' , $item->id)->count()}}
 																	Reviews</a>
 															</div>
 															<div class="mt-2 mb-2">
@@ -338,112 +338,18 @@
 						</div>
 						<div class="card-body">
 							<div class="" id="container">
+								@foreach(App\Models\Category::orderby('name','asc')->get() as $item)
 								<div class="filter-product-checkboxs">
 									<label class="custom-control form-checkbox mb-3">
 										<input type="checkbox" class="custom-control-input" name="checkbox1"
 											value="option1">
 										<span class="custom-control-label">
-											<a href="javascript:void(0)" class="text-dark">Computer<span
+											<a href="javascript:void(0)" class="text-dark">{{$item->name}}<span
 													class="label label-primary float-end">14</span></a>
-										</span>
-									</label>
-									<label class="custom-control form-checkbox mb-3">
-										<input type="checkbox" class="custom-control-input" name="checkbox2"
-											value="option2">
-										<span class="custom-control-label">
-											<a href="javascript:void(0)" class="text-dark">Services<span
-													class="label label-primary float-end">22</span></a>
-										</span>
-									</label>
-									<label class="custom-control form-checkbox mb-3">
-										<input type="checkbox" class="custom-control-input" name="checkbox3"
-											value="option3">
-										<span class="custom-control-label">
-											<a href="javascript:void(0)" class="text-dark">Jobs<span
-													class="label label-primary float-end">78</span></a>
-										</span>
-									</label>
-									<label class="custom-control form-checkbox mb-3">
-										<input type="checkbox" class="custom-control-input" name="checkbox4"
-											value="option3">
-										<span class="custom-control-label">
-											<a href="javascript:void(0)" class="text-dark">RealEstates<span
-													class="label label-primary float-end">35</span></a>
-										</span>
-									</label>
-									<label class="custom-control form-checkbox mb-3">
-										<input type="checkbox" class="custom-control-input" name="checkbox5"
-											value="option3">
-										<span class="custom-control-label">
-											<a href="javascript:void(0)" class="text-dark">Clothing<span
-													class="label label-primary float-end">23</span></a>
-										</span>
-									</label>
-									<label class="custom-control form-checkbox mb-3">
-										<input type="checkbox" class="custom-control-input" name="checkbox6"
-											value="option3">
-										<span class="custom-control-label">
-											<a href="javascript:void(0)" class="text-dark">Home & Garden<span
-													class="label label-primary float-end">14</span></a>
-										</span>
-									</label>
-									<label class="custom-control form-checkbox mb-3">
-										<input type="checkbox" class="custom-control-input" name="checkbox7"
-											value="option3">
-										<span class="custom-control-label">
-											<a href="javascript:void(0)" class="text-dark">Beauty & Spa<span
-													class="label label-primary float-end">45</span></a>
-										</span>
-									</label>
-									<label class="custom-control form-checkbox mb-3">
-										<input type="checkbox" class="custom-control-input" name="checkbox7"
-											value="option3">
-										<span class="custom-control-label">
-											<a href="javascript:void(0)" class="text-dark">Restaurant<span
-													class="label label-primary float-end">34</span></a>
-										</span>
-									</label>
-									<label class="custom-control form-checkbox mb-3">
-										<input type="checkbox" class="custom-control-input" name="checkbox7"
-											value="option3">
-										<span class="custom-control-label">
-											<a href="javascript:void(0)" class="text-dark">Travel<span
-													class="label label-primary float-end">12</span></a>
-										</span>
-									</label>
-									<label class="custom-control form-checkbox mb-3">
-										<input type="checkbox" class="custom-control-input" name="checkbox7"
-											value="option3">
-										<span class="custom-control-label">
-											<a href="javascript:void(0)" class="text-dark">Event<span
-													class="label label-primary float-end">18</span></a>
-										</span>
-									</label>
-									<label class="custom-control form-checkbox mb-3">
-										<input type="checkbox" class="custom-control-input" name="checkbox7"
-											value="option3">
-										<span class="custom-control-label">
-											<a href="javascript:void(0)" class="text-dark">Health & fitness<span
-													class="label label-primary float-end">02</span></a>
-										</span>
-									</label>
-									<label class="custom-control form-checkbox mb-3">
-										<input type="checkbox" class="custom-control-input" name="checkbox7"
-											value="option3">
-										<span class="custom-control-label">
-											<a href="javascript:void(0)" class="text-dark">Electronics<span
-													class="label label-primary float-end">15</span></a>
-										</span>
-									</label>
-									<label class="custom-control form-checkbox mb-3">
-										<input type="checkbox" class="custom-control-input" name="checkbox7"
-											value="option3">
-										<span class="custom-control-label">
-											<a href="javascript:void(0)" class="text-dark">Mobile<span
-													class="label label-primary float-end">32</span></a>
 										</span>
 									</label>
 								</div>
+								@endforeach
 							</div>
 						</div>
 						

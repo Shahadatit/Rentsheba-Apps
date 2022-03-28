@@ -291,7 +291,7 @@
 			<div class="horizontal-header clearfix ">
 				<div class="container">
 					<a id="horizontal-navtoggle" class="animated-arrow"><span></span></a>
-					<span class="smllogo"><a href="index.html" class="d-flex logo-height logo-svg">
+					<span class="smllogo"><a href="{{url('/')}}" class="d-flex logo-height logo-svg">
 							<svg style="enable-background:new 0 0 512 512;" version="1.1" viewbox="0 0 512 512" x="0px"
 								xmlns="http://www.w3.org/2000/svg" y="0px">
 								<g>

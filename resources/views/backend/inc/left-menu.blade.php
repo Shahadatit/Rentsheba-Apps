@@ -12,30 +12,33 @@
         <label class="sidebar-label pd-x-10 mg-t-25 mg-b-20 tx-info">Information Summary</label>
         <li class="br-menu-item">
           <a href="#" class="br-menu-link with-sub">
-          <i class="menu-item-icon icon ion-ios-color-filter-outline tx-24"></i>
+          <i class="fas fa-paste"></i>
+          
             <span class="menu-item-label">Posts</span>
           </a><!-- br-menu-link -->
           <ul class="br-menu-sub">
             <li class="sub-item"><a href="{{route('post.index')}}" class="sub-link">Post List</a></li>
             <li class="sub-item"><a href="{{route('post.create')}}" class="sub-link">Add New Post</a></li>
+            <li class="sub-item"><a href="{{route('comment.index')}}" class="sub-link">Comment List</a></li>
           </ul>
         </li>
 
         <li class="br-menu-item">
           <a href="#" class="br-menu-link with-sub">
-          <i class="menu-item-icon icon ion-ios-navigate-outline tx-24"></i>
+          <i class="fas fa-building"></i>
             <span class="menu-item-label">Business</span>
           </a><!-- br-menu-link -->
           <ul class="br-menu-sub">
             <li class="sub-item"><a href="{{route('business.index')}}" class="sub-link">Business List</a></li>
             <li class="sub-item"><a href="{{route('business.create')}}" class="sub-link">Add New Business</a></li>
+            <li class="sub-item"><a href="{{route('companycomment.index')}}" class="sub-link">Comment List</a></li>
           </ul>
         </li>
 
           
         <li class="br-menu-item">
           <a href="#" class="br-menu-link with-sub">
-            <i class="icon ion-more icon ion-ios-photos-outline tx-20"></i>
+          <i class="fas fa-tags"></i>
             <span class="menu-item-label">Categorys</span>
           </a><!-- br-menu-link -->
           <ul class="br-menu-sub">
@@ -43,6 +46,8 @@
             <li class="sub-item"><a href="{{route('category.create')}}" class="sub-link">Add New Category</a></li>
           </ul>
         </li>
+        
+        <label class="sidebar-label pd-x-10 mg-t-25 mg-b-20 tx-info">Location Management </label>
        
         <li class="br-menu-item">
           <a href="#" class="br-menu-link with-sub">
@@ -78,7 +83,12 @@
           </ul>
         </li>
 
-          
+       
+      </ul><!-- br-sideleft-menu -->
+
+      <label class="sidebar-label pd-x-10 mg-t-25 mg-b-20 tx-info">Information Summary</label>
+
+           
         <li class="br-menu-item">
           <a href="#" class="br-menu-link with-sub">
             <i class="icon ion-person icon ion-ios-photos-outline tx-20"></i>
@@ -88,14 +98,6 @@
             <li class="sub-item"><a href="{{route('user.index')}}" class="sub-link">User List</a></li>
           </ul>
         </li>
-       
-        
-     
-
-       
-      </ul><!-- br-sideleft-menu -->
-
-      <label class="sidebar-label pd-x-10 mg-t-25 mg-b-20 tx-info">Information Summary</label>
 
      
 

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Company;
 use App\Models\Cuntry;
+use App\Models\CompanyComment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Auth;
@@ -29,18 +30,37 @@ class companyController extends Controller
                 return redirect()->back();
 
             }else{
-                $categorys = Category::orderby('name','asc')->where('status','1')->get();
-                $countrys = Cuntry::orderby('name','asc')->where('status','1')->get();
-                return view('frontend.pages.business.add-business',compact('categorys','countrys'));
+                if(Auth::user()->phone && Auth::user()->cuntry && Auth::user()->address ){
+                    $categorys = Category::orderby('name','asc')->where('status','1')->get();
+                    $countrys = Cuntry::orderby('name','asc')->where('status','1')->get();
+                    return view('frontend.pages.business.add-business',compact('categorys','countrys'));
+
+                }else{
+                    return redirect()->route('customer.edit',Auth::id())->with('success','Update the profile first, Then add your business');
+                }
+               
                 
             }
         }else{
             return redirect()->route('login')->with('success','Login First , Then Continue');
         }
+    }
 
+    public function commentStore(Request $request){
+        if(Auth::check()){
+            $comments = new CompanyComment();
+            $comments->company_id  = $request->company_id;
+            $comments->user_id     = Auth::id();
+            $comments->comment     = $request->comment;
+            $comments->star        = $request->star;
 
+          
 
-        
+            $comments->save();
+            return back()->with('success','Review Send Successful');
+        }else{
+            return redirect()->route('login')->with('success','Login First, Then Review');
+        }
     }
 
     /**

@@ -44,11 +44,12 @@ Route::get('web-development',[frontendController::class,'webDevelopment'])->name
 
 // Commetn Route
 Route::post('/commetn-store' , [commentController::class,'store'])->name('comment.store');
+Route::post('/company-commetn-store' , [companyController::class,'commentStore'])->name('companycomment.store');
 
 Route::middleware('auth','verified')->group(function (){
     Route::group(['prefix' => '/user'],function(){
         Route::get('/dashboard' , [frontendController::class,'userDashboard'])->name('user-dashboard')->middleware('verified','auth');
-        Route::get('/edit/{id}',[userController::class,'edit'])->name('user.edit');
+        Route::get('/edit/{id}',[userController::class,'edit'])->name('customer.edit');
         Route::post('/update/{id}' , [userController::class,'update'])->name('user.update');
     });
     
@@ -91,7 +92,7 @@ Route::middleware('auth','role','verified')->group(function (){
         Route::group(['prefix' => '/user'],function(){
             Route::get('/manage' , [backendUserController::class , 'index'])->name('user.index');
             Route::get('/edit{id}' , [backendUserController::class , 'edit'])->name('user.edit');
-            Route::post('/update{id}' , [backendUserController::class , 'update'])->name('user.update');
+            Route::post('/update{id}' , [backendUserController::class , 'update'])->name('adminuser.update');
             Route::post('/destroy{id}' , [backendUserController::class , 'destroy'])->name('user.destroy');
         });
 
@@ -105,12 +106,17 @@ Route::middleware('auth','role','verified')->group(function (){
             Route::post('/destroy{id}' , [categoryController::class , 'destroy'])->name('category.destroy');
         });
 
-        // Category Route
+        // Post Comment Route
         Route::group(['prefix' => '/comment'],function(){
-            Route::get('/manage' , [adminCommintController::class , 'index'])->name('comment.index');
-            Route::get('/edit{id}' , [adminCommintController::class , 'edit'])->name('comment.edit');
+            Route::get('/manage' , [adminCommintController::class , 'postComment'])->name('comment.index');
             Route::post('/update{id}' , [adminCommintController::class , 'update'])->name('comment.update');
             Route::post('/destroy{id}' , [adminCommintController::class , 'destroy'])->name('comment.destroy');
+        });
+        // Company Comment Route
+        Route::group(['prefix' => '/company-comment'],function(){
+            Route::get('/manage' , [adminCommintController::class , 'companyComment'])->name('companycomment.index');
+            Route::post('/update{id}' , [adminCommintController::class , 'companyupdate'])->name('companycomment.update');
+            Route::post('/destroy{id}' , [adminCommintController::class , 'companydestroy'])->name('companycomment.destroy');
         });
 
         // Category Route

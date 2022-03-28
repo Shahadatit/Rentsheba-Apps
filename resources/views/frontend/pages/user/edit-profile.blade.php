@@ -28,13 +28,29 @@
 				<div class="row">
 					@include('frontend.inc.user-leftmenu')
 					<div class="col-xl-9 col-lg-12 col-md-12">
+
+						<!-- Session Massage -->
+						@if(session()->has('success'))
+
+							<div class="alert alert-warning alert-dismissible fade show text-center" role="alert" style="border-radius:0px">
+								<strong>{{Auth::user()->name}} ! </strong>  {{ session()->get('success') }}  
+								
+							</div>
+						@endif
+
+
 						<div class="card mb-0 overflow-hidden">
 							<div class="card-header">
+								
 								<h3 class="card-title">Edit Profile</h3>
 							</div>
+								
 							<form action="{{route('user.update', Auth::user()->id)}}" method='POST' enctype='multipart/form-data'>
 								@csrf 
 								<div class="card-body">
+									
+								
+								
 									
 										<div class="row">
 											<div class="col-sm-6 col-md-6">

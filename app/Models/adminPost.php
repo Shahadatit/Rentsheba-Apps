@@ -20,5 +20,6 @@ class adminPost extends Model
         return $this->hasMany(Comment::class);
     }
 
+   
     
 }
