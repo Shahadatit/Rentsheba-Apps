@@ -92,12 +92,24 @@ class companyController extends Controller
             'cat_id'        => ['required'],
             'description'   => ['required', 'string', 'max:301'],
             'o_phone'       => ['required'],
-            'cover_photo'          => ['required'],
+            'cover_photo'   => ['required'],
             
+        ],[
+            'company_name.required'  => "Company Name required",
+            'cuntry.required'        => "Company Cuntry required",
+            'com_mobile.required'    => "Company Mobile required",
+            'c_address.required'     => "Company Address required",
+            'c_district.required'    => "Company District required",
+            'c_zipcode.required'     => "Company Zip Code required",
+            'main_title.required'    => "Main Title required",
+            'cat_id.required'        => "Category required",
+            'description.required'   => "Description required",
+            'o_phone.required'       => "Required Number ",
+            'cover_photo.required'   => "Required Cover Photo ",
         ]);
 
 
-        // new Company Added
+        
         $companys = new Company();
         $companys->company_name         = $request->company_name;
         $companys->slug                 = Str::slug($request->company_name);
