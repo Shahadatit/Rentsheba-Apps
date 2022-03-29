@@ -122,18 +122,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-7">
-					<h3 class="leading-normal">Laravel Web Development Service</h3>
-							<p class="leading-normal fs-16"> We have client-focused , Customer-centric, creating Website Solutions, that deliver tangible business results,  Appnovation's Web Developers helps Brands the ever-changing digital landscape</p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="sptb bg-white">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-7">
-					<h3 class="leading-normal">Full-Stack Web Development Service.</h3>
-							<p class="leading-normal fs-16"> We Have a team of skilled <b>Full-stack developers</b> with expertise in MEAN and MERN Stack. You can hire Front-end and Back-end Development teams separately as well. Get <b>Full-Stack Development</b> on MEAN, MERN, PHP+ Vue.js, Net+JS , to name a few</p>
+					<h3 class="leading-normal"> Why Use Freezer Ambulance Service? </h3>
+							<p class="leading-normal fs-16"> A freezer ambulance is a dead body carrier ambulance. It has freezing box in it. The freezer ambulance can intact the dead body several hours and days. People who wants to keep their relatives dead body intact or free from germs or viruses for several hours or sveral days. They can rent a freezing ambualnce from us. Some time the dead body comes from abroad or they need to stay more time before buried, in that case you need to this ambulance service.  </p>
 					</div>
 				</div>
 			</div>
@@ -144,28 +134,15 @@
 			<div class="container">
 				<div class="row mb-5">
 					<div class="col-lg-7">
-					<h3 class="leading-normal">Features and Benefit of Dynamic Website :</h3>
+					<h3 class="leading-normal"> Details of Freezing Ambulance Service :</h3>
 					<ul class="slide-menu open">
-							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i>Dynamic Website is best than Static Website.</a></li>
-							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i>Dynamic Website is safe  & Secure than static website.</a></li>
-							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i>Easy to capture to by search engines.</a></li>
-							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i>It's easy to maintenance.</a></li>
-							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i>The Dynamic Website is more valueable than static website.</a></li>
+							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i> The freezing ambulance direct import from japan.</a></li>
+							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i>High quality steel strachters keeping the body.</a></li>
+							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i>There are Glass's Windwo to see the dead body.</a></li>
+							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i>It has freezer box in it.</a></li> 
+							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i>There are lighting facilities inside to see the body.</a></li>
+							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i>Genereal tempreture is (- 7 to -20) of freezing ambualnce.</a></li>
 							
-						</ul>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-lg-7">
-					<h3 class="leading-normal">Features and Benefit of Static Website :</h3>
-					<ul class="slide-menu open">
-							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i> Efficient Website management with a Content Management system.</a></li>
-							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i> The layout can be changed independently of them content.</a></li>
-							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i> Content Can be personalized by the users or be presented in different ways.</a></li>
-							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i> Complex Websites with lots of pages can be handled easily.</a></li>
-							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i> Easy to capture by search engines.</a></li>
-							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i>Not any maintenance tension.</a></li>
-							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i>Vefy cheap in price than a dynamic website.</a></li>
 						</ul>
 					</div>
 				</div>
