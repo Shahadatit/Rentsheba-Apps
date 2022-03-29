@@ -97,6 +97,7 @@ class companyController extends Controller
         ]);
 
 
+        // new Company Added
         $companys = new Company();
         $companys->company_name         = $request->company_name;
         $companys->slug                 = Str::slug($request->company_name);
