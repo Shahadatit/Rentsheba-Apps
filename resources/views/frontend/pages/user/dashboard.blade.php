@@ -78,7 +78,7 @@
                                             <li class=""><a href="#tab-5" class="active" data-bs-toggle="tab">Profile</a></li>
                                             <li><a href="#tab-6" data-bs-toggle="tab" class="">Edit Profile</a></li>
                                             <li><a href="#tab-7" data-bs-toggle="tab" class="">My Listings</a></li>
-                                            <li><a href="#tab-8" data-bs-toggle="tab" class="">Featured Listings</a></li>
+                                            <li><a href="#tab-8" data-bs-toggle="tab" class="">Favoritie Listings</a></li>
                                             <li><a href="#tab-9" data-bs-toggle="tab" class="">Published Listings</a></li>
                                         </ul>
                                     </div>
@@ -106,9 +106,6 @@
                                                         
                                                         <li><a href="javascript:void(0)" class="text-dark"><span style='min-width:100px; display:inline-block' class="font-weight-semibold">Phone  </span> :  @if(!empty(Auth::user()->phone)) {{Auth::user()->phone}}  @else  -N/a- @endif </a></li>
                                                         <li><a href="javascript:void(0)" class="text-dark"><span style='min-width:100px; display:inline-block' class="font-weight-semibold">Phone  </span> :  @if(!empty(Auth::user()->zip_code)) {{Auth::user()->zip_code}}  @else  -N/a- @endif </a></li>
-                                                    
-                                                        
-
 
                                                        
                                                     </ul>
@@ -229,6 +226,12 @@
                                                 </form>
                                             </div>
                                             <div class="tab-pane userprof-tab" id="tab-7">
+                                                @if($business->count() == 0)
+                                                    <div class="alert alert-info text-center">
+                                                        No Listing Found
+                                                    </div>
+                                                @else
+                                                
                                                 @foreach( $business as $item)
                                                 <div class="card overflow-hidden card-absolute">
                                                     <div class="edit-buttons-absolute">
@@ -238,8 +241,8 @@
                                                     </div>
                                                     <div class="d-md-flex">
                                                         <div class="item-card9-img">
-                                                            <div class="item-card9-imgs">
-                                                                <a href="business.html"></a>
+                                                            <div class="item-card9-imgs" style='width:300px'>
+                                                                <a href="{{route('company-details', $item->slug)}}"></a>
                                                                 <img src="{{asset('image/' . $item->cover_photo)}}" alt="img" class="cover-image">
                                                             </div>
                                                             <div class="item-cardreview-absolute">
@@ -256,7 +259,7 @@
                                                                     <div class="d-flex">
                                                                         <a href="business.html">{{$item->categorys->name}}</a>
                                                                     </div>
-                                                                    <a href="business.html" class="text-dark"><h4 class="font-weight-semibold mt-0">{{$item->main_title}}<i class="ion-checkmark-circled text-success ms-1"></i></h4></a>
+                                                                    <a href="{{route('company-details', $item->slug)}}" class="text-dark"><h4 class="font-weight-semibold mt-0">{{$item->main_title}}<i class="ion-checkmark-circled text-success ms-1"></i></h4></a>
                                                                     <div class="item-card2-desc mt-3">
                                                                         <div class="item-card2-desc-cost">
                                                                             <h6 class="text-dark font-weight-normal mb-0 mt-0"><i class="fa fa-map-marker me-1"></i> {{$item->c_address}}</h6>
@@ -280,23 +283,28 @@
                                                     </div>
                                                 </div>
                                                 @endforeach
+                                                @endif
                                                 
                                             </div>
                                             <div class="tab-pane userprof-tab" id="tab-8">
-                                                comming Soon
-                                                <!-- <div class="card overflow-hidden card-absolute">
-                                                    <div class="arrow-ribbon bg-success">Featured</div>
+                                                
+                                                @if($favoritis->count() == 0)
+                                                    <div class="alert alert-info text-center">
+                                                        No Listing Found
+                                                    </div>
+                                                @else
+                                                
+                                                @foreach( $favoritis as $item)
+                                                <div class="card overflow-hidden card-absolute">
+                                                    
                                                     <div class="edit-buttons-absolute">
-                                                        <a class="btn btn-success btn-sm text-white" href="edit-list.html" data-bs-toggle="tooltip" data-bs-original-title="Edit"><i class="fa fa-pencil"></i></a>
-                                                        <a class="btn btn-danger btn-sm text-white" data-bs-toggle="tooltip" data-bs-original-title="Delete"><i class="fa fa-trash-o"></i></a>
-                                                        <a class="btn btn-info btn-sm text-white" data-bs-toggle="tooltip" data-bs-original-title="Save to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                                        <a class="btn btn-secondary btn-sm text-white" data-bs-toggle="tooltip" data-bs-original-title="View"><i class="fa fa-eye"></i></a>
+                                                        <a href="{{route('company-details', $item->company->slug)}}" class="btn btn-secondary btn-sm text-white" data-bs-toggle="tooltip" data-bs-original-title="View"><i class="fa fa-eye"></i></a>
                                                     </div>
                                                     <div class="d-md-flex">
                                                         <div class="item-card9-img">
-                                                            <div class="item-card9-imgs">
-                                                                <a href="business.html"></a>
-                                                                <img src="../assets/images/products/h4.png" alt="img" class="cover-image">
+                                                            <div class="item-card9-imgs" style='width:300px'>
+                                                                <a href="{{route('company-details', $item->company->slug)}}"></a>
+                                                                <img src="{{asset('image/' . $item->company->cover_photo)}}" alt="img" class="cover-image">
                                                             </div>
                                                             <div class="item-cardreview-absolute">
                                                                 <div class="d-flex">
@@ -310,13 +318,13 @@
                                                             <div class="card-body py-4">
                                                                 <div class="item-card9">
                                                                     <div class="d-flex">
-                                                                        <a href="business.html">RealEstate</a>
+                                                                        <a >{{$item->company->categorys->name}}</a>
                                                                     </div>
-                                                                    <a href="business.html" class="text-dark"><h4 class="font-weight-semibold mt-0">BHK RealEstates Consultancy <i class="ion-checkmark-circled text-success ms-1"></i></h4></a>
+                                                                    <a href="{{route('company-details', $item->company->slug)}}" class="text-dark"><h4 class="font-weight-semibold mt-0">{{$item->company->main_title}} <i class="ion-checkmark-circled text-success ms-1"></i></h4></a>
                                                                     <div class="item-card2-desc mt-3">
                                                                         <div class="item-card2-desc-cost">
-                                                                            <h6 class="text-dark font-weight-normal mb-0 mt-0"><i class="fa fa-map-marker me-1"></i> New York, NY 10012, US-52014</h6>
-                                                                            <h6 class="text-dark font-weight-normal mb-0 mt-2"><i class="fa fa-phone me-1"></i> <a href="javascript:void(0)"> 140 256-654-6859</a></h6>
+                                                                            <h6 class="text-dark font-weight-normal mb-0 mt-0"><i class="fa fa-map-marker me-1"></i> {{$item->company->c_address}}, {{$item->company->cuntrys->name}}</h6>
+                                                                            <h6 class="text-dark font-weight-normal mb-0 mt-2"><i class="fa fa-phone me-1"></i> <a href="javascript:void(0)"> {{$item->company->com_mobile}}</a></h6>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -327,14 +335,16 @@
                                                                         <a href="javascript:void(0)" class="mt-1 mb-1 me-1"><i class="fa fa-clock-o"></i> Every day <b>9am-10pm</b></a>
                                                                     </div>
                                                                     <div class="col col-auto">
-                                                                        <a href="javascript:void(0)" class="mt-1 mb-1 me-2"><i class="fa fa-heart-o"></i> Add to favorities</a>
-                                                                        <a href="javascript:void(0)" class="mt-1 mb-1 me-0"><i class="fa fa-eye"></i> 254</a>
+                                                                        <a href="javascript:void(0)" class="mt-1 mb-1 me-2"><i class="fa fa-heart-o"></i> favoritie Item</a>
+                                                                        <a href="javascript:void(0)" class="mt-1 mb-1 me-0"><i class="fa fa-eye"></i> {{$item->company->views}}</a>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div> -->
+                                                </div>
+                                                @endforeach
+                                                @endif
                                                 
                                             </div>
                                             <div class="tab-pane userprof-tab" id="tab-9">

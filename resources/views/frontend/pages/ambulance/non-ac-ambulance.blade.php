@@ -1,6 +1,6 @@
 @extends('frontend.layout.template')
 
-@section('title') <title> Website Design and Web Development Service </title> @endsection
+@section('title') <title> Non-Ac Ambulance Service in Dhaka, Bangladesh </title> @endsection
 
 @section('content')
 
@@ -11,8 +11,8 @@
 			<div class="header-text text-1 mb-0">
 				<div class="container">
 					<div class="text-center text-white mb-7">
-						<h1 class="mb-1"> Website Design and Web Development Service </h1>
-						<p>Welcome to Rentsheba! Rentsheba is the laargest and Trusted IT Development Service Company. It's Provides Website Design & Web Development, Domain & Hosting, Local SEO Service, Digital Marketting Service, and Business Direcotry. Grow your Business by Branding your company. High Quality Service Granted. 24/7 Suppport </p>
+						<h1 class="mb-1">  Non-Ac Ambulance Service in Dhaka, Bangladesh </h1>
+						<p> Non-Ac Ambulance Service in Dhaka, Bangladesh. Rentsheba Provide different types of ambulance service. 24 Hours emergency ambulance service is available in all districts of Bangladesh. If you need any types of ambulance service then contact us.  Hight Quality ambulance service is Granted at your budgets. 24/7 Suppport </p>
 					</div>
 					<div class="row">
 						<div class="col-xl-10 col-lg-12 col-md-12 d-block mx-auto">

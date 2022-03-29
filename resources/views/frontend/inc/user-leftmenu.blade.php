@@ -20,6 +20,9 @@
 								<div class="app-sidebar__user clearfix">
 									<ul class="side-menu">
 										<li>
+											<a class="side-menu__item" href="{{route('user-dashboard',Auth::user()->id)}}"><i class="side-menu__icon icon icon-home fs-20"></i><span class="side-menu__label ms-2">My Profile</span></a>
+										</li>
+										<li>
 											<a class="side-menu__item" href="{{route('customer.edit',Auth::user()->id)}}"><i class="typcn typcn-edit fs-20"></i><span class="side-menu__label ms-2">Edit Profile</span></a>
 										</li>
 									

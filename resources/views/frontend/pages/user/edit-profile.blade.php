@@ -115,7 +115,7 @@
 													<label class="form-label">Country</label>
 													<select name='cuntry' class="form-control select2-show-search border-bottom-0 w-100 select2-show-search" data-placeholder="Select">
 														<optgroup label="Categories">
-															<option>--Select--</option>
+															<option value="">--Select--</option>
 															@foreach( $countrys as $country)
 															<option value="{{$country->id}}" @if( $country->id == $user->cuntry) selected @endif>{{$country->name}}</option>
 															@endforeach

@@ -8,6 +8,7 @@ use App\Models\adminPost;
 use App\Models\Company;
 use App\Models\Category;
 use App\Models\CompanyComment;
+use App\Models\Favoriti;
 use App\Models\Comment;
 use Illuminate\Http\Request;
 use Auth;
@@ -92,9 +93,10 @@ class frontendController extends Controller
 
     public function userDashboard()
     {
+        $favoritis = Favoriti::orderby('id','desc')->where('user_id',Auth::id())->where('status',1)->get();
         $cuntrys = Cuntry::orderby('name','asc')->where('status',1)->get();
         $business = Company::where('user_id', Auth::id())->get();
-        return view('frontend.pages.user.dashboard',compact('cuntrys','business'));
+        return view('frontend.pages.user.dashboard',compact('cuntrys','business','favoritis'));
     }
 
     // All ambulance function class
@@ -108,7 +110,7 @@ class frontendController extends Controller
     }
     public function nonAcAmbulance()
     {
-        return view('frontend.pages.ambulance.ac-ambulance');
+        return view('frontend.pages.ambulance.non-ac-ambulance');
     }
     public function freezingAmbulance()
     {

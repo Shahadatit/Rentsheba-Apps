@@ -184,8 +184,8 @@
 	<section class="sptb">
 		<div class="container">
 			<div class="section-title center-block text-center">
-				<h2>Latest News</h2>
-				<p>Mauris ut cursus nunc. Morbi eleifend, ligula at consectetur vehicula</p>
+				<h2>Popular Service</h2>
+				<p> Are you looking best service? Search here any types service. High Quality Service is available. </p>
 			</div>
 			<div>
 				<div class="items-gallery">
@@ -328,8 +328,8 @@
 	<section class="sptb bg-white">
 		<div class="container">
 			<div class="section-title center-block text-center">
-				<h2>Latest Listings</h2>
-				<p>Mauris ut cursus nunc. Morbi eleifend, ligula at consectetur vehicula</p>
+				<h2>Business Listing</h2>
+				<p>  Rentsheba is a largest Platform to Providing Service. Take & Add Your Bussiness listting to Grow your Business by listing.</p>
 			</div>
 			<div id="myCarousel1" class="owl-carousel owl-carousel-icons2">
 				@foreach( $companys as $company)
@@ -342,7 +342,14 @@
 							<img src="{{asset('image/' . $company->cover_photo)}}" alt="img" class="cover-image">
 							<div class="item-card2-icons">
 								<a href="business.html" class="item-card2-icons-l"><i class="fa fa-cutlery"></i></a>
-								<a href="javascript:void(0)" class="item-card2-icons-r"><i class="fa fa fa-heart-o"></i></a>
+								<a  class="item-card2-icons-r">
+									<form action="{{route('favorities.store')}}" method="POST" >
+										@csrf 
+										<input type="hidden" name="company_id" value="{{$company->id}}">
+										<button type="submit" style='background:transparent;border:none;text:red' class="fa fa fa-heart-o text-white"></button >
+										
+									</form>
+								</a>
 							</div>
 							<div class="blog--category">{{$company->categorys->name}}</div>
 						</div>
@@ -398,7 +405,7 @@
 	<section class="sptb bg-patterns bg-white">
 		<div class="container">
 			<div class="section-title center-block text-center">
-				<h2>Featured Listings test</h2>
+				<h2>Featured Listings</h2>
 				<p>Mauris ut cursus nunc. Morbi eleifend, ligula at consectetur vehicula</p>
 			</div>
 			<div id="myCarousel2" class="owl-carousel owl-carousel-icons2">

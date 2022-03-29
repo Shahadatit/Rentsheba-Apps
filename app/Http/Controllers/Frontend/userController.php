@@ -78,12 +78,12 @@ class userController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'name' => ['required', 'string', 'max:13'],
-            'address' => ['required', 'string', 'max:20'],
-            'phone' => ['required', 'string', 'max:12'],
-            'cuntry' => ['required'],
-            'zip_code' => ['required', 'string', 'max:20'],
-            'description' => ['required', 'string', 'max:160'],
+            'name'          => ['required', 'string', 'max:13'],
+            'address'       => ['required', 'string', 'max:20'],
+            'phone'         => ['required', 'string', 'max:12'],
+            'cuntry'        => ['required'],
+            'zip_code'      => ['required', 'string', 'max:20'],
+            'description'   => ['required', 'string', 'max:160'],
             
         ]);
 

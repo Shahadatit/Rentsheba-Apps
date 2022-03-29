@@ -16,6 +16,7 @@ use App\Http\Controllers\Frontend\frontendController;
 use App\Http\Controllers\Frontend\userController;
 use App\Http\Controllers\Frontend\companyController;
 use App\Http\Controllers\Frontend\commentController;
+use App\Http\Controllers\Frontend\favoritiesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,6 +58,8 @@ Route::middleware('auth','verified')->group(function (){
     Route::post('/business-store' , [companyController::class , 'store'] )->name('store-listing');
     Route::get('/listig-edit/{id}' , [companyController::class , 'edit'] )->name('edit-listing');
     Route::post('/listig-update/{id}' , [companyController::class , 'update'] )->name('update-listing');
+
+    Route::post('/favorities' , [favoritiesController::class , 'store'])->name('favorities.store');
 });
 
 
