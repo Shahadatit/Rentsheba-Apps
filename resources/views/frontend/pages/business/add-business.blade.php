@@ -124,7 +124,7 @@
 								<div class="form-group">
 									<label class="form-label text-dark">Category</label>
 									<select name="cat_id"  class="form-control form-select select2-show-search ">
-										<option >Select Category</option>
+										<option value="" >Select Category</option>
                                         @foreach($categorys as $category)
 											@foreach( App\Models\Category::orderby('name','asc')->where('is_parent', $category->id)->get() as $sCut)
 										<option value="{{$sCut->id}}">{{$sCut->name}}</option>
