@@ -6,7 +6,7 @@
 
 	<!--Sliders Section-->
 	<section>
-		<div class="banner-1 cover-image sptb-2 sptb-tab bg-background2" data-bs-image-src="{{asset('frontend/img/web-design.png')}}">
+		<div class="banner-1 cover-image sptb-2 sptb-tab bg-background2" data-bs-image-src="{{asset('frontend/img/local-seo-service.png')}}">
 			<div class="header-text text-1 mb-0">
 				<div class="container">
 					<div class="text-center text-white mb-7">
@@ -94,9 +94,12 @@
                     The Dynamic <b>WordPress Website Design</b> & <b>Professional Web Development</b> Expert team. client-focused , Customer-centric, creating Website Solutions, that deliver tangible business results,  Appnovation's Web Developers helps Brands the ever-changing digital landscape</p>
 							<a class="btn btn-secondary btn-lg mt-2" href="javascript:void0">View More</a>
 						</div>
-						<div class="col-lg-6">
+						<div class="col-lg-1">
+							
+						</div>
+						<div class="col-lg-5">
 							<div class="border-5 br-4 mt-5 mt-lg-0 overflow-hidden">
-								<img src="{{asset('frontend/img/web-development.png')}}" alt="">
+								<img src="{{asset('frontend/img/local-seo-service.png')}}" alt="">
 							</div>
 						</div>
 					</div>

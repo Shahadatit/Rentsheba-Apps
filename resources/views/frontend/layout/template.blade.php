@@ -24,6 +24,7 @@
 
 	<!-- Font-awesome  Css -->
 	<link href="/assets/css/icons.css" rel="stylesheet" />
+	<link href="/assets/css/custom.css" rel="stylesheet" />
 
 </head>
 
@@ -32,7 +33,7 @@
 
 	<!--Loader-->
 	<div id="global-loader">
-		<img src="{{asset('frontend/img/Rentsheba-logo-270.png')}}" style="width:60px" class="loader-img floating" alt="">
+		<img src="{{asset('frontend/img/loader.png')}}" style="width:60px" class="loader-img floating" alt="">
 	</div>
 
 	@include('frontend.inc.topmenu')

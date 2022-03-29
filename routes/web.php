@@ -32,16 +32,23 @@ Route::get('/blog' , [frontendController::class, 'blogList'])->name('blog-list')
 Route::get('/blog-details/{slug}' , [frontendController::class, 'blogDetails'])->name('blog-details');
 Route::get('/search',[frontendController::class, 'search']);
 
+// Domain Route
+Route::get('/domain-name-search',[frontendController::class,'domainNameSearch'])->name('domain.name.search');
+Route::get('/best-web-hosting',[frontendController::class,'webHosting'])->name('web.hosting');
+Route::get('/wordpress-hosting',[frontendController::class,'wordPressHosting'])->name('wordpress.hosting');
+Route::get('/vps-hosting',[frontendController::class,'vpsHosting'])->name('vps.hosting');
+
 // Ambulance
-Route::get('ambulance-service',[frontendController::class,'ambulanceService'])->name('ambulnace-service');
-Route::get('ac-ambulance-service',[frontendController::class,'acAmbulance'])->name('ac-ambulnace');
-Route::get('non-ac-ambulance-service',[frontendController::class,'nonAcAmbulance'])->name('non-ac-ambulnace');
-Route::get('freezing-ambulance-service',[frontendController::class,'freezingAmbulance'])->name('freezing-ambulnace');
-Route::get('icu-ambulance-service',[frontendController::class,'icuAmbulance'])->name('icu-ambulnace');
+Route::get('/ambulance-service',[frontendController::class,'ambulanceService'])->name('ambulnace-service');
+Route::get('/ac-ambulance-service',[frontendController::class,'acAmbulance'])->name('ac-ambulnace');
+Route::get('/non-ac-ambulance-service',[frontendController::class,'nonAcAmbulance'])->name('non-ac-ambulnace');
+Route::get('/freezing-ambulance-service',[frontendController::class,'freezingAmbulance'])->name('freezing-ambulnace');
+Route::get('/icu-ambulance-service',[frontendController::class,'icuAmbulance'])->name('icu-ambulnace');
 
 // IT service pages
-Route::get('web-design',[frontendController::class,'webDesign'])->name('web-design');
-Route::get('web-development',[frontendController::class,'webDevelopment'])->name('web-development');
+Route::get('/web-design',[frontendController::class,'webDesign'])->name('web-design');
+Route::get('/web-development',[frontendController::class,'webDevelopment'])->name('web-development');
+Route::get('/local-seo-service',[frontendController::class,'localSeoService'])->name('local.seo.service');
 
 // Commetn Route
 Route::post('/commetn-store' , [commentController::class,'store'])->name('comment.store');

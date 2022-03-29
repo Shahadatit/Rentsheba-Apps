@@ -4,11 +4,13 @@
 
 @section('content')
 
+	
+
 		<!--Breadcrumb-->
-		<section >
+		<section class="">
 			<div class="bannerimg cover-image bg-background3" data-bs-image-src="{{asset('image/' . $post->image)}}">
-				<div class="header-text mb-0">
-					<div class="container">
+				<div class="header-text mb-0 " >
+					<div class="container  banner-height">
 						<div class="text-center text-white">
 							<h1 class="">Blog-Details</h1>
 							<ol class="breadcrumb">
@@ -17,6 +19,15 @@
 								<li class="breadcrumb-item active text-white" aria-current="page">Blog-Details</li>
 							</ol>
 						</div>
+						<div class="row">
+						<div class="col-xl-10 col-lg-12 col-md-12 d-block mx-auto">
+							<div class="search-background px-4 ">
+								<div class="form row row-sm">
+								<!-- Banner Seaarch  -->
+								</div>
+							</div>
+						</div>
+					</div>
 					</div>
 				</div>
 			</div>

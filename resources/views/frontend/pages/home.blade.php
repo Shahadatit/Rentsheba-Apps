@@ -180,6 +180,53 @@
 		</div>
 	</section>
 
+	<!-- Ambulance  -->
+	<section class="sptb bg-white">
+		<div class="container">
+			<div class="section-title center-block text-center">
+				<h2>Business Listing</h2>
+				<p>  Rentsheba is a largest Platform to Providing Service. Take & Add Your Bussiness listting to Grow your Business by listing.</p>
+			</div>
+			<div id="myCarousel1" class="owl-carousel owl-carousel-icons2">
+				@foreach( $posts as $post)
+				<div class="item">
+					<div class="card mb-0 overflow-hidden">
+						
+						<div class="item-card2-img">
+							<a href="{{route('blog-details', $post->slug)}}" class="absolute-link"></a>
+							<img src="{{asset('image/'.$post->image)}}" alt="img" class="cover-image">
+							<div class="item-card2-icons">
+								<a href="#" class="item-card2-icons-l"><i class="fa fa-cutlery"></i></a>
+								
+							</div>
+							<div class="blog--category">{{$post->categoryFunction->name}}</div>
+						</div>
+						<div class="card-body pb-0">
+							<div class="item-card2">
+								<div class="item-card2-desc">
+									<div class="item-card2-text">
+										<a href="{{route('blog-details', $post->slug)}}" class="text-dark">
+											<h4 class="mb-0">{{$post->name}}</h4>
+										</a>
+									</div>
+									<div class="pt-3">
+										
+										
+									</div>
+									<p class="">{{$post->sort_description}}</p>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				@endforeach
+				
+			</div>
+		</div>
+	</section>
+	<!--Ambulance-->
+
 	<!--Latest News-->
 	<section class="sptb">
 		<div class="container">
@@ -369,7 +416,7 @@
 											</p>
 										</a>
 										<a href="tel:{{$company->com_mobile}}">
-											<p class="pb-0 pt-0 mb-2 mt-2"><i class="fa fa-phone me-2"></i>+{{$company->com_mobile}}</p>
+											<p class="pb-0 pt-0 mb-2 mt-2"><i class="fa fa-phone me-2"></i>{{$company->com_mobile}}</p>
 										</a>
 										<p class="pb-0 pt-0 mb-2 mt-2"><i class="fa fa-clock-o me-2"></i>10am - 9pm<a>
 												<span class="badge badge-success ms-2 fs-13">Open Now</span></a></p>
@@ -480,7 +527,7 @@
 	<!--Statistics-->
 	<section>
 		<div class="about-1 cover-image sptb bg-background-color"
-			data-bs-image-src="../assets/images/banners/banner5.jpg">
+			data-bs-image-src="">
 			<div class="content-text mb-0 text-white info">
 				<div class="container">
 					<div class="row text-center">
@@ -528,6 +575,8 @@
 	<!--/Statistics-->
 
 	<!--Section-->
+	@if(Auth::check())
+	@else
 	<section class="sptb bg-white">
 		<div class="container">
 			<div class="section-title center-block text-center">
@@ -555,7 +604,7 @@
 								<h4 class="mb-4 fs-20">Exsiting User</h4>
 								<p>it look like readable English. Many desktop publishing packages and web page editors
 									now use Lorem Ipsum as their default model text</p>
-								<a href="javascript:void(0)" class="btn btn-primary text-white px-6">Login</a>
+								<a href="{{route('login')}}" class="btn btn-primary text-white px-6">Login</a>
 							</div>
 						</div>
 					</div>
@@ -588,7 +637,7 @@
 								<h4 class="mb-4 fs-20">New User</h4>
 								<p>it look like readable English. Many desktop publishing packages and web page editors
 									now use Lorem Ipsum as their default model text</p>
-								<a href="javascript:void(0)" class="btn btn-primary text-white px-6">Register</a>
+								<a href="{{route('register')}}" class="btn btn-primary text-white px-6">Register</a>
 							</div>
 						</div>
 					</div>
@@ -596,6 +645,7 @@
 			</div>
 		</div>
 	</section>
+	@endif
 	<!--/Section-->
 
 	

@@ -1,0 +1,18 @@
+.bg-background-color:before, .bg-background3:before, .bg-background9:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    display: block;
+    z-index: 1;
+    top: 0;
+}
+
+.bg-background-color:before {
+    background: #041162 !important;
+}
+.banner-height{
+    padding:150px 0;
+}

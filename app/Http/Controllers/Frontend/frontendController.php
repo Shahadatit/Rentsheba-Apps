@@ -25,8 +25,9 @@ class frontendController extends Controller
     {
         $categorys = Category::orderby('name','asc')->where('status',1)->where('is_parent',0)->get();
         $companys  = Company::where('status',1)->inRandomOrder()->get();
+        $posts = adminPost::where('status',1)->where('cat_id',4)->inRandomOrder()->get();
        
-        return view('frontend.pages.home',compact('categorys','companys'));
+        return view('frontend.pages.home',compact('categorys','companys','posts'));
     }
 
     
@@ -99,6 +100,20 @@ class frontendController extends Controller
         return view('frontend.pages.user.dashboard',compact('cuntrys','business','favoritis'));
     }
 
+    // Domain Function class 
+    public function domainNameSearch(){
+        return view('frontend.pages.domain.domain-search');
+    }
+    public function webHosting(){
+        return view('frontend.pages.domain.webhosting');
+    }
+    public function wordPressHosting(){
+        return view('frontend.pages.domain.wordpress-hosting');
+    }
+    public function vpsHosting(){
+        return view('frontend.pages.domain.vps-hosting');
+    }
+
     // All ambulance function class
     public function ambulanceService()
     {
@@ -129,6 +144,10 @@ class frontendController extends Controller
     public function webDevelopment()
     {
         return view('frontend.pages.it-service.web-development');
+    }
+    public function localSeoService()
+    {
+        return view('frontend.pages.it-service.local-seo');
     }
 
     /**

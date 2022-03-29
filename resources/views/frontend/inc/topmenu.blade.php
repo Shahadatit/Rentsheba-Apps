@@ -275,10 +275,7 @@
 								@endif
 								
 								
-								<li>
-									<a href="#" class="text-dark"><i class="fa fa-heart me-1"></i>
-										<span>My favorities</span></a>
-								</li>
+								
 							</ul>
 						</div>
 					</div>
@@ -340,23 +337,22 @@
 						<li><a href="{{url('/')}}">Home </a></li>
 						<li><a href="javascript:void(0)">Domain <span class="fa fa-caret-down m-0"></span></a>
 							<ul class="sub-menu">
-								<li><a href="#">Domain Register</a></li>
-								<li><a href="#">Domain Price</a></li>
-								<li><a href="#">Domain Transfer</a></li>
+								<li><a href="{{route('domain.name.search')}}"> Domain Registration </a></li>
+						
 							</ul>
 						</li>
 						<li><a href="javascript:void(0)">Hosting <span class="fa fa-caret-down m-0"></span></a>
 							<ul class="sub-menu">
-								<li><a href="#">Web Hosting</a></li>
-								<li><a href="#">WordPress Hosting</a></li>
-								<li><a href="#">VPS Hosting</a></li>
+								<li><a href="{{route('web.hosting')}}">Web Hosting</a></li>
+								<li><a href="{{route('wordpress.hosting')}}">WordPress Hosting</a></li>
+								<li><a href="{{route('vps.hosting')}}">VPS Hosting</a></li>
 							</ul>
 						</li>
 						<li><a href="javascript:void(0)">Web Service <span class="fa fa-caret-down m-0"></span></a>
 							<ul class="sub-menu">
 								<li><a href="{{route('web-design')}}">Web Design</a></li>
 								<li><a href="{{route('web-development')}}">Web Development</a></li>
-								<li><a href="#">Local SEO Service</a></li>
+								<li><a href="{{route('local.seo.service')}}">Local SEO Service</a></li>
 							</ul>
 						</li>
 						<li><a href="{{route('ambulnace-service')}}">Ambulance<span class="fa fa-caret-down m-0"></span></a>
