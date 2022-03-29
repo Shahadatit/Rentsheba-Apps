@@ -100,7 +100,7 @@ class companyController extends Controller
         $companys = new Company();
         $companys->company_name         = $request->company_name;
         $companys->slug                 = Str::slug($request->company_name);
-        $companys->cuntry               = $request->country;
+        $companys->cuntry               = $request->cuntry;
         $companys->website              = $request->website;
         $companys->com_mobile           = $request->com_mobile;
         $companys->c_address            = $request->c_address;
@@ -174,6 +174,7 @@ class companyController extends Controller
     {
         $request->validate([
             'company_name'  => ['required', 'string', 'max:30'],
+            'cuntry'        => ['required'],
             'com_mobile'    => ['required', 'string'],
             'c_address'     => ['required', 'string'],
             'c_district'    => ['required', 'string'],
@@ -185,6 +186,7 @@ class companyController extends Controller
             
         ],[
             'company_name.required'  => "Company Name required",
+            'cuntry.required'        => "Company Cuntry required",
             'com_mobile.required'    => "Company Mobile required",
             'c_address.required'     => "Company Address required",
             'c_district.required'    => "Company District required",
@@ -198,7 +200,7 @@ class companyController extends Controller
         $companys = Company::find($id);
         $companys->company_name         = $request->company_name;
         $companys->slug                 = Str::slug($request->company_name);
-        $companys->cuntry               = $request->country;
+        $companys->cuntry               = $request->cuntry;
         $companys->website              = $request->website;
         $companys->com_mobile           = $request->com_mobile;
         $companys->c_address            = $request->c_address;

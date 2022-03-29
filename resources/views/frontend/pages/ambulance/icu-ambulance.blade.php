@@ -12,7 +12,7 @@
 				<div class="container">
 					<div class="text-center text-white mb-7">
 						<h1 class="mb-1"> ICU Ambulance Service in Dhaka, Bangladesh </h1>
-						<p> ICU Ambulance service is available.. High Quality Service Granted. 24/7 Suppport </p>
+						<p> ICU Ambulance service is available. We Provide Basic Life Support ICU, CCU, NICU & PICU Ambulance with Ventilator Mechine, Doctors or Brother. Dhaka to All districts ICU Ambulance Service avaialble. High Quality Service Granted. 24/7 Suppport </p>
 					</div>
 					<div class="row">
 						<div class="col-xl-10 col-lg-12 col-md-12 d-block mx-auto">
@@ -33,7 +33,7 @@
     <section class="sptb bg-white">
 			<div class="container">
 				<div class="section-title center-block text-center">
-					<h2>Web Design Service & Solutions</h2>
+					<h2> ICU Ambulance Service </h2>
 				
 				</div>
 				<div class="row">

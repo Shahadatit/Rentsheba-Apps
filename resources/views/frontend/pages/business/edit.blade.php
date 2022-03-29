@@ -45,7 +45,7 @@
 								</div>
 								<div class="form-group">
 									<label class="form-label text-dark">Country</label>
-									<select name="country" class="form-control form-select select2-show-search">
+									<select name="cuntry" class="form-control form-select select2-show-search">
 										<option value="0">Select Country</option>
                                         @foreach( $countrys as $country )
 										<option value="{{$country->id}}" @if($country->id == $company->cuntry) selected @endif>{{$country->name}}</option>
