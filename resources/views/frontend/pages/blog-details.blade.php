@@ -1,6 +1,6 @@
 @extends('frontend.layout.template')
 
-@section('title') <title>Rentsheba | Rentsheba post listing</title> @endsection
+@section('title') <title>{{$post->name}} | Rentsheba</title> @endsection
 
 @section('content')
 
@@ -12,11 +12,11 @@
 				<div class="header-text mb-0 " >
 					<div class="container  banner-height">
 						<div class="text-center text-white">
-							<h1 class="">Blog-Details</h1>
+							<h1 class="">{{$post->name}}</h1>
 							<ol class="breadcrumb">
 								<li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-								<li class="breadcrumb-item"><a href="javascript:void(0)">Blog</a></li>
-								<li class="breadcrumb-item active text-white" aria-current="page">Blog-Details</li>
+								<li class="breadcrumb-item"><a href="javascript:void(0)">service</a></li>
+								<li class="breadcrumb-item active text-white" aria-current="page">{{$post->categoryFunction->name}}</li>
 							</ol>
 						</div>
 						<div class="row">

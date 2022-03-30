@@ -1,6 +1,6 @@
 @extends('frontend.layout.template')
 
-@section('title') <title>Rentsheba | Rentsheba post listing</title> @endsection
+@section('title') <title> WordPress Hosting | Fast and Secure WP Web Hosting </title> @endsection
 
 @section('content')
 
@@ -10,8 +10,8 @@
 			<div class="header-text text-1 mb-0">
 				<div class="container">
 					<div class="text-center text-white mb-7">
-						<h1 class="mb-4">Website Design and Web Development Service Company </h1>
-						<p>Website development is the word involved in development a web site for the internet (World Wide Web) or an internet. Rentsheba Company provide different types of Web Development service.  </p>
+						<h1 class="mb-4"> WordPress Hosting | Fast and Secure WP Web Hosting </h1>
+						<p> WordPress Hosting is available. Fast and Secure WP Web Hosting. Web Hosting is best for Wordpress Website. The best hosting is fast & safe for a website.  </p>
 					</div>
 					<div class="row">
 						<div class="col-xl-10 col-lg-12 col-md-12 d-block mx-auto">

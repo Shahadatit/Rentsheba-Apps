@@ -1,6 +1,6 @@
 @extends('frontend.layout.template')
 
-@section('title') <title>Rentsheba | Rentsheba business details</title> @endsection
+@section('title') <title>{{$company->main_title}} | Rentsheba</title> @endsection
 
 @section('content')
 

@@ -92,6 +92,24 @@ class frontendController extends Controller
         return view('frontend.pages.search',compact('companys'));
     }
 
+    public function contact()
+    {
+        return view('frontend.pages.contact');
+    }
+    public function about()
+    {
+        return view('frontend.pages.about');
+    }
+    public function termsofCondition()
+    {
+        return view('frontend.pages.terms-condition');
+    }
+    public function privacyPolicy()
+    {
+        return view('frontend.pages.privacy-policy');
+    }
+
+
     public function userDashboard()
     {
         $favoritis = Favoriti::orderby('id','desc')->where('user_id',Auth::id())->where('status',1)->get();

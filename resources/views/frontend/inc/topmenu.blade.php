@@ -364,7 +364,7 @@
 							</ul>
 						</li>
 						
-						<li><a href="contact.html"> Contact Us <span class="wsarrow"></span></a></li>
+						
 						<li class="d-lg-none mt-5 pb-5 mt-lg-0">
 							<span><a class="btn btn-orange" href="ad-list.html">Add Listing</a></span>
 						</li>

@@ -49,48 +49,21 @@
 							<h6>Categories</h6>
 							<ul class="list-unstyled mb-0">
 								<li>
-									<a href="javascript:void(0)" class="btn footer-btn-outline btn-sm btn-pill mb-1">RealEstate</a>
-									<a href="javascript:void(0)" class="btn footer-btn-outline btn-sm btn-pill mb-1">Spa</a>
-									<a href="javascript:void(0)" class="btn footer-btn-outline btn-sm btn-pill mb-1">Education</a>
-									<a href="javascript:void(0)" class="btn footer-btn-outline btn-sm btn-pill mb-1">Mediation</a>
-									<a href="javascript:void(0)" class="btn footer-btn-outline btn-sm btn-pill mb-1">Restaurent</a>
-									<a href="javascript:void(0)" class="btn footer-btn-outline btn-sm btn-pill mb-1">Backery</a>
-									<a href="javascript:void(0)" class="btn footer-btn-outline btn-sm btn-pill mb-1">Automobiles</a>
+									@foreach(App\Models\Category::where('status',1)->where('is_parent',0)->get() as $item)
+									<a href="{{route('primarycatcompany' , $item->slug)}}" class="btn footer-btn-outline btn-sm btn-pill mb-1">{{$item->name}}</a>
+									@endforeach
 								</li>
 							</ul>
 						</div>
 						<div class="col-xl-3 col-lg-6 col-md-12">
-							<h6>Popular Listings</h6>
+							<h6>IT Service</h6>
 							<ul class="list-unstyled mb-0">
-								<li><a href="javascript:void(0)"><i class="fa fa-angle-double-right me-2 text-secondary"></i> Educational
-										college</a></li>
-								<li><a href="javascript:void(0)"><i class="fa fa-angle-double-right me-2 text-secondary"></i> Free Lancer
-										for Web Developer</a></li>
-								<li><a href="javascript:void(0)"><i class="fa fa-angle-double-right me-2 text-secondary"></i> 2BHK Flat
-										In Hyderabad</a></li>
-								<li><a href="javascript:void(0)"><i class="fa fa-angle-double-right me-2 text-secondary"></i> Best
-										Restaurants in Hyderabad</a></li>
-							</ul>
-						</div>
-						<div class="col-xl-3 col-lg-6 col-md-12">
-							<h6 class="mt-6 mt-xl-0">Contact</h6>
-							<ul class="list-unstyled mb-0">
-								<li>
-									<a href="javascript:void(0)"><i class="fa fa-home me-3 text-secondary"></i> New York, NY 10012,
-										US-52014</a>
-								</li>
-								<li>
-									<a href="javascript:void(0)"><i class="fa fa-envelope me-3 fs-12 text-secondary"></i>
-										info12323@example.com</a>
-								</li>
-								<li>
-									<a href="javascript:void(0)"><i class="fa fa-phone me-3 text-secondary"></i> + 01 234 567 88, + 01
-										234 567 88</a>
-								</li>
-								<li>
-									<a href="javascript:void(0)"><i class="fa fa-print me-3 text-secondary"></i> + 01 234 567 89, + 01
-										234 567 89</a>
-								</li>
+								<li><a href="javascript:void(0)"><i class="fa fa-angle-double-right me-2 text-secondary"></i> Web Design </a></li>
+								<li><a href="javascript:void(0)"><i class="fa fa-angle-double-right me-2 text-secondary"></i> Web Development</a></li>
+								<li><a href="javascript:void(0)"><i class="fa fa-angle-double-right me-2 text-secondary"></i>
+										Domain Service</a></li>
+								<li><a href="javascript:void(0)"><i class="fa fa-angle-double-right me-2 text-secondary"></i>Web Hosting</a></li>
+								<li><a href="javascript:void(0)"><i class="fa fa-angle-double-right me-2 text-secondary"></i>Local SEO Service</a></li>
 							</ul>
 						</div>
 						<div class="col-xl-3 col-lg-6 col-md-12">
@@ -127,21 +100,34 @@
 								</li>
 							</ul>
 						</div>
+						<div class="col-xl-3 col-lg-6 col-md-12">
+							<h6 class="mt-6 mt-xl-0">Contact</h6>
+							<ul class="list-unstyled mb-0">
+								<li>
+									<a href="tel:01627669222"><i class="fa fa-phone me-3 text-secondary"></i> 01627669222</a>
+								</li>
+								<li>
+									<a href="tel:01627669222"><i class="fa fa-whatsapp me-3 text-secondary"></i> 01710060020</a>
+								</li>
+								<li>
+									<a href="mail:rentsheba@gmail.com"><i class="fa fa-envelope me-3 fs-12 text-secondary"></i>
+										rentsheba@gmail.com</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)"><i class="fa fa-map-marker me-3 text-secondary"></i> Gulshan-1, Dhaka - 1212</a>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="bg-dark-purple text-white p-0 border-bottom">
 				<div class="container">
 					<div class="p-2 text-center footer-links">
-						<a href="javascript:void(0)" class="btn btn-link">How It Works</a>
-						<a href="javascript:void(0)" class="btn btn-link">About Us</a>
-						<a href="javascript:void(0)" class="btn btn-link">Pricing</a>
-						<a href="javascript:void(0)" class="btn btn-link">Listing Categories</a>
+						<a href="{{route('contact')}}" class="btn btn-link">About Us</a>
 						<a href="javascript:void(0)" class="btn btn-link">Privacy Policy</a>
-						<a href="javascript:void(0)" class="btn btn-link">Terms Of Conditions</a>
-						<a href="javascript:void(0)" class="btn btn-link">Blog</a>
-						<a href="javascript:void(0)" class="btn btn-link">Contact Us</a>
-						<a href="javascript:void(0)" class="btn btn-link">Premium Ad</a>
+						<a href="javascript:void(0)" class="btn btn-link">Terms & Conditions</a>
+						<a href="{{route('contact')}}" class="btn btn-link">Contact Us</a>
 					</div>
 				</div>
 			</div>
@@ -149,29 +135,25 @@
 				<div class="container">
 					<div class="row d-flex">
 						<div class="col-lg-12 col-sm-12  mt-2 mb-2 text-center ">
-							Copyright © 2022<a href="javascript:void(0)" class="fs-14 text-secondary mx-2">Bizdire</a>. Designed by <a
-								href="javascript:void(0)" class="fs-14 text-secondary">Spruko</a> All rights reserved.
+							Copyright © 2022<a href="javascript:void(0)" class="fs-14 text-secondary mx-2">Rentsheba</a> All rights reserved.
 						</div>
 						<div class="col-lg-12 col-sm-12 text-center mb-2 mt-2">
 							<ul class="social-icons mb-0">
 								<li>
-									<a class="social-icon" href="javascript:void0"><i class="fa fa-facebook"></i></a>
+									<a class="social-icon" target="black" href="https://www.facebook.com/rentsheba"><i class="fa fa-facebook"></i></a>
 								</li>
 								<li>
-									<a class="social-icon" href="javascript:void0"><i class="fa fa-twitter"></i></a>
+									<a class="social-icon" target="black" href="https://www.instagram.com/rentsheba/"><i class="fa fa-instagram"></i></a>
 								</li>
+								
 								<li>
-									<a class="social-icon" href="javascript:void0"><i class="fa fa-rss"></i></a>
+									<a class="social-icon" target="black" href="https://www.linkedin.com/in/rentsheba/"><i class="fa fa-linkedin"></i></a>
 								</li>
+								
 								<li>
-									<a class="social-icon" href="javascript:void0"><i class="fa fa-youtube"></i></a>
+									<a class="social-icon" target="black" href="https://www.pinterest.com/rentsheba/"><i class="fa fa-pinterest"></i></a>
 								</li>
-								<li>
-									<a class="social-icon" href="javascript:void0"><i class="fa fa-linkedin"></i></a>
-								</li>
-								<li>
-									<a class="social-icon" href="javascript:void0"><i class="fa fa-google-plus"></i></a>
-								</li>
+								
 							</ul>
 						</div>
 					</div>
@@ -183,6 +165,8 @@
 
 	<!-- Back to top -->
 	<a href="#top" id="back-to-top"><i class="fa fa-rocket"></i></a>
+
+	
 
 	<!-- JQuery js-->
 	<script src="/assets/js/vendors/jquery.js"></script>
@@ -241,6 +225,39 @@
 	<!-- Custom Js-->
 	<script src="/assets/js/custom.js"></script>
 	<script src="/assets/js/themeColors.js"></script>
+
+	<!-- Facebook live Chat plugin code start -->
+	<!-- Messenger Chat plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "105707521256458");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v13.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+	<!-- Facebook live Chat plugin code end -->
 </body>
 
 </html>

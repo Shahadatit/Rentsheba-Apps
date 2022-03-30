@@ -147,23 +147,57 @@
 							<div class="panel-heading"></div>
 							<div class="panel-body text-center"></div>
 							<ul class="text-start">
-								<li><a href="javascript:void(0)"> Duration</a></li>
-								<li><a href="javascript:void(0)"> Display Email</a></li>
-								<li><a href="javascript:void(0)"> Display Phone Number</a></li>
-								<li><a href="javascript:void(0)"> Display Fax</a></li>
-								<li><a href="javascript:void(0)"> Display Website</a></li>
-								<li><a href="javascript:void(0)"> Display Video Link</a></li>
-								<li><a href="javascript:void(0)"> Display Map</a></li>
-								<li><a href="javascript:void(0)"> Display Address</a></li>
-								<li><a href="javascript:void(0)"> Display Logo</a></li>
-								<li><a href="javascript:void(0)"> Thumbnails</a></li>
-								<li><a href="javascript:void(0)"> Display Description</a></li>
-								<li><a href="javascript:void(0)"> Keywords</a></li>
-								<li><a href="javascript:void(0)"> Inquiries</a></li>
-								<li><a href="javascript:void(0)"> Categories</a></li>
-								<li><a href="javascript:void(0)"> Display Rating Button</a></li>
-								<li><a href="javascript:void(0)"> Display Inquires Button</a></li>
-								<li><a href="javascript:void(0)"> Reviews</a></li>
+								<li>
+									<a href="javascript:void(0)"> Duration</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)"> Display Email</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)"> Display Phone Number</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)"> Display Fax</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)"> Display Website</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)"> Display Video Link</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)"> Display Map</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)"> Display Address</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)"> Display Logo</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)"> Thumbnails</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)"> Display Description</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)"> Keywords</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)"> Inquiries</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)"> Categories</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)"> Display Rating Button</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)"> Display Inquires Button</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)"> Reviews</a>
+								</li>
 							</ul>
 							<div class="panel-footer"></div>
 						</div>
@@ -236,84 +270,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4 col-lg margin-top-30 most-popular">
-						<div class="panel panel-info">
-							<div class="panel-heading text-center py-4">
-								<h3 class="mb-0">Silver</h3>
-							</div>
-							<div class="px-4 py-6 text-center bg-success text-white">
-								<div class="pricer-value">
-									<h4 class="mb-0 text-white">$ <span>25</span> /Year</h4>
-								</div>
-							</div>
-							<ul class="text-center">
-								<li>2 years 
-                                    <div class="d-block d-md-none"> Duration</div>
-                                </li>
-								<li>
-                                    <i class="fe fe-check text-success"></i> 
-                                    <div class="d-block d-md-none"> Display Email</div>
-                                </li>
-								<li>
-                                    <i class="fe fe-check text-success">
-                                    </i><div class="d-block d-md-none"> Display Phone Number</div>
-                                </li>
-								<li>
-                                    <i class="fe fe-check text-success"></i>
-                                    <div class="d-block d-md-none"> Display Fax</div>
-                                </li>
-								<li>
-                                    <i class="fe fe-check text-success"></i>
-                                    <div class="d-block d-md-none"> Display Website</div>
-                                </li>
-								<li>
-                                    <i class="fe fe-x text-danger"></i>
-                                    <div class="d-block d-md-none"> Display Video Link</div>
-                                </li>
-								<li>
-                                    <i class="fe fe-check text-success"></i>
-                                    <div class="d-block d-md-none"> Display Map</div>
-                                </li>
-								<li>
-                                    <i class="fe fe-check text-success"></i>
-                                    <div class="d-block d-md-none"> Display Address</div>
-                                </li>
-								<li>
-                                    <i class="fe fe-check text-success"></i><div class="d-block d-md-none"> Display Logo</div>
-                                </li>
-								<li>0
-                                    <div class="d-block d-md-none"> Thumbnails</div>
-                                </li>
-								<li>
-                                    <i class="fe fe-check text-success"></i><div class="d-block d-md-none"> Display Description</div>
-                                </li>
-								<li>3
-                                    <div class="d-block d-md-none"> Keywords</div>
-                                </li>
-								<li>2
-                                    <div class="d-block d-md-none"> Inquiries</div>
-                                </li>
-								<li>2
-                                    <div class="d-block d-md-none"> Categories</div>
-                                </li>
-								<li>
-                                    <i class="fe fe-check text-success"></i>
-                                    <div class="d-block d-md-none"> Display Rating Button</div>
-                                </li>
-								<li>
-                                    <i class="fe fe-check text-success"></i>
-                                    <div class="d-block d-md-none"> Display Inquires Button</div>
-                                </li>
-								<li>
-                                    <i class="fe fe-check text-success"></i>
-                                    <div class="d-block d-md-none"> Reviews</div>
-                                </li>
-							</ul>
-							<div class="p-4 text-center border-top">
-								<a class="btn btn-pill btn-success" href="javascript:void(0)">Buy NOW</a>
-							</div>
-						</div>
-					</div>
+					
 					<div class="col-md-4 col-lg margin-top-30 most-popular">
 						<div class="panel panel-info">
 							<div class="panel-heading text-center py-4">

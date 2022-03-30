@@ -184,8 +184,8 @@
 	<section class="sptb bg-white">
 		<div class="container">
 			<div class="section-title center-block text-center">
-				<h2>Business Listing</h2>
-				<p>  Rentsheba is a largest Platform to Providing Service. Take & Add Your Bussiness listting to Grow your Business by listing.</p>
+				<h2>24 Hours Ambulance Service</h2>
+				<p> 27/7 Hours Emergency Ambulance service is available In Bangladesh. Rentsheba Provides different Types of ambulance service.</p>
 			</div>
 			<div id="myCarousel1" class="owl-carousel owl-carousel-icons2">
 				@foreach( $posts as $post)

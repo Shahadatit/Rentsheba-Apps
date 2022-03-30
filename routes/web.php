@@ -26,11 +26,15 @@ use App\Http\Controllers\Frontend\favoritiesController;
 
 Route::get('/' , [frontendController::class, 'home'])->name('home');
 Route::get('/listing' , [frontendController::class, 'businessList'])->name('company-list');
-Route::get('/listing-details/{slug}' , [frontendController::class, 'businessDetails'])->name('company-details');
-Route::get('/category/{slug}' , [frontendController::class, 'primaryCategory'])->name('primarycatcompany');
+Route::get('/listing/{slug}' , [frontendController::class, 'businessDetails'])->name('company-details');
+Route::get('/inventory/{slug}' , [frontendController::class, 'primaryCategory'])->name('primarycatcompany');
 Route::get('/blog' , [frontendController::class, 'blogList'])->name('blog-list');
 Route::get('/blog-details/{slug}' , [frontendController::class, 'blogDetails'])->name('blog-details');
 Route::get('/search',[frontendController::class, 'search']);
+Route::get('/contact-us',[frontendController::class,'contact'])->name('contact');
+Route::get('/about-us',[frontendController::class,'about'])->name('about');
+Route::get('/terms-of-conditions',[frontendController::class,'termsofCondition'])->name('terms.condition');
+Route::get('/privacy-policy',[frontendController::class,'privacyPolicy'])->name('privacy.policy');
 
 // Domain Route
 Route::get('/domain-name-search',[frontendController::class,'domainNameSearch'])->name('domain.name.search');
