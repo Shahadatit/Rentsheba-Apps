@@ -33,7 +33,7 @@ class frontendController extends Controller
     
     public function businessList()
     {
-        $companys = Company::where('status',1)->inRandomOrder()->get();
+        $companys = Company::where('status',1)->inRandomOrder()->paginate(8);
         $adminPost = adminPost::where('status',1)->inRandomOrder()->limit(6)->get();
         return view('frontend.pages.business-list',compact('companys','adminPost'));
     }

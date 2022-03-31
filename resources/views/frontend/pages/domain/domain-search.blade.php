@@ -18,7 +18,7 @@
 								<div class="search-background px-4 py-3 mt-4">
 									<div class="form row row-sm">
 										<div class="form-group  col-xl-9 col-lg-9 col-md-12 mb-0">
-											<input type="text" name="search" value="" class="form-control      input-lg border-white" id="text" placeholder="Search Domain here">
+											<input type="text" name="search" value="" class="form-control input-lg border-white" id="text" placeholder="Search Domain here">
 										</div>
 										
 										<div class="col-xl-3 col-lg-3 col-md-12 mb-0">
@@ -82,8 +82,8 @@
 		<section class="pricingtables combination-pricing sptb">
 			<div class="container">
 				<div class="section-title center-block text-center">
-					<h2>Pricing Table</h2>
-					<p>Mauris ut cursus nunc. Morbi eleifend, ligula at consectetur vehicula</p>
+					<h2> Domain Name Search and Checker</h2>
+					<p> Rentsheba Offers Low Prices for Domain Registration. Hurry Up! </p>
 				</div>
 				<div class="item-all-cat widget-cat">
 					<div class="row category-type">
@@ -94,10 +94,10 @@
 									<img src="/assets/images/svgs/jobs/calendar-white.svg" class="imag-service" alt="Driver">
 								</div>
 								<div class="item-all-text mt-3">
-									<h5 class="mb-0 text-body">Internship</h5>
+									<h5 class="mb-0 text-body"> Your domain, Your identity</h5>
 								</div>
 								<div class="item-all-text mt-3">
-									<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem assumenda atque possimus in tenetur vel, dolorum quas labore, laborum minima vero modi cupiditate vitae? Quisquam tempora nesciunt dignissimos impedit harum!</p>
+									<p> Your domain is a personalized address that is easy to remember and easy to share. Build and grow your online presence with a custom domain. </p>
 								</div>
 							</div>
 						</div>
@@ -108,10 +108,10 @@
 									<img src="/assets/images/svgs/jobs/hourglass-white.svg" class="imag-service" alt="IT-Hardware">
 								</div>
 								<div class="item-all-text mt-3">
-									<h5 class="mb-0 text-body">Part Time</h5>
+									<h5 class="mb-0 text-body"> Buy A Domain Name  </h5>
 								</div>
 								<div class="item-all-text mt-3">
-									<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem assumenda atque possimus in tenetur vel, dolorum quas labore, laborum minima vero modi cupiditate vitae? Quisquam tempora nesciunt dignissimos impedit harum!</p>
+									<p> Register a Domain Name and create your online identity. Use our advanced domain name generator to get your ideal choice right away </p>
 								</div>
 							</div>
 						</div>
@@ -122,10 +122,10 @@
 									<img src="/assets/images/svgs/jobs/businessman-white.svg" class="imag-service" alt="Software">
 								</div>
 								<div class="item-all-text mt-3">
-									<h5 class="mb-0 text-body">Full Time</h5>
+									<h5 class="mb-0 text-body"> 24/7 Technical Support </h5>
 								</div>
 								<div class="item-all-text mt-3">
-									<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem assumenda atque possimus in tenetur vel, dolorum quas labore, laborum minima vero modi cupiditate vitae? Quisquam tempora nesciunt dignissimos impedit harum!</p>
+									<p> Our live customer support team is here for you any time of the day or night. Just contact us and We will explain it all to you.  </p>
 								</div>
 							</div>
 						</div>
@@ -133,13 +133,50 @@
 				</div>
 			</div>
 		</section>
-		<!-- End of Pricing Tables -->
+		<!-- End of Pricing Tables --> 
+
+		<section class="sptb bg-white">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-10">
+					<h3 class="leading-normal"> What is the Domain Name? </h3>
+							<p class="leading-normal fs-16">The <b>Domain names</b>  are the human friendly address for websites. Websites rely on the domain name system (DNS), Which uses numeric addrsses to route traffic all over the world wide web. Domain names are assigned to those numeric addresses to make it easier for humans to remember and locate individual websites.  </p>
+					</div>
+				</div>
+			</div>
+		</section> 
+
+		<section class="sptb bg-white">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-10">
+					<h3 class="leading-normal"> Buy A Domain Name </h3>
+							<p class="leading-normal fs-16"> <b> Register a Domain Name </b> and create your online identity. Use our advanced domain name generator to get your ideal choice right away. Already have a domain registerd somewhere else? No problem, Domain transfers are free and easy. </p>
+					</div>
+				</div>
+			</div>
+		</section> 
+
+		<section class="sptb bg-white">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-10">
+					<h3 class="leading-normal"> Why Register Your Domain With Rentsheba? </h3>
+							<p class="leading-normal fs-16"> 24/7 live technical support </p>
+							<p class="leading-normal fs-16"> Trusted domain register  </p>
+							<p class="leading-normal fs-16"> Domain transfers are free and easy  </p>
+							<p class="leading-normal fs-16"> Easy Control and Instant setup  </p>
+					</div>
+				</div>
+			</div>
+		</section> 
+		
         <!--  Pricing Tables -->
 		<section class="pricingtables combination-pricing sptb">
 			<div class="container">
 				<div class="section-title center-block text-center">
-					<h2>Pricing Table</h2>
-					<p>Mauris ut cursus nunc. Morbi eleifend, ligula at consectetur vehicula</p>
+					<h2> Web Hosting Pricing Table</h2>
+					<p> Are you looking the best hosting setup your Website? No tension, We Porvide differnt types of Hosting for website. </p>
 				</div>
 				<div class="row g-0">
 					<div class="col-md-8 col-lg-3 margin-top-30 left-price sitelock">
@@ -205,11 +242,11 @@
 					<div class="col-md-4 col-lg margin-top-30 most-popular border-start">
 						<div class="panel panel-info">
 							<div class="panel-heading text-center py-4">
-								<h3 class="mb-0">Free</h3>
+								<h3 class="mb-0">Web Hosting</h3>
 							</div>
 							<div class="px-4 py-6 text-center bg-secondary text-white">
 								<div class="pricer-value">
-									<h4 class="mb-0 text-white">$ <span>0</span> /Year</h4>
+									<h4 class="mb-0 text-white"> ৳ <span>1200</span> /Year</h4>
 								</div>
 							</div>
 							<ul class="text-center">
@@ -239,11 +276,11 @@
 					<div class="col-md-4 col-lg margin-top-30 most-popular">
 						<div class="panel panel-info">
 							<div class="panel-heading text-center py-4">
-								<h3 class="mb-0">Premium</h3>
+								<h3 class="mb-0">WordPress Hosting </h3> 
 							</div>
 							<div class="px-4 py-6 text-center bg-primary text-white">
 								<div class="pricer-value">
-									<h4 class="mb-0 text-white">$ <span>19</span> /Year</h4>
+									<h4 class="mb-0 text-white"> ৳ <span>1000</span> /Year</h4>
 								</div>
 							</div>
 							<ul class="text-center">
@@ -274,14 +311,14 @@
 					<div class="col-md-4 col-lg margin-top-30 most-popular">
 						<div class="panel panel-info">
 							<div class="panel-heading text-center py-4">
-								<h3 class="mb-0">Gold</h3>
+								<h3 class="mb-0"> VPS Hosting </h3>
 							</div>
 							<div class="px-4 py-6 text-center bg-info text-white">
 								<div class="pricer-value">
-									<h4 class="mb-0 text-white">$ <span>40</span> /Year</h4>
+									<h4 class="mb-0 text-white">৳ <span>2000</span> /Year</h4>
 								</div>
 							</div>
-							<ul class="text-center">
+							<ul class="text-center"> 
 								<li>2 years 
                                     <div class="d-block d-md-none"> Duration</div>
                                 </li>
@@ -355,6 +392,22 @@
 			</div>
 		</section>
 		<!-- End of Pricing Tables -->
+
+		<section class="sptb bg-white">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7">
+					<h3 class="leading-normal">Features and Description of Domain : </h3>
+					<ul class="slide-menu open">
+							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i> SSL Certificate free</a></li>
+							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i> Monthly backup & Solutions </a></li> 
+
+						
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section> 
 
 	
 

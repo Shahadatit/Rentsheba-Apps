@@ -33,7 +33,7 @@
 		<section class="sptb bg-white">
 			<div class="container">
 				<div class="section-title center-block text-center">
-					<h2>Web Design Service & Solutions</h2>
+					<h2> WordPress Hosting </h2>
 				
 				</div>
 				<div class="row">
@@ -43,8 +43,8 @@
 								<div class="service-card text-center">
 									
 								<div class="servic-data mt-3">
-									<h3 class="font-weight-semibold mb-2"> Website Design</h3>
-									<p class="text-muted mb-0">Rentsheba Provide <b> Website Disign Services</b> by HTML-5, CSS-3, bootstrap-5, JavaScript, and jQuery. The best Web Design is available at cheap Price. The all Device Responsive with Mobile friendly Website, and SEO friendly design. </p>
+									<h3 class="font-weight-semibold mb-2"> WordPress Basic</h3>
+									<p class="text-muted mb-0">Rentsheba Provide <b> Website Disign Services</b> by HTML-5, CSS-3, bootstrap-5 </p>
 									
 								</div>
 								</div>
@@ -57,8 +57,8 @@
 								<div class="service-card text-center">
 										
 									<div class="servic-data mt-3">
-										<h3 class="font-weight-semibold mb-2"> Web Development Service</h3>
-										<p class="text-muted mb-0">We Provide <b> different types of Web Development Service</b> Like: (i) Statik Website (ii) Dynamic Website by the WordPress, PHP, Laravel, and Node js. Hi-Quality Web Development service is Granted in you budget. </p>
+										<h3 class="font-weight-semibold mb-2"> DreamPress WordPress </h3>
+										<p class="text-muted mb-0">We Provide <b> different types of Web Development Service</b> Like: </p>
 										
 									</div>
 								</div>
@@ -71,8 +71,8 @@
 								<div class="service-card text-center">
 									
 								<div class="servic-data mt-3">
-									<h3 class="font-weight-semibold mb-2"> Full-Stack Development Service</h3>
-									<p class="text-muted mb-0"> We have a team of <b> Skilled full-Stack Developers</b> expertise. You can hire front-end & Back-end Development teams separately as well as. Contact us to hire Full-Stack Development </p>
+									<h3 class="font-weight-semibold mb-2"> VPS for WordPress</h3>
+									<p class="text-muted mb-0"> We have a team of <b> Skilled full-Stack Developers</b> expertise. </p>
 									
 								</div>
 								</div>
@@ -89,10 +89,11 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-6">
-							<h3 class="leading-normal">Dynamic Website Development</h3>
-							<p class="leading-normal fs-16">A <b>dynamic Website</b> is a site that contains dynamic pages such as templates, contents , scripts etc, in a nutshell , the dynamic website displays various content types every time it is browsed . The web page can be changed with the reader that opens the page, character of consumer interplay , or day time. <br> <br>
-                    The Dynamic <b>WordPress Website Design</b> & <b>Professional Web Development</b> Expert team. client-focused , Customer-centric, creating Website Solutions, that deliver tangible business results,  Appnovation's Web Developers helps Brands the ever-changing digital landscape</p>
-							<a class="btn btn-secondary btn-lg mt-2" href="javascript:void0">View More</a>
+							<h3 class="leading-normal"> WordPress Hosting  </h3>
+							<p class="leading-normal fs-16"><b>WordPress hosting </b> is just hosting that has been optimized to better meet WordPress, performance and secuity needs. It also typically includes one-click WordPress installs tomake it easy to get started with WordPress. And some WordPress hosts will even automatically update your WordPress software as needed.  <br> <br> 
+							
+							There ara two main types of WordPress hosting – shared WordPress hosting and managed WordPress hosting.  I’ll discuss each in more detail below.
+
 						</div>
 						<div class="col-lg-1">
 							
@@ -112,28 +113,22 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-7">
-					<h3 class="leading-normal">Static Website</h3>
-							<p class="leading-normal fs-16">A <b>Static Website</b> contains Web pages with fixed content. Each page is coded in HTML and displays the same information to every visitor. Static sites are them most basic type of website and are them easiest to create. Unlike <b>Dynamic Websites</b> , they do not require any Web Programming or Database design. Astatic site can be simply creating a few HTML pages and publishing them to a web server. </p>
+					<h3 class="leading-normal">Share WordPress Hosting</h3>
+							<p class="leading-normal fs-16"> The <b>Share WordPress Hosting</b> As I mentioned, you’will typicall see two types of WordPress hosting in your search: Shared WordPress Hosting 
+							Managed Wordpress Hosting 
+							Shared WordPress hosting is almost always the cheaper of the two options.  shared WordPress hosting is, your site will “ Share” a server with other websites. Your server will still be perfofrmance-Optimized for WordPress, you just won’t have it all to yourself. </p>
 					</div>
 				</div>
 			</div>
+		</section>
+
 		</section>
 		<section class="sptb bg-white">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-7">
-					<h3 class="leading-normal">Laravel Web Development Service</h3>
-							<p class="leading-normal fs-16"> We have client-focused , Customer-centric, creating Website Solutions, that deliver tangible business results,  Appnovation's Web Developers helps Brands the ever-changing digital landscape</p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="sptb bg-white">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-7">
-					<h3 class="leading-normal">Full-Stack Web Development Service.</h3>
-							<p class="leading-normal fs-16"> We Have a team of skilled <b>Full-stack developers</b> with expertise in MEAN and MERN Stack. You can hire Front-end and Back-end Development teams separately as well. Get <b>Full-Stack Development</b> on MEAN, MERN, PHP+ Vue.js, Net+JS , to name a few</p>
+					<h3 class="leading-normal">Managed Wordpress Hosting: </h3>
+							<p class="leading-normal fs-16"> <b>Managed Wordpress Hosting</b> is Powerfull then share wordpress hosting. Our managed WordPress platform is a fully-managed WordPress hosting environment, Which means you canstay focused on building your website with content that is unique to youwhile we handle the daily maintenance of your server and the applications that keeps your website running strong. </p>
 					</div>
 				</div>
 			</div>
@@ -142,30 +137,12 @@
 		<!-- Features and Benefit of static website -->
 		<section class="sptb bg-white">
 			<div class="container">
-				<div class="row mb-5">
-					<div class="col-lg-7">
-					<h3 class="leading-normal">Features and Benefit of Dynamic Website :</h3>
-					<ul class="slide-menu open">
-							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i>Dynamic Website is best than Static Website.</a></li>
-							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i>Dynamic Website is safe  & Secure than static website.</a></li>
-							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i>Easy to capture to by search engines.</a></li>
-							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i>It's easy to maintenance.</a></li>
-							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i>The Dynamic Website is more valueable than static website.</a></li>
-							
-						</ul>
-					</div>
-				</div>
 				<div class="row">
 					<div class="col-lg-7">
-					<h3 class="leading-normal">Features and Benefit of Static Website :</h3>
+					<h3 class="leading-normal">Features and Benefit of Wordpress Hosting :</h3>
 					<ul class="slide-menu open">
-							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i> Efficient Website management with a Content Management system.</a></li>
-							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i> The layout can be changed independently of them content.</a></li>
-							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i> Content Can be personalized by the users or be presented in different ways.</a></li>
-							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i> Complex Websites with lots of pages can be handled easily.</a></li>
-							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i> Easy to capture by search engines.</a></li>
-							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i>Not any maintenance tension.</a></li>
-							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i>Vefy cheap in price than a dynamic website.</a></li>
+							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i> The WordPress Hosting is the most affordable.</a></li>  
+							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i> Use our customer-friendly control panel and get 1-click WordPress installs.</a></li>  
 						</ul>
 					</div>
 				</div>

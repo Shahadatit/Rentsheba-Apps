@@ -12,7 +12,7 @@
 					<div class="row">
 						<div class="col-xl-8 col-lg-12 col-md-12 d-block mx-auto">
 							<div class="text-center text-white ">
-								<h1 class=""><span class="font-weight-bold">{{App\Models\Company::companyCount()}}</span> listings available</h1>
+								<h1 class=""><span class="font-weight-bold"> Search Your targeted Serivce</span></h1>
 							</div>
 							<form action="{{url('/search')}}" method="GET">
 								<div class="search-background px-4 py-3 mt-4">
@@ -281,15 +281,7 @@
 							</div>
 							<div class="center-block text-center">
 								<ul class="pagination mb-5">
-									<li class="page-item page-prev disabled">
-										<a class="page-link" href="javascript:void(0)" tabindex="-1">Prev</a>
-									</li>
-									<li class="page-item active"><a class="page-link" href="javascript:void(0)">1</a></li>
-									<li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
-									<li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
-									<li class="page-item page-next">
-										<a class="page-link" href="javascript:void(0)">Next</a>
-									</li>
+								{{ $companys->links("pagination::bootstrap-5") }}
 								</ul>
 							</div>
 						</div>
@@ -345,7 +337,7 @@
 											value="option1">
 										<span class="custom-control-label">
 											<a href="javascript:void(0)" class="text-dark">{{$item->name}}<span
-													class="label label-primary float-end">14</span></a>
+													class="label label-primary float-end"></span></a>
 										</span>
 									</label>
 								</div>
