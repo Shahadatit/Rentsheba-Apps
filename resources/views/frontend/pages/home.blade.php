@@ -453,7 +453,7 @@
 		<div class="container">
 			<div class="section-title center-block text-center">
 				<h2>Featured Listings</h2>
-				<p>Mauris ut cursus nunc. Morbi eleifend, ligula at consectetur vehicula</p>
+				<p>Popular company listing. Rentsheba listed popular company in ther list. </p>
 			</div>
 			<div id="myCarousel2" class="owl-carousel owl-carousel-icons2">
 				<!-- Wrapper for carousel items -->
@@ -581,7 +581,7 @@
 		<div class="container">
 			<div class="section-title center-block text-center">
 				<h2>Getting Started</h2>
-				<p>Mauris ut cursus nunc. Morbi eleifend, ligula at consectetur vehicula</p>
+				<p> If you want to Get any type service, Please register about user, and If you want to Grow your business so you may free listing your business. </p>
 			</div>
 			<div class="card overflow-hidden">
 				<div class="row g-0 row-deck">
@@ -602,8 +602,7 @@
 									<!-- User Icon Svg -->
 								</div>
 								<h4 class="mb-4 fs-20">Exsiting User</h4>
-								<p>it look like readable English. Many desktop publishing packages and web page editors
-									now use Lorem Ipsum as their default model text</p>
+								<p> Welcome to Rentsheba! If you are Exsiting user of Rentsheba, So then please Login to Getting More facilities.</p>
 								<a href="{{route('login')}}" class="btn btn-primary text-white px-6">Login</a>
 							</div>
 						</div>
@@ -635,8 +634,7 @@
 									<!--User Icon Svg -->
 								</div>
 								<h4 class="mb-4 fs-20">New User</h4>
-								<p>it look like readable English. Many desktop publishing packages and web page editors
-									now use Lorem Ipsum as their default model text</p>
+								<p> Welcome to Rentsheba! If you are new user of Rentsheba, So then please Register Now to Getting More Informations.  </p>
 								<a href="{{route('register')}}" class="btn btn-primary text-white px-6">Register</a>
 							</div>
 						</div>
@@ -648,50 +646,14 @@
 	@endif
 	<!--/Section-->
 
-	
 
-	
-
-	<!--post section-->
-	<section>
-		<div class="sptb">
-			<div class="content-text mb-0">
-				<div class="container">
-					<div class="text-center">
-						<h2 class="mb-2">Subscribe</h2>
-						<p class="fs-16 mb-0">It is a long established fact that a reader will be distracted by the
-							readable.</p>
-						<div class="row">
-							<div class="col-lg-8 mx-auto d-block">
-								<div class="mt-5">
-									<div class="input-group sub-input mt-1">
-										<input type="text" class="form-control input-lg "
-											placeholder="Enter your Email">
-										<div class="">
-											<button type="button"
-												class="btn btn-secondary btn-lg br-te-3 br-be-3 br-ts-0 br-bs-0 px-5">
-												Subscribe
-											</button>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--/post section-->
-
-	
 
 	<!--Section-->
 	<section class="sptb cover-image patter-image" data-bs-image-src="../assets/images/pngs/7.png">
 		<div class="container">
 			<div class="section-title center-block text-center">
 				<h2>Download App</h2>
-				<p>Mauris ut cursus nunc. Morbi eleifend, ligula at consectetur vehicula</p>
+				<p> Please Download App to Get easily Service, and Learning more.</p>
 			</div>
 			<div class="row">
 				<div class="col-md-12">

@@ -95,7 +95,7 @@
 						</div>
 						<div class="col-lg-6">
 							<div class="border-5 br-4 mt-5 mt-lg-0 overflow-hidden">
-								<img src="{{asset('frontend/img/web-development.png')}}" alt="">
+								<img src="{{asset('frontend/img/freezing-ambulance-service-rentsheba-02.jpg')}}" alt="">
 							</div>
 						</div>
 					</div>

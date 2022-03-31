@@ -90,14 +90,14 @@
 					<div class="row">
 						<div class="col-lg-6">
 							<h3 class="leading-normal"> Ac Ambulance Service</h3>
-							<p class="leading-normal fs-16">The <b>Ac ambulance service</b> 
-Ac ambulance service is better than Non-ac ambulance service for patients. Ac ambulance is reliable for patients and attendance. This ambulance service rent is something more than Non-ac ambulance rent. With the patients or dead body  generally can be seat 7/ 8 peoples beside him. 24/7 hours ambulance service available in Dhaka. <br> <br>
-The ambulance service is called an emergency service for human life. We know some emergency service name. There are mainly fire service, Ambulance service, Treatment service. Ambulance service is one of the most important service of those. 24/7 hours ambulance service available in Dhaka Division. </p>
+							<p class="leading-normal fs-16">The <b>Ac ambulance service</b> Ac ambulance service is better than Non-ac ambulance service for patients. Ac ambulance is reliable for patients and attendance. This ambulance service rent is something more than Non-ac ambulance rent. With the patients or dead body  generally can be seat 7/ 8 peoples beside him. 24/7 hours ambulance service available in Dhaka. <br> <br> 
+							
+							The ambulance service is called an emergency service for human life. We know some emergency service name. There are mainly fire service, Ambulance service, Treatment service. Ambulance service is one of the most important service of those. 24/7 hours ambulance service available in Dhaka Division. </p>
 							<a class="btn btn-secondary btn-lg mt-2" href="javascript:void0">View More</a>
 						</div>
 						<div class="col-lg-6">
 							<div class="border-5 br-4 mt-5 mt-lg-0 overflow-hidden">
-								<img src="{{asset('frontend/img/web-development.png')}}" alt="">
+								<img src="{{asset('frontend/img/Ac-ambulance-service .jpg')}}" alt="">
 							</div>
 						</div>
 					</div>

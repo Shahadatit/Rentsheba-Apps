@@ -126,7 +126,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="sptb bg-white">
+		<section class="sptb bg-white"> 
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-7"> 
@@ -166,9 +166,6 @@
 				</div>
 			</div>
 		</section>
-
-
-
 
 
 
