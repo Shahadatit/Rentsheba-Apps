@@ -1,6 +1,6 @@
 @extends('frontend.layout.template')
 
-@section('title') <title> Website Design and Web Development Service </title> @endsection
+@section('title') <title> Emergency Ambulance Service, 01627669222 </title> @endsection
 
 @section('content')
 
@@ -11,8 +11,8 @@
 			<div class="header-text text-1 mb-0">
 				<div class="container">
 					<div class="text-center text-white mb-7">
-						<h1 class="mb-1 mb-5"> Website Design and Web Development Service </h1>
-						<p>Welcome to Rentsheba! Rentsheba is the laargest and Trusted IT Development Service Company. It's Provides Website Design & Web Development, Domain & Hosting, Local SEO Service, Digital Marketting Service, and Business Direcotry. Grow your Business by Branding your company. High Quality Service Granted. 24/7 Suppport </p>
+						<h1 class="mb-1 mb-5"> <b> Emergency Ambulance Service in Dhaka</b> </h1>
+						<p> <b>Emergency ambulance service</b> is avilable in Dhaka, Bangladesh. We Provide differnt types of Ambulance Service Like: Ac Ambulance, Non-Ac Ambulance, Freezing Ambualnce, and ICU Ambulance Service. High Quality Service Granted. <b>24/7 Suppport</b> </p>
 					</div>
 					<div class="row">
 						<div class="col-xl-10 col-lg-12 col-md-12 d-block mx-auto">
@@ -33,7 +33,7 @@
     <section class="sptb bg-white">
 			<div class="container">
 				<div class="section-title center-block text-center">
-					<h2>Web Design Service & Solutions</h2>
+					<h2> Emergency Ambulance Service </h2>
 				
 				</div>
 				<div class="row">
@@ -42,10 +42,10 @@
 							<div class="mb-lg-0 mb-4">
 								<div class="service-card text-center">
 									
-								<div class="servic-data mt-3">
-									<h3 class="font-weight-semibold mb-2"> Website Design</h3>
-									<p class="text-muted mb-4">Rentsheba Provide <b> Website Disign Services</b> by HTML-5, CSS-3, bootstrap-5, JavaScript, and jQuery. The best Web Design is available at cheap Price. The all Device Responsive with Mobile friendly Website, and SEO friendly design. </p>
-									<a href="javascript:void(0)" class="btn btn-primary text-white w-100 px-6">Learn more</a>
+								<div class="servic-data mt-3"> 
+									<h3 class="font-weight-semibold mb-2"> Ac Ambulance Service </h3>
+									<p class="text-muted mb-4"> 24 Hours <b> Ac Ambulance Service </b> is available in Dhaka, Bangladesh. We Provide different types of ambulance service. </p>
+									<a href="{{route('ac-ambulnace')}}" class="btn btn-primary text-white w-100 px-6">Learn more</a>
 								</div>
 								</div>
 							</div>
@@ -57,9 +57,9 @@
 								<div class="service-card text-center">
 										
 									<div class="servic-data mt-3">
-										<h3 class="font-weight-semibold mb-2"> Web Development Service</h3>
-										<p class="text-muted mb-4">We Provide <b> different types of Web Development Service</b> Like: (i) Statik Website (ii) Dynamic Website by the WordPress, PHP, Laravel, and Node js. Hi-Quality Web Development service is Granted in you budget. </p>
-										<a href="javascript:void(0)" class="btn btn-primary text-white w-100 px-6">Learn more</a>
+										<h3 class="font-weight-semibold mb-2"> Freezing Ambulance Service</h3>
+										<p class="text-muted mb-4"> <b> Freezing Ambulance service</b> is available. Moving a dead body should be carefully handled as it is a very sensitive issue. In this case, a Freezer Ambulance is used. </p>
+										<a href="{{route('freezing-ambulnace')}}" class="btn btn-primary text-white w-100 px-6">Learn more</a> 
 									</div>
 								</div>
 							</div>
@@ -71,9 +71,9 @@
 								<div class="service-card text-center">
 									
 								<div class="servic-data mt-3">
-									<h3 class="font-weight-semibold mb-2"> Full-Stack Development Service</h3>
-									<p class="text-muted mb-4"> We have a team of <b> Skilled full-Stack Developers</b> expertise. You can hire front-end & Back-end Development teams separately as well as. Contact us to hire Full-Stack Development </p>
-									<a href="javascript:void(0)" class="btn btn-primary text-white w-100 px-6">Learn more</a>
+									<h3 class="font-weight-semibold mb-2"> Basic Life Support Ambulance</h3>
+									<p class="text-muted mb-4"> We Provide <b> Basic Life Support ICU, CCU, NICU & PICU Ambulance with Ventilator Mechine</b>, Doctors or Brother. High Quality Service Granted. 24/7 Suppport </p>
+									<a href="{{route('icu-ambulnace')}})" class="btn btn-primary text-white w-100 px-6">Learn more</a>
 								</div>
 								</div>
 							</div>
@@ -89,14 +89,15 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-6">
-							<h3 class="leading-normal">Dynamic Website Development</h3>
-							<p class="leading-normal fs-16">A <b>dynamic Website</b> is a site that contains dynamic pages such as templates, contents , scripts etc, in a nutshell , the dynamic website displays various content types every time it is browsed . The web page can be changed with the reader that opens the page, character of consumer interplay , or day time. <br> <br>
-                    The Dynamic <b>WordPress Website Design</b> & <b>Professional Web Development</b> Expert team. client-focused , Customer-centric, creating Website Solutions, that deliver tangible business results,  Appnovation's Web Developers helps Brands the ever-changing digital landscape</p>
+							<h3 class="leading-normal"> Emergency Ambulance Service </h3>
+							<p class="leading-normal fs-16"> <b>Emergency Ambulance</b> is available in Dhaka, Bangladesh. We Provide Emergency ambulance service from Dhaka to any districts of Bangladesh. We provide different types ambulance service. Such those: Ac ambulance service, Non-Ac ambulance service, Freezer ambulance service, and Life support ICU Ambulance service with Doctors. <br> <br>
+							
+							24 Hours Emergency ambulance is available. When you feel ill then call in hour Helpline. </p>
 							<a class="btn btn-secondary btn-lg mt-2" href="javascript:void0">View More</a>
 						</div>
 						<div class="col-lg-6">
 							<div class="border-5 br-4 mt-5 mt-lg-0 overflow-hidden">
-								<img src="{{asset('frontend/img/web-development.png')}}" alt="">
+								<img src="{{asset('frontend/img/emergency-ambulance-service.jpg')}}" alt="">
 							</div>
 						</div>
 					</div>
@@ -109,8 +110,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-7">
-					<h3 class="leading-normal">Static Website</h3>
-							<p class="leading-normal fs-16">A <b>Static Website</b> contains Web pages with fixed content. Each page is coded in HTML and displays the same information to every visitor. Static sites are them most basic type of website and are them easiest to create. Unlike <b>Dynamic Websites</b> , they do not require any Web Programming or Database design. Astatic site can be simply creating a few HTML pages and publishing them to a web server. </p>
+					<h3 class="leading-normal"> 24 Hours Ambulance Service </h3>
+							<p class="leading-normal fs-16"> 24 Hours <b> Ambulance service </b>  is available in Dhaka, Bangladesh. We Provide different types of  ambulance service like: Ac ambulance service, Non-Ac ambulance service, Freezing ambulance service & Basic life support ambulance service. If you  need Basic Life Support ICU,  CCU, NICU, PICU Ambulance Support with Doctors, Brothers than will be support from Dhaka. The latest model ambulance service available.  24 Hours emrgency ambulance service is available in Dhaka. </p>
 					</div>
 				</div>
 			</div>
@@ -119,8 +120,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-7">
-					<h3 class="leading-normal">Laravel Web Development Service</h3>
-							<p class="leading-normal fs-16"> We have client-focused , Customer-centric, creating Website Solutions, that deliver tangible business results,  Appnovation's Web Developers helps Brands the ever-changing digital landscape</p>
+						<h3 class="leading-normal"> Best Ambulance Service </h3>
+						<p class="leading-normal fs-16"> The <b>best ambulance service</b> provider in Dhaka, Bangladesh. Our Ambulance Service is the best ambulance service provider in Bangladesh. Just call our helpline to get an ambulance service. We provide ambulance service 24/7 hours and an ambulance is always available. We do not charge extra in affected or dangerous moments. Dhaka Our <b>ambulance service</b> in Dhaka is always active at any time, in any situation. Just call us for an ambulance but we'll get to you no matter what. We always work for a developing country and to help patients reach treatment or hospital. If you need a general hospital helpline number, you can call us for the Collette helpline number to contact them. Always call us for an ambulance service. </p>
 					</div>
 				</div>
 			</div>
@@ -128,42 +129,39 @@
 		<section class="sptb bg-white">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-7">
-					<h3 class="leading-normal">Full-Stack Web Development Service.</h3>
-							<p class="leading-normal fs-16"> We Have a team of skilled <b>Full-stack developers</b> with expertise in MEAN and MERN Stack. You can hire Front-end and Back-end Development teams separately as well. Get <b>Full-Stack Development</b> on MEAN, MERN, PHP+ Vue.js, Net+JS , to name a few</p>
+					<div class="col-lg-7"> 
+					<h3 class="leading-normal"> Rentsheba Ambualnce Service.</h3>
+					<ul>
+						<li class='my-3'><i class="fa fa-arrow-circle-o-right mx-2"> </i> <b>Ac Ambulance Service</b> </li> 
+						<li class='my-3'><i class="fa fa-arrow-circle-o-right mx-2"> </i> <b>Non-Ac Ambulance Service</b> </li> 
+						<li class='my-3'><i class="fa fa-arrow-circle-o-right mx-2"> </i> <b>Freezing Ambulance Service</b> </li> 
+						<li class='my-3'><i class="fa fa-arrow-circle-o-right mx-2"> </i> <b> ICU Ambulance Service</b> </li> 
+						<li class='my-3'><i class="fa fa-arrow-circle-o-right mx-2"> </i> <b> CCU Ambulance Service</b> </li> 
+						<li class='my-3'><i class="fa fa-arrow-circle-o-right mx-2"> </i> <b> NICU Ambulance Service</b> </li> 
+						<li class='my-3'><i class="fa fa-arrow-circle-o-right mx-2"> </i> <b> PICU Ambulance Service</b> </li> 
+						<li class='my-3'><i class="fa fa-arrow-circle-o-right mx-2"> </i> <b> Ventilator Ambulance Service</b> </li> 
+
+
+					</ul>
 					</div>
 				</div>
-			</div>
-		</section>
+			</div> 
+		</section> 
 
 		<!-- Features and Benefit of static website -->
 		<section class="sptb bg-white">
 			<div class="container">
-				<div class="row mb-5">
+				<div class="row">  
 					<div class="col-lg-7">
-					<h3 class="leading-normal">Features and Benefit of Dynamic Website :</h3>
-					<ul class="slide-menu open">
-							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i>Dynamic Website is best than Static Website.</a></li>
-							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i>Dynamic Website is safe  & Secure than static website.</a></li>
-							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i>Easy to capture to by search engines.</a></li>
-							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i>It's easy to maintenance.</a></li>
-							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i>The Dynamic Website is more valueable than static website.</a></li>
-							
-						</ul>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-lg-7">
-					<h3 class="leading-normal">Features and Benefit of Static Website :</h3>
-					<ul class="slide-menu open">
-							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i> Efficient Website management with a Content Management system.</a></li>
-							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i> The layout can be changed independently of them content.</a></li>
-							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i> Content Can be personalized by the users or be presented in different ways.</a></li>
-							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i> Complex Websites with lots of pages can be handled easily.</a></li>
-							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i> Easy to capture by search engines.</a></li>
-							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i>Not any maintenance tension.</a></li>
-							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i>Vefy cheap in price than a dynamic website.</a></li>
-						</ul>
+						<h3 class="leading-normal"> Details of Ambulance Service :</h3>
+						<ul class="slide-menu open"> 
+							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i> 24/7 Hours Ambulance Service is available.</a></li>
+							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i> Emergency Ambulance Service is available</a></li>
+							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i> The different types Ambulance Service is availale.</a></li>
+							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i> High Quality Ambulance Service at comfortable price.</a></li>
+							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i> Latest Model Ambulance Service.</a></li>
+							<li><a href="cards.html" class="slide-item"><i class="fa fa-angle-right me-1"></i> 24/7 Live Chat, Email, and Phone Number contact is available.</a></li>
+						</ul> 
 					</div>
 				</div>
 			</div>

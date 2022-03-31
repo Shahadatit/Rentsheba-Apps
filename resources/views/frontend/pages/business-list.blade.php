@@ -222,7 +222,7 @@
 																		<div class="rating-star sm my-rating-5"
 																			data-rating="4.5">
 																		</div>
-																		<a class="fs-13 leading-tight mt-1" href="javascript:void(0)">13
+																		<a class="fs-13 leading-tight mt-1" href="javascript:void(0)">{{App\Models\CompanyComment::where('company_id' , $item->id)->count()}}
 																			Reviews</a>
 																	</div>
 																	<div class="mt-2 mb-2">

@@ -58,12 +58,12 @@
 						<div class="col-xl-3 col-lg-6 col-md-12">
 							<h6>IT Service</h6>
 							<ul class="list-unstyled mb-0">
-								<li><a href="javascript:void(0)"><i class="fa fa-angle-double-right me-2 text-secondary"></i> Web Design </a></li>
-								<li><a href="javascript:void(0)"><i class="fa fa-angle-double-right me-2 text-secondary"></i> Web Development</a></li>
-								<li><a href="javascript:void(0)"><i class="fa fa-angle-double-right me-2 text-secondary"></i>
+								<li><a href="{{route('web-design')}}"><i class="fa fa-angle-double-right me-2 text-secondary"></i> Web Design </a></li>
+								<li><a href="{{route('web-development')}}"><i class="fa fa-angle-double-right me-2 text-secondary"></i> Web Development</a></li>
+								<li><a href="{{route('domain.name.search')}}"><i class="fa fa-angle-double-right me-2 text-secondary"></i>
 										Domain Service</a></li>
-								<li><a href="javascript:void(0)"><i class="fa fa-angle-double-right me-2 text-secondary"></i>Web Hosting</a></li>
-								<li><a href="javascript:void(0)"><i class="fa fa-angle-double-right me-2 text-secondary"></i>Local SEO Service</a></li>
+								<li><a href="{{route('web.hosting')}}"><i class="fa fa-angle-double-right me-2 text-secondary"></i>Web Hosting</a></li>
+								<li><a href="{{route('local.seo.service')}}"><i class="fa fa-angle-double-right me-2 text-secondary"></i>Local SEO Service</a></li>
 							</ul>
 						</div>
 						<div class="col-xl-3 col-lg-6 col-md-12">

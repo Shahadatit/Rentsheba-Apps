@@ -88,7 +88,7 @@ class frontendController extends Controller
         if($request->category != "ALL"){
             $busines->where('cat_id',$request->category);
         }
-        $companys  = $busines->get();
+        $companys  = $busines->paginate(10);
         return view('frontend.pages.search',compact('companys'));
     }
 

@@ -126,7 +126,7 @@
 																<div class="rating-star sm my-rating-5"
 																	data-rating="4.5">
 																</div>
-																<a class="fs-13 leading-tight mt-1" href="javascript:void(0)">13
+																<a class="fs-13 leading-tight mt-1" href="javascript:void(0)">{{App\Models\CompanyComment::where('company_id' , $item->id)->count()}}
 																	Reviews</a>
 															</div>
 															<div class="mt-2 mb-2">
@@ -189,7 +189,7 @@
 														<div class="item-card9-img">
 															<div class="item-card9-imgs">
 																<a href="{{route('company-details' , $item->slug)}}"></a>
-																<img src="{{asset('image/' . $item->logo)}}"
+																<img src="{{asset('image/' . $item->cover_photo)}}"
 																	alt="img" class="cover-image">
 															</div>
 															<div class="item-card9-icons">
@@ -222,7 +222,7 @@
 																		<div class="rating-star sm my-rating-5"
 																			data-rating="4.5">
 																		</div>
-																		<a class="fs-13 leading-tight mt-1" href="javascript:void(0)">13
+																		<a class="fs-13 leading-tight mt-1" href="javascript:void(0)">{{App\Models\CompanyComment::where('company_id' , $item->id)->count()}}
 																			Reviews</a>
 																	</div>
 																	<div class="mt-2 mb-2">
@@ -281,15 +281,7 @@
 							</div>
 							<div class="center-block text-center">
 								<ul class="pagination mb-5">
-									<li class="page-item page-prev disabled">
-										<a class="page-link" href="javascript:void(0)" tabindex="-1">Prev</a>
-									</li>
-									<li class="page-item active"><a class="page-link" href="javascript:void(0)">1</a></li>
-									<li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
-									<li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
-									<li class="page-item page-next">
-										<a class="page-link" href="javascript:void(0)">Next</a>
-									</li>
+								{{ $companys->links("pagination::bootstrap-5") }}
 								</ul>
 							</div>
 						</div>
