@@ -46,7 +46,7 @@ class userCompany extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'company_name'  => ['required', 'string', 'max:30'],
+            'company_name'  => ['required', 'string', 'max:30','unique:companies'],
             'com_mobile'    => ['required', 'string'],
             'c_address'     => ['required', 'string'],
             'c_district'    => ['required', 'string'],
@@ -137,7 +137,7 @@ class userCompany extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'company_name'  => ['required', 'string', 'max:30'],
+            'company_name'  => ['required', 'string', 'max:30','unique:companies'],
             'com_mobile'    => ['required', 'string'],
             'c_address'     => ['required', 'string'],
             'c_district'    => ['required', 'string'],

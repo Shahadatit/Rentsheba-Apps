@@ -33,7 +33,7 @@
 
 	<!--Loader-->
 	<div id="global-loader">
-		<img src="{{asset('frontend/img/loader.png')}}" style="width:60px" class="loader-img floating" alt="">
+		<img src="{{asset('frontend/img/loader.png')}}"  class="loader-img floating" alt="">
 	</div>
 
 	@include('frontend.inc.topmenu')

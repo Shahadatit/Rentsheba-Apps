@@ -36,9 +36,9 @@
 									<h3>Register</h3>
 									<div class="text-center">
 										<div class="btn-list d-flex">
-											<a href="https://www.google.com/gmail/" class="btn btn-google btn-block"><i class="fa fa-google fa-1x me-2"></i> Google</a>
-											<a href="https://twitter.com/" class="btn btn-twitter"><i class="fa fa-twitter fa-1x"></i></a>
-											<a href="https://www.facebook.com/" class="btn btn-facebook"><i class="fa fa-facebook fa-1x"></i></a>
+											<a href="#" class="btn btn-google btn-block"><i class="fa fa-google fa-1x me-2"></i> Google</a>
+											<a href="#" class="btn btn-twitter"><i class="fa fa-twitter fa-1x"></i></a>
+											<a href="#" class="btn btn-facebook"><i class="fa fa-facebook fa-1x"></i></a>
 										</div>
 									</div>
 								</div>

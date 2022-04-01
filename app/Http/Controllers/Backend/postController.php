@@ -45,9 +45,10 @@ class postController extends Controller
     {
         $request->validate([
             'cat_id'            => "required",
-            'name'              => ['required', 'string', 'max:55'],
+            'name'              => ['required', 'string', 'max:55','unique:admin_posts'],
             'discription'       => "required",
             'sort_description'  => ['required'],
+            'focus_keyword'     => ['required'],
             'image'             => ['required','mimes:jpg,png'],
             
         ],[
@@ -55,6 +56,7 @@ class postController extends Controller
             'name.required'              => 'Post Title required',
             'discription.required'       => "Post Description required",
             'sort_description.required'  => "Sort Description required",
+            'focus_keyword.required'    => "Focus Keyword required",
             'image.required'             => "Fiture Image required ",
         ]);
 
@@ -115,6 +117,7 @@ class postController extends Controller
             'name'              => ['required', 'string', 'max:55'],
             'discription'       => "required",
             'sort_description'  => ['required'],
+            'focus_keyword'     => ['required'],
           
         ],[
             'cat_id'                     => "Category field required",

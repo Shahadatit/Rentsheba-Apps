@@ -35,21 +35,21 @@
                                         <div class="col-lg-9">
                                             <div class="form-group">
                                                 <label for="">Title</label>
-                                                <input type="text" name="name" class="form-control" >
+                                                <input type="text" name="name" value="{{old('name')}}" class="form-control" >
                                                 @error('name')
                                                     <div class="text-danger">{{ $message }}</div>
                                                 @enderror
                                             </div>
                                             <div class="form-group">
                                                 <label for=""></label>
-                                                <textarea name="discription" class=""></textarea>
+                                                <textarea name="discription" class="">{{old('discription')}}</textarea>
                                                 @error('discription')
                                                     <div class="text-danger">{{ $message }}</div>
                                                 @enderror
                                             </div>
                                             <div class="form-group">
                                                 <label for="">Sort Discription</label>
-                                                <textarea name="sort_description" id="" cols="30" class="form-control" maxlength="100" rows="2"></textarea>
+                                                <textarea name="sort_description" id="" cols="30" class="form-control" maxlength="100" rows="2">{{old('sort_description')}}</textarea>
                                                 @error('sort_description')
                                                     <div class="text-danger">{{ $message }}</div>
                                                 @enderror
@@ -80,7 +80,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="">Focus Keyword</label>
-                                                <input type="text" name="focus_keyword" class='form-control' id="">
+                                                <input type="text" name="focus_keyword" value="{{old('focus_keyword')}}" class='form-control' id="">
                                             </div>
                                             <div class="form-group">
                                                 <label for="">Status</label>

@@ -3,8 +3,8 @@
 @section('title') <title>Rentsheba | Rentsheba digital marketing agency</title> @endsection
 
 @section('content')
- <!--Sliders Section-->
- <section>
+	<!--Sliders Section-->
+	<section>
 			<div class="bannerimg cover-image bg-background3" data-bs-image-src="../assets/images/banners/banner2.jpg">
 				<div class="header-text mb-0">
 					<div class="container">
@@ -29,11 +29,6 @@
 					<div class="single-page" >
 						<div class="col-lg-5 col-xl-4 col-md-6 d-block mx-auto">
 							<div class="wrapper wrapper2 p-4">
-
-
-
-
-
 
 
                                 <div class="mb-4 text-sm text-gray-600 text-dark">

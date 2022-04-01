@@ -251,7 +251,7 @@
 										<a class="dropdown-item" href="javascript:void(0)">
 											<i class="dropdown-icon icon icon-bell"></i> Notifications
 										</a>
-										<a href="settings.html" class="dropdown-item">
+										<a href="#" class="dropdown-item">
 											<i class="dropdown-icon  icon icon-settings"></i> Account Settings
 										</a>
 										<form method="POST" action="{{ route('logout') }}">

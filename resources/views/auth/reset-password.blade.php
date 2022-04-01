@@ -1,48 +1,92 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
 
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+@extends('frontend.layout.template')
 
-        <form method="POST" action="{{ route('password.update') }}">
-            @csrf
+@section('title') <title>Rentsheba | Rentsheba digital marketing agency</title> @endsection
 
-            <!-- Password Reset Token -->
-            <input type="hidden" name="token" value="{{ $request->route('token') }}">
+@section('content')
 
-            <!-- Email Address -->
-            <div>
-                <x-label for="email" :value="__('Email')" />
 
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email', $request->email)" required autofocus />
-            </div>
+        <!--Sliders Section-->
+		<section>
+			<div class="bannerimg cover-image bg-background3" data-bs-image-src="../assets/images/banners/banner2.jpg">
+				<div class="header-text mb-0">
+					<div class="container">
+						<div class="text-center text-white">
+							<h1 class="">Login</h1>
+							<ol class="breadcrumb text-center">
+								<li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+								<li class="breadcrumb-item"><a href="javascript:void(0)">Pages</a></li>
+								<li class="breadcrumb-item active text-white" aria-current="page">Login</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/Sliders Section-->
 
-            <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
+		<!--Login-Section-->
+		<section class="sptb">
+			<div class="container customerpage">
+				<div class="row">
+					<div class="single-page" >
+						<div class="col-lg-5 col-xl-4 col-md-6 d-block mx-auto">
+							<div class="wrapper wrapper2">
+								<div class="card-body">
+									<h3>Login</h3>
+									
+								</div>
+								<hr class="divider">
 
-                <x-input id="password" class="block mt-1 w-full" type="password" name="password" required />
-            </div>
 
-            <!-- Confirm Password -->
-            <div class="mt-4">
-                <x-label for="password_confirmation" :value="__('Confirm Password')" />
+                                <!-- Validation Errors -->
+                                <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
-                <x-input id="password_confirmation" class="block mt-1 w-full"
-                                    type="password"
-                                    name="password_confirmation" required />
-            </div>
+                                <form method="POST" action="{{ route('password.update') }}">
+                                    @csrf
 
-            <div class="flex items-center justify-end mt-4">
-                <x-button>
-                    {{ __('Reset Password') }}
-                </x-button>
-            </div>
-        </form>
-    </x-auth-card>
-</x-guest-layout>
+                                    <!-- Password Reset Token -->
+                                    <input type="hidden" name="token" value="{{ $request->route('token') }}">
+
+                                    <!-- Email Address -->
+                                    <div class='email'>
+                                        <label for="email" >Email</label>
+
+                                        <input id="email"  type="email" name="email" value="{{old('email', $request->email)}}" required autofocus />
+                                    </div>
+
+                                    <!-- Password -->
+                                    <div class="password">
+                                        <label for="password">Password</label>
+
+                                        <input id="password"  type="password" name="password" required />
+                                    </div>
+
+                                    <!-- Confirm Password -->
+                                    <div class="password_confirmation">
+                                        <label for="password_confirmation" >Confirm Password</label>
+
+                                        <input id="password_confirmation" 
+                                                            type="password"
+                                                            name="password_confirmation" required />
+                                    </div>
+
+                                    <div class="flex items-center justify-end mt-4">
+                                        <button type='submit'  class="btn btn-secondary btn-block">Reset Password</button>
+                                    </div>
+                                </form>
+
+
+
+                            </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/Login-Section-->
+
+		
+
+@endsection
+

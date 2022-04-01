@@ -42,6 +42,10 @@ class categoryController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'name' => ['required', 'string', 'max:22', 'unique:categories'],
+        ]);
+
         $categorys = new Category();
         $categorys->name        = $request->name;
         $categorys->slug        = Str::slug($request->name);

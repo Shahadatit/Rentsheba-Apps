@@ -28,6 +28,7 @@
 		<section class="sptb">
 			<div class="container">
 				<div class="row ">
+					
                     <form action="{{route('store-listing')}}" method="POST" enctype="multipart/form-data">
                         @csrf
 					<div class="col-lg-8 col-md-12">
