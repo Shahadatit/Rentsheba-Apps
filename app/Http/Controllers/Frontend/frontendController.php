@@ -68,7 +68,7 @@ class frontendController extends Controller
 
     public function blogDetails($slug)
     {
-        $post = adminPost::where('slug', $slug)->firstOrFail();
+        $post = adminPost::where('slug', $slug)->first();
        
         if(!empty($post)){
             
@@ -85,8 +85,8 @@ class frontendController extends Controller
     public function search(Request $request){
 
         $busines = Company::where('main_title','LIKE','%'.$request->search.'%');
-        if($request->category != "ALL"){
-            $busines->where('cat_id',$request->category);
+        if($request->cuntry != "ALL"){
+            $busines->where('cuntry',$request->cuntry);
         }
         $companys  = $busines->paginate(10);
         return view('frontend.pages.search',compact('companys'));

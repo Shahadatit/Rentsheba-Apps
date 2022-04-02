@@ -22,14 +22,14 @@
 												placeholder="Search Products">
 										</div>
 										<div class="form-group col-xl-4 col-lg-4 select2-lg  col-md-12 mb-0 border-white">
-											<select id="cat" name="category" class="form-control select2-show-search w-100"
+											<select id="cat" name="cuntry" class="form-control select2-show-search w-100"
 												data-placeholder="Select">
 												<optgroup label="Categories">
-													<option value="ALL" {{ request('category') == "ALL" ? 'selected' : ""}} >Select</option>
-													@foreach(App\Models\Category::where('is_parent',0)->get() as $pCat)
-													@foreach(App\Models\Category::where('is_parent',$pCat->id)->get() as $cCat)
-													<option value="{{$cCat->id}}" {{request('category') == $cCat->id ? 'selected' : ""}}>{{$cCat->name}}</option>
-													@endforeach
+													<option value="ALL" {{ request('cuntry') == "ALL" ? 'selected' : ""}} >Select</option>
+													@foreach(App\Models\Cuntry::where('status',1)->get() as $itemy)
+													
+													<option value="{{$itemy->id}}" {{request('cuntry') == $itemy->id ? 'selected' : ""}}>{{$itemy->name}}</option>
+													
 													@endforeach
 												</optgroup>
 											</select>
