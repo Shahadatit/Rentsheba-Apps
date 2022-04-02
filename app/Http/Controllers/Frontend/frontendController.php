@@ -68,7 +68,7 @@ class frontendController extends Controller
 
     public function blogDetails($slug)
     {
-        $post = adminPost::where('slug', $slug)->first();
+        $post = adminPost::where('slug', $slug)->firstOrFail();
        
         if(!empty($post)){
             

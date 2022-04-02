@@ -78,32 +78,5 @@
 		</section>
 		<!--Register-section-->
 
-		<!--Newsletter-->
-		<section class="sptb bg-white border-top">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-7 col-xl-6 col-md-12">
-						<div class="sub-newsletter d-sm-flex">
-							<i class="fa fa-envelope fs-22 me-2"></i>
-							<div>
-								<h3 class="mb-1">Subscribe To Our Newsletter</h3>
-								<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-5 col-xl-6 col-md-12 mt-4 mt-lg-0">
-						<div class="input-group sub-input mt-1">
-							<input type="text" class="form-control input-lg" placeholder="Enter your Email">
-							<div class="input-group-text p-0 border-0 bg-transparent">
-								<button type="button" class="btn btn-secondary btn-lg br-te-3 br-be-3 br-ts-0 br-bs-0 px-5">
-									Subscribe
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!--/Newsletter-->
-
+		
 @endsection

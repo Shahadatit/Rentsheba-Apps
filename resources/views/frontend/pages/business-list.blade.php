@@ -353,27 +353,6 @@
 	</section>
 	<!--/Add Listings-->
 
-	<!-- Newsletter-->
-	<section class="sptb border-top bg-white">
-		<div class="container">
-			<div class="section-title center-block text-center">
-				<h2>Subscribe To Our Newsletter</h2>
-				<p>Mauris ut cursus nunc. Morbi eleifend, ligula at consectetur vehicula</p>
-			</div>
-			<div class="row">
-				<div class="col-lg-10 col-xl-8 col-md-12 mx-auto d-block text-center">
-					<div class="input-group sub-input mt-0">
-						<input type="text" class="form-control input-lg " placeholder="Enter your Email">
-						<div class="input-group-text p-0 border-0 bg-transparent">
-							<button type="button" class="btn btn-secondary btn-lg br-te-3 br-be-3 br-ts-0 br-bs-0 px-5">
-								Subscribe
-							</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--/Newsletter-->
+
 
 @endsection
