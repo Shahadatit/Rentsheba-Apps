@@ -53,28 +53,7 @@
 								</div>
 							</aside>
 						</div>
-						<div class="card my-select">
-							<div class="card-header">
-								<h3 class="card-title">Search Listings</h3>
-							</div>
-							<div class="card-body">
-								<div class="form-group">
-									<input type="text" class="form-control keywords-input" id="text" placeholder="What are you looking for?">
-								</div>
-								<div class="form-group">
-									<select name="country" id="select-countries" class="form-control form-select select2-show-search">
-										<option value="1" selected="">All Categories</option>
-										@foreach(App\Models\Category::where('status',1)->get() as $cate)
-										<option value="2">{{$cate->name}}</option>
-										@endforeach
-										
-									</select>
-								</div>
-								<div class="">
-									<a href="javascript:void(0)" class="btn btn-block btn-secondary">Search</a>
-								</div>
-							</div>
-						</div>
+					
 						<div class="card mb-xl-0">
 							<div class="card-header">
 								<h3 class="card-title">Safety Tips For Buyers</h3>

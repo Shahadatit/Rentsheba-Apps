@@ -56,7 +56,7 @@
 											<div class="col-sm-6 col-md-6">
 												<div class="form-group">
 													<label class="form-label">First Name</label>
-													<input type="text" class="form-control" name='name' value="{{Auth::user()->name}}" placeholder="First Name">
+													<input type="text" class="form-control" name='name' value="{{Auth::user()->name}}" maxlength="30" placeholder="First Name">
 													@error('name')
 													<p class="text-danger">{{$message}}</p>
 													@enderror
@@ -86,7 +86,7 @@
 											<div class="col-md-12">
 												<div class="form-group">
 													<label class="form-label">Address</label>
-													<input type="text" class="form-control" name='address' value="{{Auth::user()->address}}" placeholder="Home Address">
+													<input type="text" class="form-control" name='address' value="{{Auth::user()->address}}" maxlength="50" placeholder="Home Address">
 													@error('address')
 													<p class="text-danger">{{$message}}</p>
 													@enderror
@@ -130,7 +130,7 @@
 											<div class="col-md-12">
 												<div class="form-group">
 													<label class="form-label">About Me</label>
-													<textarea rows="5" name='description' class="form-control"  placeholder="Enter About your description" maxlength="160">{{$user->description}}</textarea>
+													<textarea rows="5" name='description' class="form-control"  placeholder="Enter About your description" maxlength="200">{{$user->description}}</textarea>
 													@error('description')
 													<p class="text-danger">{{$message}}</p>
 													@enderror
@@ -140,7 +140,7 @@
 												<div class="form-group mb-0">
 													<label class="form-label">Upload Profile Picture</label>
 													<div class="form-file">
-														<input class="form-control example-file-input-custom" type="file" id="formFile" name="profile">
+														<input class="form-control example-file-input-custom" type="file" id="formFile" name="image">
 
 													</div>
 													
@@ -150,7 +150,7 @@
 									
 								</div>
 								<div class="card-footer">
-									<button type="submit" class="btn btn-secondary">Updated Profile</button>
+									<button type="submit" class="btn btn-secondary">Save & Update</button>
 								</div>
 							</form>
 						</div>

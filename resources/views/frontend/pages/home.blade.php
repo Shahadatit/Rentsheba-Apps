@@ -8,7 +8,7 @@
 
 @extends('frontend.layout.template')
 
-@section('title') <title> Website Design and Web Development Service </title> @endsection
+@section('title') <title> Website Design & Web Development Service </title> @endsection
 
 @section('content')
 
@@ -20,8 +20,8 @@
 			<div class="header-text text-1 mb-0">
 				<div class="container">
 					<div class="text-center text-white mb-7">
-						<h1 class="mb-1"> Website Design and Web Development Service </h1>
-						<p>Welcome to Rentsheba! Rentsheba is the laargest and Trusted IT Development Service Company. It's Provides Website Design & Web Development, Domain & Hosting, Local SEO Service, Digital Marketting Service, and Business Direcotry. Grow your Business by Branding your company. High Quality Service Granted. 24/7 Suppport </p>
+						<h1 class="mb-1"> Website Design & Web Development Service </h1>
+						<p>Welcome to Rentsheba! Rentsheba is the largest and Trusted IT Development Service Company. It's Provides Website Design & Web Development, Domain & Hosting, Local SEO Service, Digital Marketing Service, and Business Directory. Grow your Business by Branding your company. High Quality Service Granted. 24/7 Suppport </p>
 					</div>
 					<div class="row">
 						<div class="col-xl-10 col-lg-12 col-md-12 d-block mx-auto">
@@ -99,7 +99,7 @@
 								
 								<div class="servic-data mt-3">
 									<h3 class="font-weight-semibold mb-2"> Web Hosting Service</h3>
-									<p class="text-muted mb-4">The <b> best Web Hosting</b> is best for Website. The best Hosting is fast & for a Website. If you are looking best hosting to set up your Website </p>
+									<p class="text-muted mb-4">The <b> best Web Hosting</b> is best for Website. The best Hosting is fast & for a Website. If you are looking <a target="_blank" href="https://webseobd.com/">best hosting</a> to set up your Website </p>
 									<a href="{{route('web.hosting')}}" class="btn btn-primary text-white w-100 px-6">Learn More</a>
 								</div>
 							</div>
@@ -185,36 +185,26 @@
 		<div class="container">
 			<div class="section-title center-block text-center">
 				<h2>24 Hours Ambulance Service</h2>
-				<p> 27/7 Hours Emergency Ambulance service is available In Bangladesh. Rentsheba Provides different Types of ambulance service.</p>
+				<p> 24/7 Hours <a href="{{route('ambulnace-service')}}" style='color: #5275C1'>Emergency Ambulance service</a> is available In Bangladesh. Rentsheba Provides different Types of ambulance service.</p>
 			</div>
-			<div id="myCarousel1" class="owl-carousel owl-carousel-icons2">
-				@foreach( $posts as $post)
-				<div class="item">
-					<div class="card mb-0 overflow-hidden">
-						
-						<div class="item-card2-img">
-							<a href="{{route('blog-details', $post->slug)}}" class="absolute-link"></a>
-							<img src="{{asset('image/'.$post->image)}}" alt="img" class="cover-image">
-							<div class="item-card2-icons">
-								<a href="#" class="item-card2-icons-l"><i class="fa fa-cutlery"></i></a>
-								
-							</div>
-							<div class="blog--category">{{$post->categoryFunction->name}}</div>
+			
+			<div class="row">
+				@foreach($posts as $allItem)
+				<div class="col-xl-4 col-lg-4 col-md-12">
+					<div class="card mb-xl-0">
+						<div class="item-card8-img  br-te-4 br-ts-4">
+							<a href="{{route('blog-details', $allItem->slug)}}">
+								<img src="{{asset('image/' . $allItem->image)}}" alt="img"
+								class="cover-image">
+							</a>
+							
 						</div>
-						<div class="card-body pb-0">
-							<div class="item-card2">
-								<div class="item-card2-desc">
-									<div class="item-card2-text">
-										<a href="{{route('blog-details', $post->slug)}}" class="text-dark">
-											<h4 class="mb-0">{{$post->name}}</h4>
-										</a>
-									</div>
-									<div class="pt-3">
-										
-										
-									</div>
-									<p class="">{{$post->sort_description}}</p>
-								</div>
+						
+						<div class="card-body">
+							<div class="item-card8-desc">
+								
+								<h4 class="font-weight-semibold text-center" ><a href="{{route('blog-details', $allItem->slug)}}">{{substr(strip_tags($allItem->name), 0, 35)}}</a></h4>
+								<p class="mb-0 text-center">{{substr(strip_tags($allItem->sort_description),0,88)}}</p>
 							</div>
 						</div>
 						
@@ -267,8 +257,8 @@
 											<div class="card-body">
 												<div class="item-card8-desc">
 													<p class="text-muted mb-2">{{$allItem->created_at->format('d M, Y')}}</p>
-													<h4 class="font-weight-semibold"><a href="{{route('blog-details', $allItem->slug)}}">{{$allItem->name}}</a></h4>
-													<p class="mb-0">{{$allItem->sort_description}}</p>
+													<h4 class="font-weight-semibold"><a href="{{route('blog-details', $allItem->slug)}}">{{substr(strip_tags($allItem->name),0,35)}}</a></h4>
+													<p class="mb-0">{{substr(strip_tags($allItem->sort_description),0,85)}}</p>
 												</div>
 											</div>
 											
@@ -296,8 +286,8 @@
 											<div class="card-body">
 												<div class="item-card8-desc">
 													<p class="text-muted mb-2">{{$allItem->created_at->format('d M, Y')}}</p>
-													<h4 class="font-weight-semibold"><a href="{{route('blog-details', $allItem->slug)}}">{{$allItem->name}}</a></h4>
-													<p class="mb-0">{{$allItem->sort_description}}</p>
+													<h4 class="font-weight-semibold"><a href="{{route('blog-details', $allItem->slug)}}">{{substr(strip_tags($allItem->name),0,35)}}</a></h4>
+													<p class="mb-0">{{substr(strip_tags($allItem->sort_description),0,85)}}</p>
 												</div>
 											</div>
 											
@@ -388,7 +378,7 @@
 							<a href="{{route('company-details' , $company->slug)}}" class="absolute-link"></a>
 							<img src="{{asset('image/' . $company->cover_photo)}}" alt="img" class="cover-image">
 							<div class="item-card2-icons">
-								<a href="business.html" class="item-card2-icons-l"><i class="fa fa-cutlery"></i></a>
+								
 								<a  class="item-card2-icons-r">
 									<form action="{{route('favorities.store')}}" method="POST" >
 										@csrf 
@@ -472,7 +462,7 @@
 							<div class="item-card7-desc">
 								<div class="item-card7-text">
 									<a href="{{route('company-details' , $company->slug)}}" class="text-dark">
-										<h4 class="">{{substr(strip_tags($item->main_title),0,25)}}..</h4>
+										<h4 class="">{{substr(strip_tags($item->main_title),0,25)}}</h4>
 									</a>
 								</div>
 								<ul class="item-cards7-ic mb-0">

@@ -25,7 +25,7 @@ class frontendController extends Controller
     {
         $categorys = Category::orderby('name','asc')->where('status',1)->where('is_parent',0)->get();
         $companys  = Company::where('status',1)->inRandomOrder()->get();
-        $posts = adminPost::where('status',1)->where('cat_id',4)->inRandomOrder()->get();
+        $posts = adminPost::where('status',1)->where('cat_id',2)->inRandomOrder()->limit(3)->get();
        
         return view('frontend.pages.home',compact('categorys','companys','posts'));
     }

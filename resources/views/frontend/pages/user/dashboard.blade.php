@@ -118,6 +118,17 @@
                                                             
                                                         </div>
                                                     </div>
+                                                    <div class="mt-5 profie-img">
+                                                        <div class="">
+                                                            @if(Auth::user()->cuntry)
+                                                                @if(App\Models\Company::where('user_id', Auth::user()->id))
+                                                                @else
+                                                                <a href="{{route('add-listing')}}" class='btn btn-secondary ad-post btn-sm'>Click to Add Listing</a>
+                                                                @endif
+                                                            @endif
+                                                            
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="tab-pane" id="tab-6">

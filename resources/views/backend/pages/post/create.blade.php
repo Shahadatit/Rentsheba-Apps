@@ -35,7 +35,7 @@
                                         <div class="col-lg-9">
                                             <div class="form-group">
                                                 <label for="">Title</label>
-                                                <input type="text" name="name" value="{{old('name')}}" class="form-control" >
+                                                <input type="text" name="name" value="{{old('name')}}"  class="form-control" >
                                                 @error('name')
                                                     <div class="text-danger">{{ $message }}</div>
                                                 @enderror
@@ -49,14 +49,14 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="">Sort Discription</label>
-                                                <textarea name="sort_description" id="" cols="30" class="form-control" maxlength="100" rows="2">{{old('sort_description')}}</textarea>
+                                                <textarea name="sort_description" id="" cols="30" class="form-control" maxlength="200" rows="2">{{old('sort_description')}}</textarea>
                                                 @error('sort_description')
                                                     <div class="text-danger">{{ $message }}</div>
                                                 @enderror
                                             </div>
                                             <div class="form-group">
                                                 <label for="">Tags</label>
-                                                <input type="text" name='tags' value="tags, Title" data-role="tagsinput">
+                                                <input type="text" name='tags'  data-role="tagsinput">
                                             </div>
                                            
                                             

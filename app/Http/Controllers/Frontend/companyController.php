@@ -83,15 +83,15 @@ class companyController extends Controller
     {
        
         $request->validate([
-            'company_name'  => ['required', 'string', 'max:30','unique:companies'],
+            'company_name'  => ['required', 'string', 'max:40','unique:companies'],
             'cuntry'        => ['required'],
             'com_mobile'    => ['required'],
             'c_address'     => ['required', 'string'],
             'c_district'    => ['required', 'string'],
             'c_zipcode'     => ['required'],
-            'main_title'    => ['required', 'string', 'max:42'],
+            'main_title'    => ['required', 'string', 'max:60'],
             'cat_id'        => ['required'],
-            'description'   => ['required', 'string', 'max:301'],
+            'description'   => ['required', 'string', 'max:601'],
             'o_phone'       => ['required'],
             'cover_photo'   => ['required'],
             
@@ -187,15 +187,15 @@ class companyController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'company_name'  => ['required', 'string', 'max:30','unique:companies'],
+            'company_name'  => ['required', 'string', 'max:40'],
             'cuntry'        => ['required'],
             'com_mobile'    => ['required', 'string'],
             'c_address'     => ['required', 'string'],
             'c_district'    => ['required', 'string'],
             'c_zipcode'     => ['required'],
-            'main_title'    => ['required', 'string', 'max:42'],
+            'main_title'    => ['required', 'string', 'max:60'],
             'cat_id'        => ['required'],
-            'description'   => ['required', 'string', 'max:301'],
+            'description'   => ['required', 'string', 'max:601'],
             'o_phone'       => ['required'],
             
         ],[
