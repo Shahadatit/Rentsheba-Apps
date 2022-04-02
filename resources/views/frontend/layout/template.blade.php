@@ -163,8 +163,7 @@
 	</section>
 	<!--Footer Section-->
 
-	<!-- Back to top -->
-	<a href="#top" id="back-to-top"><i class="fa fa-rocket"></i></a>
+	
 
 	
 
@@ -230,7 +229,11 @@
 	<!-- Messenger Chat plugin Code -->
     <div id="fb-root"></div>
 
-    <!-- Your Chat plugin code -->
+    <!-- Facebook live Chat plugin code  start-->
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
     <div id="fb-customer-chat" class="fb-customerchat">
     </div>
 
