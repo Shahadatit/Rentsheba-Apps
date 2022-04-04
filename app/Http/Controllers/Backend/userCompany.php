@@ -137,7 +137,7 @@ class userCompany extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'company_name'  => ['required', 'string', 'max:30','unique:companies'],
+            'company_name'  => ['required', 'string', 'max:30'],
             'com_mobile'    => ['required', 'string'],
             'c_address'     => ['required', 'string'],
             'c_district'    => ['required', 'string'],

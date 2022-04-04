@@ -164,13 +164,19 @@ class companyController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($slug)
     {
-        $company = Company::find($id);
+        $company = Company::where('slug' , $slug)->first();
         if( !empty($company) ){
-            $categorys = Category::orderby('name','asc')->where('status','1')->get();
-            $countrys = Cuntry::orderby('name','asc')->where('status','1')->get();
-             return view('frontend.pages.business.edit',compact('company','categorys','countrys'));
+
+            if(Auth::user()->id == $company->user_id ){
+                $categorys = Category::orderby('name','asc')->where('status','1')->get();
+                $countrys = Cuntry::orderby('name','asc')->where('status','1')->get();
+                return view('frontend.pages.business.edit',compact('company','categorys','countrys'));
+            }else{
+                return back();
+            }
+            
         }else{
             return back();
         }

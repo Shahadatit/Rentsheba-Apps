@@ -246,7 +246,7 @@
                                                 @foreach( $business as $item)
                                                 <div class="card overflow-hidden card-absolute">
                                                     <div class="edit-buttons-absolute">
-                                                        <a class="btn btn-success btn-sm text-white" href="{{route('edit-listing' , $item->id)}}" data-bs-toggle="tooltip" data-bs-original-title="Edit"><i class="fa fa-pencil"></i></a>
+                                                        <a class="btn btn-success btn-sm text-white" href="{{route('edit-listing' , $item->slug)}}" data-bs-toggle="tooltip" data-bs-original-title="Edit"><i class="fa fa-pencil"></i></a>
                                                         
                                                         <a class="btn btn-secondary btn-sm text-white" href="{{route('company-details', $item->slug)}}" data-bs-toggle="tooltip" data-bs-original-title="View"><i class="fa fa-eye"></i></a>
                                                     </div>

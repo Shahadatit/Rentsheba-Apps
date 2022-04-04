@@ -67,7 +67,7 @@ Route::middleware('auth','verified')->group(function (){
     
     Route::get('/add-listing' , [companyController::class , 'index'] )->name('add-listing');
     Route::post('/business-store' , [companyController::class , 'store'] )->name('store-listing');
-    Route::get('/listig-edit/{id}' , [companyController::class , 'edit'] )->name('edit-listing');
+    Route::get('/listig-edit/{slug}' , [companyController::class , 'edit'] )->name('edit-listing');
     Route::post('/listig-update/{id}' , [companyController::class , 'update'] )->name('update-listing');
 
     Route::post('/favorities' , [favoritiesController::class , 'store'])->name('favorities.store');
